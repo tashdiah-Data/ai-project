@@ -3,13 +3,13 @@
   "project": "internship",
   "totals": {
     "stories_total": 42,
-    "stories_verified": 0,
+    "stories_verified": 1,
     "stories_submitted": 0,
-    "stories_in_progress": 1,
-    "stories_not_started": 41,
+    "stories_in_progress": 40,
+    "stories_not_started": 1,
     "criteria_total": 58,
-    "criteria_passed": 0,
-    "points_awarded": 0
+    "criteria_passed": 3,
+    "points_awarded": 19
   },
   "stories": [
     {
@@ -27,7 +27,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -55,7 +55,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -83,7 +83,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -111,7 +111,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -139,7 +139,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -167,7 +167,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -195,7 +195,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -223,7 +223,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -251,7 +251,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -279,7 +279,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -307,7 +307,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -335,7 +335,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -363,7 +363,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -391,7 +391,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -419,7 +419,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -447,7 +447,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -475,7 +475,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -503,7 +503,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -531,7 +531,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -559,7 +559,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -587,7 +587,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -615,7 +615,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -643,7 +643,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -671,7 +671,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -699,7 +699,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -727,7 +727,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -755,7 +755,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -783,7 +783,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -811,7 +811,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -839,7 +839,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -867,7 +867,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -895,7 +895,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -923,7 +923,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -951,7 +951,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -979,7 +979,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 1,
         "verified_at": null,
@@ -1015,7 +1015,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 3,
         "verified_at": null,
@@ -1053,7 +1053,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 3,
         "verified_at": null,
@@ -1091,19 +1091,15 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "in_progress",
-        "criteria_passed": 0,
+        "state": "verified",
+        "criteria_passed": 3,
         "criteria_total": 3,
-        "verified_at": null,
+        "verified_at": "2026-10-29T17:34:01.119Z",
         "commit_sha": "95f72d772cfb13c259e6d33f566c72fa1ec7974c",
         "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/95f72d772cfb13c259e6d33f566c72fa1ec7974c",
         "commit_at": "2026-10-29T14:10:01Z",
-        "points_awarded": null,
-        "outstanding": [
-          "All nine anatomy elements are addressed, with none left blank and none dismissed as not applicable without a stated reason.",
-          "Each element names the concrete platform surface, tool or record it maps to, rather than describing the element in general terms.",
-          "Any element that cannot be filled is recorded as a gap with what is missing, rather than omitted."
-        ]
+        "points_awarded": 19,
+        "outstanding": []
       }
     },
     {
@@ -1129,7 +1125,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 3,
         "verified_at": null,
@@ -1167,7 +1163,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 3,
         "verified_at": null,
@@ -1205,7 +1201,7 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
         "criteria_total": 3,
         "verified_at": null,
