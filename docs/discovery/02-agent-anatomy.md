@@ -121,7 +121,7 @@ Read-only tools only: `internship_admin_api_read`, `kpi_aggregate_read`, and `ba
 - Dhee has not validated the workflows, the check-in cadence, or what "required attendance" means (inventory `blocked_by` on several capabilities).
 
 **First honest version**
-Pip's first procedure is a single weekly watch routine: read the console, list interns and applicants needing attention, and give Dhee the list with the evidence. It begins from the two capabilities the inventory notes as strongest candidates, `career_support_handoff` and `manager_check_in_brief_and_follow_up`, if Dhee agrees.
+Pip's first procedure is a single weekly watch routine: read the console, list interns and applicants needing attention, and give Dhee the list with the evidence. It begins from the two capabilities the inventory notes as strongest candidates, `career_support_handoff` and `manager_check_in_brief_and_follow_up`, if Dhee agrees. For the handoff, Pip only lists who may need one and why. The handoff itself is a human act (`human_decision: true`, capped at R2), and Dhee has not yet named the receiving person or the trigger.
 
 ## 7. Coordination: how Pip works with other agents and people
 
