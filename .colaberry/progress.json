@@ -3,13 +3,13 @@
   "project": "internship",
   "totals": {
     "stories_total": 42,
-    "stories_verified": 2,
-    "stories_submitted": 1,
+    "stories_verified": 3,
+    "stories_submitted": 0,
     "stories_in_progress": 38,
     "stories_not_started": 1,
     "criteria_total": 58,
     "criteria_passed": 9,
-    "points_awarded": 38
+    "points_awarded": 57
   },
   "stories": [
     {
@@ -1121,14 +1121,14 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "submitted",
+        "state": "verified",
         "criteria_passed": 3,
         "criteria_total": 3,
-        "verified_at": null,
-        "commit_sha": null,
-        "commit_url": null,
-        "commit_at": null,
-        "points_awarded": null,
+        "verified_at": "2026-10-29T20:33:25.899Z",
+        "commit_sha": "916c5d3ed3e52b8d5fc8b6027762a4876306ec98",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/916c5d3ed3e52b8d5fc8b6027762a4876306ec98",
+        "commit_at": "2026-10-29T20:33:14Z",
+        "points_awarded": 19,
         "outstanding": []
       }
     },
