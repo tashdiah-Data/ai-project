@@ -1,0 +1,210 @@
+{
+  "generated_at": "2026-10-29T14:15:06.901Z",
+  "plan_version": 1,
+  "plan_sha256": "315c78f430773cc110dce00105d96c98114acde5f83e6461e563413369915595",
+  "correlation_id": "1e7fa36a-7a9d-4c60-bd30-4be7dd49fdc8",
+  "project_id": "778350cb-5eaf-5651-b9b8-ba3e957d49fd",
+  "truth_revision": null,
+  "files": [
+    {
+      "path": "docs/REQUIREMENTS.md",
+      "sha256": "e5842ae1e7bdf056ead95486610cde21397202ea515a6e857b336651c483a196"
+    },
+    {
+      "path": "docs/STORIES.md",
+      "sha256": "b9c148d25e05956263c73bd45e3ab76b9a362df664a654eac7dce15fe014eca1"
+    },
+    {
+      "path": "docs/TRACEABILITY.md",
+      "sha256": "bb24457fd4a2baeaf06306496f1e3dafd8a66cbbb04eff15672f868bc61b96ef"
+    },
+    {
+      "path": "docs/DATA_CONTRACT.md",
+      "sha256": "d56e89edcfe36725945d961cf3479b646507d1fa855bba0dcdfff3f8f8a658b0"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "a77ff78b818a8f6b7b158062d8c656c0eaa9eb27c195b7529124773a971accc5"
+    },
+    {
+      "path": "docs/stories/internship.CAP.activation_and_entitlement_grant.md",
+      "sha256": "c7ed34e4469e8c1eabb5ea4d69124e06e8032399437d61c02c6c374a80d99245"
+    },
+    {
+      "path": "docs/stories/internship.CAP.active_project_drift_detection.md",
+      "sha256": "127901a80e5057c9a9ddcf908298cd305beafdde521300b81f1d6ce191077577"
+    },
+    {
+      "path": "docs/stories/internship.CAP.admission_decision_recording.md",
+      "sha256": "d6f7ed2507fc715b060a89bea70ad6f3f07aa823950d696340dbf5a783ffd2bb"
+    },
+    {
+      "path": "docs/stories/internship.CAP.ai_voice_interview_and_transcript_capture.md",
+      "sha256": "2ec8977b00c5b71ae043298023e77c2ee0b6d7f9f2b494973d033ffad7c42ef0"
+    },
+    {
+      "path": "docs/stories/internship.CAP.applicant_pii_access_audit.md",
+      "sha256": "3ad6fda4f9634f91dc5a89b005bd2fbf4de5e56e2127865a8369855853125aab"
+    },
+    {
+      "path": "docs/stories/internship.CAP.applicant_readiness_assessment.md",
+      "sha256": "3a84b3b6bd4d7181ca499a4847ef9f20f50528612515b4ad4946b87259e2caee"
+    },
+    {
+      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.md",
+      "sha256": "a62ada03e779231cd6739b291d28bd6db0a01c65668efcdcf3eda9c9449974b8"
+    },
+    {
+      "path": "docs/stories/internship.CAP.build_progress_and_pace_monitoring.md",
+      "sha256": "ebea528581f095cf23edf06b6d592aadea0cbf45c1ef2c9c7ca8d5983d1da512"
+    },
+    {
+      "path": "docs/stories/internship.CAP.career_support_handoff.md",
+      "sha256": "0d55d95786647497a56a73775c053bdd06cede279ce8a50300148188d61b6099"
+    },
+    {
+      "path": "docs/stories/internship.CAP.certification_readiness_tracking.md",
+      "sha256": "ab5bdadc23a7f359f0e9c865712ffb4f2efef7f1516fa3fc3d9630e570c3f53a"
+    },
+    {
+      "path": "docs/stories/internship.CAP.class_internship_movement.md",
+      "sha256": "df5fdcefaca2cdc157cfaa871d7051444086c39444b3473ce08ace9e774e00c0"
+    },
+    {
+      "path": "docs/stories/internship.CAP.cohort_kpi_reporting.md",
+      "sha256": "6810f144f96e0f678d899995f1a834d73d941f067a93c94afd654bf26e747ff3"
+    },
+    {
+      "path": "docs/stories/internship.CAP.comp_expiry_advance_warning.md",
+      "sha256": "4a18487a9b7fa1ff80978fdf515c13ee9ebb466f8ce9b54f20e6e28d94c8ff71"
+    },
+    {
+      "path": "docs/stories/internship.CAP.da_cohort_analysis_automation.md",
+      "sha256": "ab19419569971eebb93e1a93c4efd8a4d936fe73e248e841c2ab8f3ce7019973"
+    },
+    {
+      "path": "docs/stories/internship.CAP.deterministic_requirement_checks.md",
+      "sha256": "fd05338405287bbccb04f02f5206a0e1421b4d7f95dc8da1f20caa72652417d2"
+    },
+    {
+      "path": "docs/stories/internship.CAP.employment_readiness_gap_flag.md",
+      "sha256": "71809428fdd401b40abe7dc41f9f34181a5cf752f8f1ec4dc07e691bb140f8c5"
+    },
+    {
+      "path": "docs/stories/internship.CAP.existing_intern_conversion_planning.md",
+      "sha256": "5da5c223123ee3c3d1bd1437b5bf46b5bdc9ae2d9996c2d641946a0e5e8be44e"
+    },
+    {
+      "path": "docs/stories/internship.CAP.generated_build_project_authoring.md",
+      "sha256": "15a90163739c44f7e7784de6c67894c3d669cfa82d07c8cf5aa4d10eba6e8418"
+    },
+    {
+      "path": "docs/stories/internship.CAP.inactivity_escalation_and_exit_recommendation.md",
+      "sha256": "1cff0669b964496843563f2c89c66ce42de84aef8c0aa0739514382d0778e138"
+    },
+    {
+      "path": "docs/stories/internship.CAP.intern_project_portfolio_assembly.md",
+      "sha256": "bf0bf2d16347f8a9c608035a0efec74b6e550dbb0086822d01d51139e1a54567"
+    },
+    {
+      "path": "docs/stories/internship.CAP.intern_project_to_catalog_matching.md",
+      "sha256": "7bfd700e71f29a411b768929335489e49ad0c6ba3fc52f13fc94a541d34353f0"
+    },
+    {
+      "path": "docs/stories/internship.CAP.interview_preparation_support.md",
+      "sha256": "dbecfe57c766365ec50629f542e9246180e6668580a32abee723a67a2fac500f"
+    },
+    {
+      "path": "docs/stories/internship.CAP.manager_check_in_brief_and_follow_up.md",
+      "sha256": "87efe0076942e3bcd1d64a918f1e00dbd52de2d8c69886d5da7d04d707d5dc10"
+    },
+    {
+      "path": "docs/stories/internship.CAP.manager_surface_access_verification.md",
+      "sha256": "f0261bd20ec2df7717f69e57682155320aff610a35e87282aae64cd033be0fd0"
+    },
+    {
+      "path": "docs/stories/internship.CAP.offer_document_package_generation.md",
+      "sha256": "398c2af69c28629ddfe27eddee851ced2858ef917e3285bc428c485a6d1774d5"
+    },
+    {
+      "path": "docs/stories/internship.CAP.onboarding_checklist_tracking.md",
+      "sha256": "8539e3a239e5f15da35530b10b54296d1b1f5a500d03f3855738961b82c9bbe6"
+    },
+    {
+      "path": "docs/stories/internship.CAP.payment_gate_monitoring.md",
+      "sha256": "c22d69b6249e0399f4ac32091326df1ee6f8263d20e194d708ff6ac3162c121b"
+    },
+    {
+      "path": "docs/stories/internship.CAP.portfolio_publication_readiness.md",
+      "sha256": "56acafd544a4b8af22697a6173d1c46a6e124a7a17d493d9d7e0b85cd87311f6"
+    },
+    {
+      "path": "docs/stories/internship.CAP.project_assignment_readiness_gating.md",
+      "sha256": "7352a81ed696608cb2219755b2a0d9b2c6d92d39e299d85c5941cd18e0742a42"
+    },
+    {
+      "path": "docs/stories/internship.CAP.review_queue_triage_and_profile_signals.md",
+      "sha256": "112f768fc59c8775a7b9fd1897b0ca9d4ea4843d705b7daefe33b63410452b81"
+    },
+    {
+      "path": "docs/stories/internship.CAP.routine_document_reminder_sending.md",
+      "sha256": "15b14c3e2a25accc130d46781644e7cb40e2489fba4644efa25dd1b0c8693180"
+    },
+    {
+      "path": "docs/stories/internship.CAP.signed_document_verification.md",
+      "sha256": "0604054ca25aba97242a195a39fa68015b4e409ebb2ee914ef4ee8e79640d042"
+    },
+    {
+      "path": "docs/stories/internship.CAP.skill_gap_identification_for_interns.md",
+      "sha256": "6380ba40574a26c1343fb8868ef0a7ba51f2ad4bbb99b12378b827696260d510"
+    },
+    {
+      "path": "docs/stories/internship.CAP.standup_attendance_tracking.md",
+      "sha256": "378d2343069c1cf61c3bf5456c02fcade853bfc04ec80036c37089580075b1b8"
+    },
+    {
+      "path": "docs/stories/internship.CAP.two_channel_structured_interview.md",
+      "sha256": "6e7efa717f17e162bdee99c44330e8b4a6bf832fbc836ed6f8696a0382605253"
+    },
+    {
+      "path": "docs/stories/internship.LEGACY-MIGRATION-PLAN.md",
+      "sha256": "ef03b9b2d71ec4e30c29bef3eb45079f69abe0b933e144fe63ab1d1f7dd80c50"
+    },
+    {
+      "path": "docs/stories/internship.RESEARCH-1-SYSTEM-CLASSES.md",
+      "sha256": "a5826e58af77c25c806b4e3475e41a016928eb60b541559a30eba9d3dc46e442"
+    },
+    {
+      "path": "docs/stories/internship.RESEARCH-2-AGENT-ANATOMY.md",
+      "sha256": "1b911e78ea865d0e9cfbc3a58caecc3f827cc417fe16fded646f9e898b35bb1b"
+    },
+    {
+      "path": "docs/stories/internship.RESEARCH-3-ROLE-AND-DA-TRANSITION.md",
+      "sha256": "b6f5cd6b7c759efa04a5e6282038b260f45c7ff4a5b53cea479afb708dcbc708"
+    },
+    {
+      "path": "docs/stories/internship.RESEARCH-4-MANAGER-INTERVIEW.md",
+      "sha256": "405633cdf3ddf416a83a48524e984c3eb4126bcd99ff9549dedbe1c2f7530b89"
+    },
+    {
+      "path": "docs/stories/internship.RESEARCH-5-THREE-PROPOSED-TASKS.md",
+      "sha256": "77e83a42dfa4f869bb45c841cffbcf2a19fb46d256c9d1835b11f8ed4c917cb8"
+    },
+    {
+      "path": "docs/stories/STORY-000.md",
+      "sha256": "7733ff7bc8e517613c0eaf171845b4ed94468f62f59910050c0f7b4fa706ee06"
+    },
+    {
+      "path": ".colaberry/plan.json",
+      "sha256": "e34078fb18c26fa9a3abe323c7ea216b149686423fac17780ded16e773a645e2"
+    },
+    {
+      "path": ".colaberry/progress.json",
+      "sha256": "f1dfe78d678981f9c5edf0559b012055b579089c68d3d756f237ab6a17a49325"
+    },
+    {
+      "path": ".colaberry/profile.json",
+      "sha256": "de37e34f9ff591e07ab8f9da67ff6f2982995ca3ce59652f54986af7535b5a37"
+    }
+  ]
+}

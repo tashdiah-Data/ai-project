@@ -1,0 +1,1256 @@
+{
+  "schema_version": 2,
+  "project": "internship",
+  "totals": {
+    "stories_total": 42,
+    "stories_verified": 0,
+    "stories_submitted": 0,
+    "stories_in_progress": 1,
+    "stories_not_started": 41,
+    "criteria_total": 58,
+    "criteria_passed": 0,
+    "points_awarded": 0
+  },
+  "stories": [
+    {
+      "id": "internship.CAP.activation_and_entitlement_grant",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Blocker list matches activationBlockers() exactly; the output never contains an activation instruction or a ready-to-activate verdict",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Blocker list matches activationBlockers() exactly; the output never contains an activation instruction or a ready-to-activate verdict"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.active_project_drift_detection",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches DriftCode and the module header; never proposes a correction",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches DriftCode and the module header; never proposes a correction"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.admission_decision_recording",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Explanations match REASON_DEFINITIONS; any output phrased as a decision fails the release",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Explanations match REASON_DEFINITIONS; any output phrased as a decision fails the release"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.ai_voice_interview_and_transcript_capture",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Explanation matches internshipCallService.ts:19-26 with no claim that a fallback agent exists",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Explanation matches internshipCallService.ts:19-26 with no claim that a fallback agent exists"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.applicant_pii_access_audit",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Dhee accepts the audit question set in writing; until then this capability stays absent and no coverage is claimed",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Dhee accepts the audit question set in writing; until then this capability stays absent and no coverage is claimed"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.applicant_readiness_assessment",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Zero unsourced claims across a named sample reviewed by Dhee; any invented fact fails the release",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Zero unsourced claims across a named sample reviewed by Dhee; any invented fact fails the release"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.build_progress_and_pace_monitoring",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Figures match paceFor(), dayOfInternship() and deterministicStanding() exactly; zero dates or percentages originate from the model",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Figures match paceFor(), dayOfInternship() and deterministicStanding() exactly; zero dates or percentages originate from the model"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.career_support_handoff",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Dhee names the receiving human and the trigger in writing; until then this capability stays absent",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Dhee names the receiving human and the trigger in writing; until then this capability stays absent"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.certification_readiness_tracking",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches internCertification() and toCertAttempts(); no pass prediction appears and no issued credential is implied",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches internCertification() and toCertAttempts(); no pass prediction appears and no issued credential is implied"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.class_internship_movement",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Explanation names the duplicate-sweep, comp-entitlement and pickBestEnrollment failures with their citations and claims no capability that does not exist",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Explanation names the duplicate-sweep, comp-entitlement and pickBestEnrollment failures with their citations and claims no capability that does not exist"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.cohort_kpi_reporting",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Counts match internshipKpis(); every unknown is labelled unknown rather than rendered as zero",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Counts match internshipKpis(); every unknown is labelled unknown rather than rendered as zero"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.comp_expiry_advance_warning",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Dhee accepts the lead time, the recipient and the once-per-window rule in writing",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Dhee accepts the lead time, the recipient and the once-per-window rule in writing"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.da_cohort_analysis_automation",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Dhee names at least one specific deliverable; the inventory lists only artifacts that were observed, with no invented reports",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Dhee names at least one specific deliverable; the inventory lists only artifacts that were observed, with no invented reports"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.deterministic_requirement_checks",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Zero disagreements against checkRequirements() across a named fixture set, and every unclear accompanied by the missing key",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Zero disagreements against checkRequirements() across a named fixture set, and every unclear accompanied by the missing key"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.employment_readiness_gap_flag",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches the registry row and directorActions.ts:72 exactly; no claim of analysis the row does not perform",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches the registry row and directorActions.ts:72 exactly; no claim of analysis the row does not perform"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.existing_intern_conversion_planning",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches ConversionPlan and the no-transaction guarantee; never claims a conversion was applied",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches ConversionPlan and the no-transaction guarantee; never claims a conversion was applied"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.generated_build_project_authoring",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches normalizeSize() and the planGate violation split; never claims a plan is ready to assign",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches normalizeSize() and the planGate violation split; never claims a plan is ready to assign"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.inactivity_escalation_and_exit_recommendation",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Thresholds match internActivityTracker.js:11-17 and the UNKNOWN rule is stated, not omitted",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Thresholds match internActivityTracker.js:11-17 and the UNKNOWN rule is stated, not omitted"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.intern_project_portfolio_assembly",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches assembleProjectPortfolio() on fixtures; self-reported items are never described as verified",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches assembleProjectPortfolio() on fixtures; self-reported items are never described as verified"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.intern_project_to_catalog_matching",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Dhee states in writing whether a catalog should exist; until then this capability stays absent and no evidence is claimed",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Dhee states in writing whether a catalog should exist; until then this capability stays absent and no evidence is claimed"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.interview_preparation_support",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Stage and beat match interviewPrepData.normalize and interviewPrepNudges on the unit fixtures",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Stage and beat match interviewPrepData.normalize and interviewPrepNudges on the unit fixtures"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.manager_check_in_brief_and_follow_up",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Percentages and dates match internDeliveryCoachNote.js arithmetic exactly; zero figures originate from the model",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Percentages and dates match internDeliveryCoachNote.js arithmetic exactly; zero figures originate from the model"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.manager_surface_access_verification",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Names the requireAdmin-only state of the agent routes and does not claim a manager-scoped gate that has not shipped",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Names the requireAdmin-only state of the agent routes and does not claim a manager-scoped gate that has not shipped"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.offer_document_package_generation",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "nextMonday outputs reproduced exactly for a fixed set of input dates including a Sunday and a Monday boundary",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "nextMonday outputs reproduced exactly for a fixed set of input dates including a Sunday and a Monday boundary"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.onboarding_checklist_tracking",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches resolveChecklist() and nextStudentAction() on every fixture; a Colaberry-owned step is never reported as the intern being late",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches resolveChecklist() and nextStudentAction() on every fixture; a Colaberry-owned step is never reported as the intern being late"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.payment_gate_monitoring",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches stateAfterDocumentsVerified() for all four input combinations",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches stateAfterDocumentsVerified() for all four input combinations"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.portfolio_publication_readiness",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Unmet list matches computeReadiness() under DEFAULT_POLICY; any employability language fails the release",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Unmet list matches computeReadiness() under DEFAULT_POLICY; any employability language fails the release"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.project_assignment_readiness_gating",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Matches readyForProject() and the handoff phase table; an unknown week never yields a late reading",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Matches readyForProject() and the handoff phase table; an unknown week never yields a late reading"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.review_queue_triage_and_profile_signals",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Bucket explanations match BUCKET_STATES exactly and no applicant identity is quoted",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Bucket explanations match BUCKET_STATES exactly and no applicant identity is quoted"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.routine_document_reminder_sending",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Template selection matches the precondition table for every fixture; zero send attempts recorded",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Template selection matches the precondition table for every fixture; zero send attempts recorded"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.signed_document_verification",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Outstanding list matches outstandingRequirements(); no document bytes are read",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Outstanding list matches outstandingRequirements(); no document bytes are read"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.skill_gap_identification_for_interns",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Dhee accepts a target profile definition in writing; until then the gap output stays unavailable",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Dhee accepts a target profile definition in writing; until then the gap output stays unavailable"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.standup_attendance_tracking",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "The explanation states the missing denominator and never quotes an attendance percentage",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "The explanation states the missing denominator and never quotes an attendance percentage"
+        ]
+      }
+    },
+    {
+      "id": "internship.CAP.two_channel_structured_interview",
+      "release": "r2",
+      "acceptance_total": 1,
+      "criteria": [
+        {
+          "text": "Answers match activeQuestionKeys() exactly for ten sampled questions; evaluator is a diff against the module",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Answers match activeQuestionKeys() exactly for ten sampled questions; evaluator is a diff against the module"
+        ]
+      }
+    },
+    {
+      "id": "internship.LEGACY-MIGRATION-PLAN",
+      "release": "r1",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "The plan accounts for every inherited legacy record for this domain, each one kept, merged or retired with a reason.",
+          "passed": false
+        },
+        {
+          "text": "The migration is described as replayable: running it twice leaves the same end state, with no duplicated side effects.",
+          "passed": false
+        },
+        {
+          "text": "The plan states what happens to a record the migration cannot classify, rather than assuming none exist.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "The plan accounts for every inherited legacy record for this domain, each one kept, merged or retired with a reason.",
+          "The migration is described as replayable: running it twice leaves the same end state, with no duplicated side effects.",
+          "The plan states what happens to a record the migration cannot classify, rather than assuming none exist."
+        ]
+      }
+    },
+    {
+      "id": "internship.RESEARCH-1-SYSTEM-CLASSES",
+      "release": "r0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "The document compares all five system classes (chatbot, fixed workflow, tool-using agent, agentic system, multi-agent system) and names which one this domain needs.",
+          "passed": false
+        },
+        {
+          "text": "The choice cites this domain's own capability count and its human-reserved count, so the argument would change if those numbers changed.",
+          "passed": false
+        },
+        {
+          "text": "The document states explicitly which class this domain does NOT need, and what would have to change to justify the next class up.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "The document compares all five system classes (chatbot, fixed workflow, tool-using agent, agentic system, multi-agent system) and names which one this domain needs.",
+          "The choice cites this domain's own capability count and its human-reserved count, so the argument would change if those numbers changed.",
+          "The document states explicitly which class this domain does NOT need, and what would have to change to justify the next class up."
+        ]
+      }
+    },
+    {
+      "id": "internship.RESEARCH-2-AGENT-ANATOMY",
+      "release": "r0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "All nine anatomy elements are addressed, with none left blank and none dismissed as not applicable without a stated reason.",
+          "passed": false
+        },
+        {
+          "text": "Each element names the concrete platform surface, tool or record it maps to, rather than describing the element in general terms.",
+          "passed": false
+        },
+        {
+          "text": "Any element that cannot be filled is recorded as a gap with what is missing, rather than omitted.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "in_progress",
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "verified_at": null,
+        "commit_sha": "95f72d772cfb13c259e6d33f566c72fa1ec7974c",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/95f72d772cfb13c259e6d33f566c72fa1ec7974c",
+        "commit_at": "2026-10-29T14:10:01Z",
+        "points_awarded": null,
+        "outstanding": [
+          "All nine anatomy elements are addressed, with none left blank and none dismissed as not applicable without a stated reason.",
+          "Each element names the concrete platform surface, tool or record it maps to, rather than describing the element in general terms.",
+          "Any element that cannot be filled is recorded as a gap with what is missing, rather than omitted."
+        ]
+      }
+    },
+    {
+      "id": "internship.RESEARCH-3-ROLE-AND-DA-TRANSITION",
+      "release": "r0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "The document names the accountable human for this domain and the specific responsibilities proposed to transition to the agent.",
+          "passed": false
+        },
+        {
+          "text": "Each transitioning responsibility states what evidence would show the agent is ready to hold it.",
+          "passed": false
+        },
+        {
+          "text": "Responsibilities that must stay human are listed separately, each with the reason it is reserved.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "The document names the accountable human for this domain and the specific responsibilities proposed to transition to the agent.",
+          "Each transitioning responsibility states what evidence would show the agent is ready to hold it.",
+          "Responsibilities that must stay human are listed separately, each with the reason it is reserved."
+        ]
+      }
+    },
+    {
+      "id": "internship.RESEARCH-4-MANAGER-INTERVIEW",
+      "release": "r0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "The interview plan fits 30 minutes, and every question is specific to this domain rather than reusable for any agent.",
+          "passed": false
+        },
+        {
+          "text": "A weekly check-in is proposed with a named day, a duration, and the three things it reviews.",
+          "passed": false
+        },
+        {
+          "text": "The plan states what to do with each answer, so a completed interview changes the build rather than only recording opinions.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "The interview plan fits 30 minutes, and every question is specific to this domain rather than reusable for any agent.",
+          "A weekly check-in is proposed with a named day, a duration, and the three things it reviews.",
+          "The plan states what to do with each answer, so a completed interview changes the build rather than only recording opinions."
+        ]
+      }
+    },
+    {
+      "id": "internship.RESEARCH-5-THREE-PROPOSED-TASKS",
+      "release": "r0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "Exactly three agent tasks are proposed, each with its boundary stated as what the agent must NOT do.",
+          "passed": false
+        },
+        {
+          "text": "Each task names the evidence that proves it completed, and that evidence is something other than the task being marked done.",
+          "passed": false
+        },
+        {
+          "text": "Each task names the human who approves it wherever approval is required.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": [
+          "Exactly three agent tasks are proposed, each with its boundary stated as what the agent must NOT do.",
+          "Each task names the evidence that proves it completed, and that evidence is something other than the task being marked done.",
+          "Each task names the human who approves it wherever approval is required."
+        ]
+      }
+    },
+    {
+      "id": "STORY-000",
+      "release": null,
+      "acceptance_total": 5,
+      "criteria": [
+        {
+          "text": "Given the Command Center, when it is opened, then every tab is reachable and every card drills down one level.",
+          "passed": false
+        },
+        {
+          "text": "Given sample mode, when any tab is shown, then the sample data is visibly labelled as sample.",
+          "passed": false
+        },
+        {
+          "text": "Given the Command Center, when any tab renders, then .colaberry/plan.json and .colaberry/progress.json are both committed in this repo and every tab reads its content from them at runtime rather than from hard-coded values.",
+          "passed": false
+        },
+        {
+          "text": "Given the Command Center, when any tab is shown, then .colaberry/manifest.json is committed in this repo and every tab shows how old that data is and warns when the age exceeds a week.",
+          "passed": false
+        },
+        {
+          "text": "Trust — no tab shows a number, a connection or a result the project has not actually produced.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": null
+    }
+  ]
+}
