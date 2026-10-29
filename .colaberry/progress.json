@@ -4,11 +4,11 @@
   "totals": {
     "stories_total": 42,
     "stories_verified": 2,
-    "stories_submitted": 0,
-    "stories_in_progress": 39,
+    "stories_submitted": 1,
+    "stories_in_progress": 38,
     "stories_not_started": 1,
     "criteria_total": 58,
-    "criteria_passed": 6,
+    "criteria_passed": 9,
     "points_awarded": 38
   },
   "stories": [
@@ -1121,19 +1121,15 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "in_progress",
-        "criteria_passed": 0,
+        "state": "submitted",
+        "criteria_passed": 3,
         "criteria_total": 3,
         "verified_at": null,
         "commit_sha": null,
         "commit_url": null,
         "commit_at": null,
         "points_awarded": null,
-        "outstanding": [
-          "The document names the accountable human for this domain and the specific responsibilities proposed to transition to the agent.",
-          "Each transitioning responsibility states what evidence would show the agent is ready to hold it.",
-          "Responsibilities that must stay human are listed separately, each with the reason it is reserved."
-        ]
+        "outstanding": []
       }
     },
     {
