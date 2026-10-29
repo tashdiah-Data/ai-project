@@ -3,13 +3,13 @@
   "project": "internship",
   "totals": {
     "stories_total": 42,
-    "stories_verified": 3,
+    "stories_verified": 4,
     "stories_submitted": 0,
-    "stories_in_progress": 38,
+    "stories_in_progress": 37,
     "stories_not_started": 1,
     "criteria_total": 58,
-    "criteria_passed": 9,
-    "points_awarded": 57
+    "criteria_passed": 12,
+    "points_awarded": 76
   },
   "stories": [
     {
@@ -1155,19 +1155,15 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "in_progress",
-        "criteria_passed": 0,
+        "state": "verified",
+        "criteria_passed": 3,
         "criteria_total": 3,
-        "verified_at": null,
-        "commit_sha": null,
-        "commit_url": null,
-        "commit_at": null,
-        "points_awarded": null,
-        "outstanding": [
-          "The interview plan fits 30 minutes, and every question is specific to this domain rather than reusable for any agent.",
-          "A weekly check-in is proposed with a named day, a duration, and the three things it reviews.",
-          "The plan states what to do with each answer, so a completed interview changes the build rather than only recording opinions."
-        ]
+        "verified_at": "2026-10-29T20:55:36.197Z",
+        "commit_sha": "5fe2163588f110737fc6ebd821735817ca9411f8",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/5fe2163588f110737fc6ebd821735817ca9411f8",
+        "commit_at": "2026-10-29T20:51:12Z",
+        "points_awarded": 19,
+        "outstanding": []
       }
     },
     {
