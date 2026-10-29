@@ -3,13 +3,13 @@
   "project": "internship",
   "totals": {
     "stories_total": 42,
-    "stories_verified": 4,
+    "stories_verified": 5,
     "stories_submitted": 0,
-    "stories_in_progress": 37,
+    "stories_in_progress": 36,
     "stories_not_started": 1,
     "criteria_total": 58,
-    "criteria_passed": 12,
-    "points_awarded": 76
+    "criteria_passed": 15,
+    "points_awarded": 95
   },
   "stories": [
     {
@@ -1189,19 +1189,15 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "in_progress",
-        "criteria_passed": 0,
+        "state": "verified",
+        "criteria_passed": 3,
         "criteria_total": 3,
-        "verified_at": null,
-        "commit_sha": null,
-        "commit_url": null,
-        "commit_at": null,
-        "points_awarded": null,
-        "outstanding": [
-          "Exactly three agent tasks are proposed, each with its boundary stated as what the agent must NOT do.",
-          "Each task names the evidence that proves it completed, and that evidence is something other than the task being marked done.",
-          "Each task names the human who approves it wherever approval is required."
-        ]
+        "verified_at": "2026-10-29T21:36:58.462Z",
+        "commit_sha": "fc8f78449f29b2262175f253cd1a930630aa6324",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/fc8f78449f29b2262175f253cd1a930630aa6324",
+        "commit_at": "2026-10-29T21:34:52Z",
+        "points_awarded": 19,
+        "outstanding": []
       }
     },
     {
