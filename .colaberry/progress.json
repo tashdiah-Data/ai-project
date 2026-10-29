@@ -3,13 +3,13 @@
   "project": "internship",
   "totals": {
     "stories_total": 42,
-    "stories_verified": 1,
+    "stories_verified": 2,
     "stories_submitted": 0,
-    "stories_in_progress": 40,
+    "stories_in_progress": 39,
     "stories_not_started": 1,
     "criteria_total": 58,
-    "criteria_passed": 3,
-    "points_awarded": 19
+    "criteria_passed": 6,
+    "points_awarded": 38
   },
   "stories": [
     {
@@ -1053,19 +1053,15 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "in_progress",
-        "criteria_passed": 0,
+        "state": "verified",
+        "criteria_passed": 3,
         "criteria_total": 3,
-        "verified_at": null,
-        "commit_sha": null,
-        "commit_url": null,
-        "commit_at": null,
-        "points_awarded": null,
-        "outstanding": [
-          "The document compares all five system classes (chatbot, fixed workflow, tool-using agent, agentic system, multi-agent system) and names which one this domain needs.",
-          "The choice cites this domain's own capability count and its human-reserved count, so the argument would change if those numbers changed.",
-          "The document states explicitly which class this domain does NOT need, and what would have to change to justify the next class up."
-        ]
+        "verified_at": "2026-10-29T18:05:22.494Z",
+        "commit_sha": "13547bccb48a0fc3bdc203d7c4f045283a436d7a",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/13547bccb48a0fc3bdc203d7c4f045283a436d7a",
+        "commit_at": "2026-10-29T17:59:30Z",
+        "points_awarded": 19,
+        "outstanding": []
       }
     },
     {
