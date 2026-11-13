@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Internship Command Center</title>
+<style>
+  /* Colours live here and only here. Change a token, not a component. */
+  :root {
+    --bg: #f7f7f5; --panel: #ffffff; --ink: #1d1d1b; --muted: #5f5f5a; --line: #dcdcd6;
+    --accent: #2f5d8a; --warn-bg: #fff4d6; --warn-ink: #6b4e00;
+    --bad-bg: #fbe4e2; --bad-ink: #8a2a20; --ok-ink: #2d6a3e;
+    --brief-bg: #e6eef7; --brief-ink: #23466b; --hatch: #c9c9c2;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161615; --panel: #1f1f1d; --ink: #ecece8; --muted: #a6a6a0; --line: #3a3a36;
+      --accent: #8fb6dd; --warn-bg: #3b3115; --warn-ink: #f0d58a;
+      --bad-bg: #3d1f1c; --bad-ink: #f2aaa2; --ok-ink: #8fd0a0;
+      --brief-bg: #1d2a38; --brief-ink: #b5d0ec; --hatch: #4a4a45;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161615; --panel: #1f1f1d; --ink: #ecece8; --muted: #a6a6a0; --line: #3a3a36;
+    --accent: #8fb6dd; --warn-bg: #3b3115; --warn-ink: #f0d58a;
+    --bad-bg: #3d1f1c; --bad-ink: #f2aaa2; --ok-ink: #8fd0a0;
+    --brief-bg: #1d2a38; --brief-ink: #b5d0ec; --hatch: #4a4a45;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 1.5rem; margin: 0 0 4px; }
+  h2 { font-size: 1.1rem; margin: 0 0 2px; }
+  h3 { font-size: .98rem; margin: 16px 0 4px; }
+  .q { color: var(--muted); margin: 0 0 6px; font-style: italic; }
+  .sub { color: var(--muted); margin: 0 0 16px; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 8px;
+            padding: 18px; margin: 0 0 18px; }
+  .na { background: var(--bad-bg); color: var(--bad-ink); border-radius: 6px; padding: 10px 12px; margin: 8px 0; }
+  .na strong { display: block; }
+  .warn { background: var(--warn-bg); color: var(--warn-ink); border-radius: 6px; padding: 10px 12px; margin: 8px 0; }
+  .brief { background: var(--brief-bg); color: var(--brief-ink); border-radius: 6px; padding: 10px 12px; margin: 8px 0; }
+  .loading { color: var(--muted); border: 1px dashed var(--line); border-radius: 6px; padding: 10px 12px; }
+  .absent { color: var(--muted); font-style: italic; }
+  .tag { display: inline-block; font-size: .78rem; padding: 1px 7px; border-radius: 10px;
+         border: 1px solid var(--line); white-space: nowrap; }
+  .tag.human { background: var(--warn-bg); color: var(--warn-ink); border-color: transparent; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .9rem; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  code { font-size: .88em; overflow-wrap: anywhere; }
+  td code { overflow-wrap: normal; white-space: nowrap; }
+  td .reason { font-size: .84rem; margin-top: 4px; max-width: 30em; white-space: normal; }
+  td.auth { min-width: 15em; } td.auth .src { margin: 0; }
+  dl { display: grid; grid-template-columns: minmax(0, max-content) minmax(0, 1fr); gap: 4px 14px; margin: 8px 0; }
+  dt { color: var(--muted); } dd { margin: 0; overflow-wrap: anywhere; }
+  ol.ladder { list-style: none; padding: 0; margin: 8px 0; }
+  ol.ladder li { display: grid; grid-template-columns: 7.5em 1fr; gap: 10px; padding: 6px 8px;
+                 border-bottom: 1px solid var(--line); }
+  ol.ladder li.fact { color: var(--bad-ink); }
+  td.cell { text-align: center; min-width: 2.4em; }
+  td.reach { color: var(--muted); background: color-mix(in srgb, var(--line) 35%, transparent); }
+  td.unreach { background: repeating-linear-gradient(45deg, transparent 0 4px, var(--hatch) 4px 6px); }
+  td.fact { background: var(--bad-bg); color: var(--bad-ink); }
+  details { margin: 6px 0; } summary { cursor: pointer; }
+  ul { margin: 6px 0; padding-left: 20px; }
+  .src { color: var(--muted); font-size: .82rem; margin: 10px 0 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Internship &amp; Career Readiness: Command Center</h1>
+  <p class="sub">Every figure on this page is read at runtime from <code>.colaberry/agent-domain.json</code>
+    and <code>.colaberry/manifest.json</code>. Nothing here is sample data, and nothing here is a sign-off.</p>
+
+  <section id="age"><h2>How old this picture is</h2><div class="body"><div class="loading">Loading the files… (not data yet)</div></div></section>
+  <section id="p1"><h2>1. Your employee</h2><p class="q">Does it exist, and what is it allowed to do?</p><div class="body"><div class="loading">Loading…</div></div></section>
+  <section id="p2"><h2>2. Your capability inventory</h2><p class="q">What am I actually building?</p><div class="body"><div class="loading">Loading…</div></div></section>
+  <section id="p3"><h2>3. The autonomy ladder</h2><p class="q">Where is this going?</p><div class="body"><div class="loading">Loading…</div></div></section>
+  <section id="p4"><h2>4. Per-rung behaviour</h2><p class="q">What does the next rung require of me?</p><div class="body"><div class="loading">Loading…</div></div></section>
+  <section id="p5"><h2>5. Your governance queue</h2><p class="q">What am I waiting on a human for?</p><div class="body"><div class="loading">Loading…</div></div></section>
+  <section id="p6"><h2>6. What is not available</h2><p class="q">What would I be lying about?</p><div class="body"><div class="loading">Loading…</div></div></section>
+  <section id="pv"><h2>Story verification: progress, not authority</h2><p class="q">What the verifier found. None of this raises any autonomy level.</p><div class="body"><div class="loading">Loading…</div></div></section>
+</main>
+
+<script>
+'use strict';
+
+const AGENT_FILE = '.colaberry/agent-domain.json';
+const MANIFEST_FILE = '.colaberry/manifest.json';
+const STALE_AFTER_DAYS = 7;
+
+// The owner's wording for the capability ladder: AUTONOMY_MEANINGS, autonomyLadder.ts:58-69.
+// This is the ladder's definition, not data about this domain.
+const AUTONOMY_LEVELS = ['R0','R1','R2','R3','R4','R5','R6','R7','R8','R9'];
+const AUTONOMY_STAGES = AUTONOMY_LEVELS.map((l) => 'autonomy:' + l);
+const AUTONOMY_MEANINGS = {
+  R0: 'Define the workflow, requirements, risks and human decisions.',
+  R1: 'Prepare isolated development, fixtures and baseline tests.',
+  R2: 'Answer questions using approved knowledge and records.',
+  R3: 'Perform approved, user-initiated sandbox tool operations.',
+  R4: 'Execute and verify stateful, multi-step sandbox tasks.',
+  R5: 'Evaluate in shadow mode against approved reference outcomes.',
+  R6: 'Conduct a separately approved, supervised production pilot.',
+  R7: 'Automate only explicitly authorized action classes within limits.',
+  R8: 'Coordinate necessary, authorized handoffs with other agents.',
+  R9: 'Demonstrate reliable operation, monitoring, recovery and ownership.',
+};
+const stageIndex = (s) => AUTONOMY_STAGES.indexOf(s);
+
+// Coordinated handoff between agents does not exist on the platform (story brief).
+const UNREACHABLE_BY_FACT = 'autonomy:R8';
+
+// From the story brief (docs/stories/internship.STORY-000.md:16-17), shown labelled as such.
+const BRIEF = { accountable_human: 'Dhee', employee: 'does not exist yet' };
+
+// From the story prompt (docs/stories/internship.STORY-000.md:177-192), not from the snapshot file.
+const TOOLS_PROMPT_SAYS_NEEDED = [
+  'sandbox_database_read', 'sandbox_database_write', 'internship_admin_api_read', 'audit_event_write',
+  'structured_output_validation', 'voice_call_trigger_sandbox', 'transcript_extraction',
+  'llm_text_generation', 'prompt_injection_fencing', 'reason_code_catalog_read',
+  'document_template_render', 'sandbox_file_write',
+];
+
+// Capability fields the prompt asks for that the snapshot file does not carry.
+const NOT_IN_SNAPSHOT = ['name', 'classification', 'implementation_state', 'requirement_validation_state',
+  'starting_autonomy', 'human_decision', 'release_behaviour[]'];
+
+const HUMAN_DECISION_REASON = 'human_decision_required_at_every_level';
+
+// ---- DOM helpers. File text always goes in through textContent, never innerHTML. ----
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (k === 'class') el.className = v; else el.setAttribute(k, v);
+  }
+  for (const k of kids.flat(Infinity)) {
+    if (k == null || k === false) continue;
+    el.append(k instanceof Node ? k : String(k));
+  }
+  return el;
+}
+const code = (t) => h('code', {}, t);
+const absent = (t) => h('span', { class: 'absent' }, t || 'not in the snapshot file');
+const val = (v) => v === undefined ? absent() : v === null ? absent('null (not recorded)') : String(v);
+const src = (...parts) => h('p', { class: 'src' }, 'Read from ', parts.map((p, i) => [i ? ', ' : '', code(p)]));
+const notAvailable = (what, why) => h('div', { class: 'na' }, h('strong', {}, 'Not available: ' + what), why);
+const fill = (id, ...kids) => document.querySelector('#' + id + ' .body').replaceChildren(...kids.flat(Infinity).filter(Boolean));
+const dl = (pairs) => h('dl', {}, pairs.map(([k, v]) => [h('dt', {}, k), h('dd', {}, v)]));
+const endpoint = (d, key) => (d.sources && d.sources[key]) ? 'endpoint ' + d.sources[key] + ' (via sources.' + key + ')' : 'sources.' + key + ' is not in the file';
+
+async function readJson(path) {
+  try {
+    const res = await fetch(path, { cache: 'no-store' });
+    if (!res.ok) return { ok: false, why: path + ' returned HTTP ' + res.status + '.' };
+    return { ok: true, data: await res.json() };
+  } catch (e) {
+    const why = location.protocol === 'file:'
+      ? 'The page was opened by double-click (file://), and browsers do not let such a page read other files. Serve the folder locally and open it through http://localhost instead.'
+      : path + ' could not be read (' + e.message + ').';
+    return { ok: false, why };
+  }
+}
+
+// ---- Data age ----
+function renderAge(m) {
+  if (!m.ok) { fill('age', notAvailable('data age', MANIFEST_FILE + ': ' + m.why)); return; }
+  const raw = m.data.generated_at;
+  const t = Date.parse(raw);
+  if (!raw || Number.isNaN(t)) { fill('age', notAvailable('data age', 'generated_at is missing or unreadable in ' + MANIFEST_FILE + '.'), src(MANIFEST_FILE + ' → generated_at')); return; }
+  const days = (Date.now() - t) / 86400000;
+  const rel = days < 1 / 24 ? 'less than an hour ago' : days < 1 ? Math.round(days * 24) + ' hours ago' : Math.floor(days) + ' days ago';
+  const abs = new Date(t).toLocaleString(undefined, { dateStyle: 'long', timeStyle: 'short' });
+  fill('age',
+    h('p', {}, h('strong', {}, 'Data last changed ' + abs + ' (' + rel + ').')),
+    days > STALE_AFTER_DAYS ? h('div', { class: 'warn' }, 'This is more than ' + STALE_AFTER_DAYS + ' days old. Sync from the portal to refresh.') : null,
+    h('p', { class: 'src' }, 'This is when the data last changed, not when it was last checked. ' + AGENT_FILE + ' carries no timestamp on purpose.'),
+    src(MANIFEST_FILE + ' → generated_at'));
+}
+
+// ---- 1. Employee ----
+function renderEmployee(d) {
+  const a = d.agent;
+  const setByGap = (d.not_recorded || []).find((n) => n.field === 'agent.autonomy_level_set_by');
+  const brief = h('div', { class: 'brief' }, h('strong', {}, 'Per the story brief'),
+    dl([['Accountable human', BRIEF.accountable_human], ['Employee', BRIEF.employee]]),
+    h('span', { class: 'src' }, 'docs/stories/internship.STORY-000.md:16-17'));
+  if (!a) { fill('p1', h('div', { class: 'na' }, h('strong', {}, 'The snapshot file has no agent record.'), 'This is a finished answer, not a loading state.'), brief, src(AGENT_FILE + ' → agent'), h('p', { class: 'src' }, endpoint(d, 'agent'))); return; }
+  const tools = Array.isArray(a.tools_granted) ? a.tools_granted : [];
+  const agentScale = d.autonomy_models && d.autonomy_models.agent_level;
+  fill('p1',
+    h('h3', {}, 'What the file says about the agent record'),
+    a.exists === false ? h('div', { class: 'na' }, h('strong', {}, 'No agent record exists.'), 'agent.exists is false.') : null,
+    dl([
+      ['agent.exists', val(a.exists)],
+      ['agent.agent_id', val(a.agent_id)],
+      ['agent_name', a.agent_name !== undefined ? val(a.agent_name) : absent('agent_name is not in the snapshot file')],
+      ['agent.display_name', a.display_name === null ? absent('null: no name recorded') : val(a.display_name)],
+      ['agent.enabled', val(a.enabled)],
+      ['agent.autonomy_level', h('span', {}, val(a.autonomy_level), h('div', { class: 'src' },
+        'Agent scale: ' + (agentScale || 'not described in the file') + '. This is not a rung on the capability ladder in panel 3.'))],
+      ['agent.autonomy_level_set_at', val(a.autonomy_level_set_at)],
+      ['agent.autonomy_level_source', val(a.autonomy_level_source)],
+      ['autonomy_level_set_by', h('span', {}, absent('Not recorded.'), setByGap ? h('div', { class: 'src' }, setByGap.reason) : null)],
+      ['agent.tools_granted_count', val(a.tools_granted_count)],
+      ['agent.tools_granted', tools.length ? tools.join(', ') : 'none (empty list)'],
+    ]),
+    brief,
+    src(AGENT_FILE + ' → agent', AGENT_FILE + ' → not_recorded', AGENT_FILE + ' → autonomy_models.agent_level'),
+    h('p', { class: 'src' }, endpoint(d, 'agent')));
+}
+
+// ---- 2. Inventory ----
+function humanDecisionDerived(row) {
+  return Array.isArray(row.reasons) && row.reasons.includes(HUMAN_DECISION_REASON);
+}
+function renderInventory(d) {
+  const rows = d.authority;
+  if (!Array.isArray(rows)) { fill('p2', notAvailable('capabilities', 'authority is not a list in ' + AGENT_FILE + '.'), src(AGENT_FILE + ' → authority')); return; }
+  const derivedHuman = rows.filter(humanDecisionDerived).length;
+  fill('p2',
+    h('p', {}, h('strong', {}, rows.length + ' capabilities'), ' in authority[], in the order the file lists them.'),
+    h('div', { class: 'warn' }, 'The snapshot file does not carry capability names, classification, implementation state, requirement validation state, starting autonomy, human-decision flags or release_behaviour. Each capability is shown by its capability_id only. Without requirement_validation_state, this page cannot show anything as validated.'),
+    h('div', { class: 'scroll' }, h('table', {},
+      h('thead', {}, h('tr', {}, ['capability_id', 'name · classification · implementation_state · requirement_validation_state · starting_autonomy', 'max_permitted_autonomy', 'Human decision (derived)'].map((t) => h('th', {}, t)))),
+      h('tbody', {}, rows.map((r) => h('tr', {},
+        h('td', { class: 'id' }, code(r.capability_id)),
+        h('td', {}, absent('all five: not in the snapshot file')),
+        h('td', {}, val(r.max_permitted_autonomy)),
+        h('td', {}, humanDecisionDerived(r) ? h('span', { class: 'tag human', title: 'Derived from the reason code ' + HUMAN_DECISION_REASON }, 'HUMAN DECIDES (derived)') : absent('no flag in file'))))))),
+    h('p', { class: 'src' }, '"Human decision (derived)": marked where authority[].reasons contains ' + HUMAN_DECISION_REASON + ' (' + derivedHuman + ' of ' + rows.length + '). The file has no human_decision field; this column is derived from a reason code.'),
+    src(AGENT_FILE + ' → authority[].capability_id', AGENT_FILE + ' → authority[].max_permitted_autonomy', AGENT_FILE + ' → authority[].reasons'),
+    h('p', { class: 'src' }, endpoint(d, 'capabilities') + '. The coverage endpoint has no section in the snapshot file.'));
+}
+
+// ---- 3. Ladder ----
+function renderLadder(d) {
+  const rows = Array.isArray(d.authority) ? d.authority : [];
+  const rule = d.authority_rule;
+  const constrained = rows.filter((r) => Array.isArray(r.reasons) && r.reasons.includes('no_tool_grants')).length;
+  const warning = d.autonomy_models && d.autonomy_models.warning;
+
+  const ruleBlock = rule ? [
+    h('h3', {}, 'The no_tool_grants rule'),
+    h('p', {}, rule.rule || absent('authority_rule.rule not in file')),
+    rule.binds_nothing === true
+      ? h('div', { class: 'warn' }, h('strong', {}, 'This rule binds nothing right now. '),
+          'No capability in this domain has been approved above autonomy:R2 yet (authority_rule.approved_above_r2 = ' + val(rule.approved_above_r2) + '). ',
+          rule.note || '')
+      : h('p', {}, 'approved_above_r2 = ' + val(rule.approved_above_r2) + '; binds_nothing = ' + val(rule.binds_nothing) + '.'),
+    h('p', {}, h('strong', {}, 'Capabilities it currently constrains: ' + constrained + '. '),
+      constrained === 0 ? 'None: no capability in authority[] carries the reason no_tool_grants.' : 'These carry the reason no_tool_grants in authority[].'),
+    src(AGENT_FILE + ' → authority_rule', AGENT_FILE + ' → authority[].reasons'),
+  ] : [notAvailable('the no_tool_grants rule', 'authority_rule is not in ' + AGENT_FILE + '.')];
+
+  fill('p3',
+    h('p', { class: 'src' }, 'This ladder is a property of each capability. The employee\'s autonomy_level (panel 1) is on a different scale and is deliberately not marked here.' + (warning ? ' File: "' + warning + '"' : '')),
+    h('ol', { class: 'ladder' }, AUTONOMY_LEVELS.map((l) => {
+      const stage = 'autonomy:' + l;
+      return h('li', { class: stage === UNREACHABLE_BY_FACT ? 'fact' : '' }, code(stage), h('span', {}, AUTONOMY_MEANINGS[l],
+        stage === UNREACHABLE_BY_FACT ? h('div', {}, 'Unreachable by fact: coordinated handoff between two agents does not exist on this platform today. This is not "incomplete".') : null));
+    })),
+    h('p', { class: 'src' }, 'Rung wording: AUTONOMY_MEANINGS, autonomyLadder.ts:58-69 (the owner\'s words).'),
+    ruleBlock,
+    h('h3', {}, 'Each capability against the ladder'),
+    h('p', { class: 'src' }, 'E = effective_autonomy · A = approved_autonomy · faint dot = within ceiling, not reached · hatched = above the ceiling, unreachable for that capability (not future work) · red = unreachable by fact.'),
+    rows.length === 0 ? notAvailable('capability authority', 'authority[] is empty or missing.') :
+    h('div', { class: 'scroll' }, h('table', {},
+      h('thead', {}, h('tr', {}, h('th', {}, 'capability_id'), h('th', {}, 'Authority'),
+        AUTONOMY_LEVELS.map((l) => h('th', {}, l)))),
+      h('tbody', {}, rows.map((r) => {
+        const ceil = stageIndex(r.max_permitted_autonomy);
+        const eff = stageIndex(r.effective_autonomy), app = stageIndex(r.approved_autonomy);
+        return h('tr', {},
+          h('td', { class: 'id' }, code(r.capability_id),
+            h('div', { class: 'reason' }, h('span', { class: 'src' }, 'ceiling_reason: '), val(r.ceiling_reason))),
+          h('td', { class: 'auth' },
+            h('div', {}, h('span', { class: 'src' }, 'effective_autonomy '), h('strong', {}, val(r.effective_autonomy))),
+            Array.isArray(r.reasons) && r.reasons.length ? h('div', { class: 'src' }, 'reasons: ' + r.reasons.join(', ')) : null,
+            h('div', {}, h('span', { class: 'src' }, 'approved_autonomy '), val(r.approved_autonomy)),
+            r.approved_autonomy_note ? h('div', { class: 'src' }, r.approved_autonomy_note) : null,
+            h('div', {}, h('span', { class: 'src' }, 'max_permitted_autonomy '), val(r.max_permitted_autonomy)),
+            r.max_permitted_autonomy_note ? h('div', { class: 'src' }, r.max_permitted_autonomy_note) : null),
+          AUTONOMY_STAGES.map((s, i) => {
+            const mark = [i === eff ? 'E' : '', i === app ? 'A' : ''].join('') || (ceil >= 0 && i <= ceil ? '·' : '');
+            if (s === UNREACHABLE_BY_FACT) return h('td', { class: 'cell fact', title: 'Unreachable by fact' }, '✕');
+            if (ceil < 0) return h('td', { class: 'cell', title: 'ceiling not readable' }, mark || '?');
+            return i <= ceil ? h('td', { class: 'cell reach', title: 'Within ceiling, not reached' }, mark) : h('td', { class: 'cell unreach', title: 'Above this capability\'s ceiling' }, '');
+          }));
+      })))),
+    src(AGENT_FILE + ' → authority[].effective_autonomy', 'approved_autonomy', 'max_permitted_autonomy', 'ceiling_reason', 'reasons'),
+    h('p', { class: 'src' }, 'effective_autonomy is the value the platform recorded from effectiveAuthority(). The page shows it as given and does not recompute it.'),
+    h('p', { class: 'src' }, endpoint(d, 'capabilities')));
+}
+
+// ---- 4. Per-rung behaviour ----
+function renderBehaviour(d) {
+  const rows = Array.isArray(d.authority) ? d.authority : [];
+  const withRb = rows.filter((r) => Array.isArray(r.release_behaviour));
+  if (withRb.length === 0) {
+    fill('p4', notAvailable('release_behaviour[]', 'The snapshot file does not carry release_behaviour for any of the ' + rows.length + ' capabilities in authority[]. The per-rung behaviours and their acceptance criteria cannot be shown until the file includes them.'),
+      src(AGENT_FILE + ' → authority[] (no release_behaviour field)'),
+      h('p', { class: 'src' }, endpoint(d, 'capabilities')));
+    return;
+  }
+  // Only reached if a future sync adds the field.
+  fill('p4', withRb.map((r) => h('details', {}, h('summary', {}, r.capability_id + (r.release_behaviour.length ? '' : ': no defined next rung')),
+    r.release_behaviour.map((e) => h('div', {}, h('strong', {}, val(e.rung || e.level || e.stage)), h('p', {}, val(e.behaviour)),
+      Array.isArray(e.acceptance_criteria) ? h('ul', {}, e.acceptance_criteria.map((c) => h('li', {}, typeof c === 'string' ? c : JSON.stringify(c)))) : null)))),
+    src(AGENT_FILE + ' → authority[].release_behaviour'),
+    h('p', { class: 'src' }, endpoint(d, 'capabilities')));
+}
+
+// ---- 5. Governance ----
+function renderGovernance(d) {
+  const g = d.governance;
+  if (!g) { fill('p5', notAvailable('governance', 'governance is not in ' + AGENT_FILE + '.'), h('p', { class: 'src' }, endpoint(d, 'governance'))); return; }
+  const reqs = Array.isArray(g.requests) ? g.requests : [];
+  const isTool = (x) => /tool/i.test(String(x.type || x.kind || x.request_type || ''));
+  const table = (title, list) => [h('h3', {}, title), list.length === 0
+    ? h('p', {}, 'None filed.')
+    : h('div', { class: 'scroll' }, h('table', {},
+        h('thead', {}, h('tr', {}, ['What', 'status', 'proposed by', 'decided by', 'decided at'].map((t) => h('th', {}, t)))),
+        h('tbody', {}, list.map((x) => h('tr', {},
+          h('td', {}, val(x.title || x.summary || x.tool_name || x.tool || x.id)),
+          h('td', {}, val(x.status)),
+          h('td', {}, val(x.proposed_by || x.requested_by)),
+          h('td', {}, x.decided_by ? String(x.decided_by) : absent('nobody has decided')),
+          h('td', {}, x.decided_at ? String(x.decided_at) : absent('nobody has decided')))))))];
+  fill('p5',
+    h('div', { class: 'warn' }, h('strong', {}, 'From the file: '), val(g.disclosure)),
+    reqs.length === 0
+      ? h('p', {}, h('strong', {}, 'No change requests or tool requests have been filed.'), ' Nothing is waiting on a human, and nothing has been granted.')
+      : [table('Change requests', reqs.filter((x) => !isTool(x))), table('Tool requests', reqs.filter(isTool))],
+    h('p', {}, 'governance.pending = ' + val(g.pending)),
+    src(AGENT_FILE + ' → governance.requests', 'governance.pending', 'governance.disclosure'),
+    h('p', { class: 'src' }, endpoint(d, 'governance')));
+}
+
+// ---- 6. Gaps ----
+function renderGaps(d) {
+  const rows = Array.isArray(d.authority) ? d.authority : [];
+  const notRecorded = Array.isArray(d.not_recorded) ? d.not_recorded : [];
+  fill('p6',
+    h('h3', {}, 'Unreachable by fact'),
+    h('p', {}, h('strong', {}, 'autonomy:R8. '), 'Coordinated handoff between two agents does not exist on this platform today, so this rung cannot be reached by any capability. It is not merely incomplete.'),
+    h('h3', {}, 'Not in the snapshot file'),
+    h('p', {}, 'For all ' + rows.length + ' capabilities in authority[], these fields are absent, so this page shows none of them:'),
+    h('ul', {}, NOT_IN_SNAPSHOT.map((f) => h('li', {}, code(f)))),
+    h('p', {}, 'Because requirement_validation_state is absent, this page cannot list which capabilities are draft. Nothing on it should be read as agreed or signed off. Because release_behaviour[] is absent, it cannot list which capabilities have no defined next rung.'),
+    h('h3', {}, 'Recorded as not recorded'),
+    notRecorded.length ? h('ul', {}, notRecorded.map((n) => h('li', {}, code(n.field), ': ', n.reason))) : h('p', {}, 'not_recorded[] is empty.'),
+    h('h3', {}, 'Not read by this page'),
+    h('ul', {},
+      h('li', {}, code('promotionCriteria.ts'), ' (NON_PROMOTING_SIGNALS) is not in this repository and was not read. Per the story prompt, a story marked complete, elapsed time, a conversation that went well and a mocked test passing never raise autonomy.'),
+      h('li', {}, 'The coverage endpoint has no section in the snapshot file.')),
+    h('h3', {}, 'Tools the capabilities say they will need'),
+    h('p', {}, 'Per the story prompt, not from the snapshot file. None is granted (agent.tools_granted_count = ' + val(d.agent && d.agent.tools_granted_count) + '). Each one is a request you file and a human approves.'),
+    h('ul', {}, TOOLS_PROMPT_SAYS_NEEDED.map((t) => h('li', {}, code(t)))),
+    src(AGENT_FILE + ' → not_recorded', AGENT_FILE + ' → authority[]', AGENT_FILE + ' → agent.tools_granted_count'),
+    h('p', { class: 'src' }, endpoint(d, 'capabilities')),
+    h('p', { class: 'src' }, endpoint(d, 'agent')));
+}
+
+// ---- Verification (progress, not authority) ----
+function renderVerification(d) {
+  const v = d.verification;
+  if (!v) { fill('pv', notAvailable('verification', 'verification is not in ' + AGENT_FILE + '.')); return; }
+  const s = v.summary || {};
+  const stories = Array.isArray(v.stories) ? v.stories : [];
+  fill('pv',
+    h('p', {}, val(v.disclosure)),
+    dl(Object.keys(s).map((k) => ['summary.' + k, val(s[k])])),
+    h('details', {}, h('summary', {}, 'All ' + stories.length + ' stories in verification.stories'),
+      h('div', { class: 'scroll' }, h('table', {},
+        h('thead', {}, h('tr', {}, ['story_id', 'status', 'verification_state', 'criteria', 'commit_sha'].map((t) => h('th', {}, t)))),
+        h('tbody', {}, stories.map((x) => h('tr', {},
+          h('td', {}, code(x.story_id)), h('td', {}, val(x.status)), h('td', {}, val(x.verification_state)),
+          h('td', {}, val(x.criteria_passed), ' of ', val(x.criteria_total)),
+          h('td', {}, x.commit_sha ? code(String(x.commit_sha).slice(0, 10)) : absent('none')))))))),
+    h('p', { class: 'src' }, 'A verified story is progress. It does not promote the agent or any capability.'),
+    src(AGENT_FILE + ' → verification'));
+}
+
+async function main() {
+  const [agentFile, manifest] = await Promise.all([readJson(AGENT_FILE), readJson(MANIFEST_FILE)]);
+  renderAge(manifest);
+  if (!agentFile.ok) {
+    for (const id of ['p1', 'p2', 'p3', 'p4', 'p5', 'p6', 'pv']) fill(id, notAvailable(AGENT_FILE, agentFile.why));
+    return;
+  }
+  const d = agentFile.data;
+  renderEmployee(d);
+  renderInventory(d);
+  renderLadder(d);
+  renderBehaviour(d);
+  renderGovernance(d);
+  renderGaps(d);
+  renderVerification(d);
+}
+main();
+</script>
+</body>
+</html>
