@@ -1,0 +1,1895 @@
+{
+  "schema": "colaberry.agent-domain/v1",
+  "domain_key": "internship",
+  "sources": {
+    "agent": "GET /api/admin/agent-domains-mine",
+    "capabilities": "GET /api/admin/agent-domains/internship",
+    "governance": "GET /api/admin/agent-domain-change-requests-mine"
+  },
+  "autonomy_models": {
+    "agent_level": "observe | suggest | act_audited | communicate -- a property of the employee",
+    "capability_ladder": "autonomy:R0 .. autonomy:R9 -- a property of each capability",
+    "warning": "These are different scales on different objects. Never render one as a position on the other, and never compare them."
+  },
+  "staleness_note": "This file deliberately carries no timestamp: a clock here would make every sync commit a file whose only change is the time. Read `generated_at` from `.colaberry/manifest.json` and label it \"last changed\", not \"last checked\".",
+  "agent": {
+    "exists": true,
+    "agent_id": "d95278fc-ec0c-4458-9681-5915bb8ea46b",
+    "display_name": null,
+    "enabled": false,
+    "autonomy_level": "observe",
+    "autonomy_level_set_at": "2026-10-18T16:08:12.413Z",
+    "autonomy_level_source": "auto",
+    "autonomy_level_set_by": null,
+    "tools_granted": [],
+    "tools_granted_count": 0
+  },
+  "authority": [
+    {
+      "capability_id": "internship.activation_and_entitlement_grant",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Activation grants paid curriculum entitlement to a named person and is the most expensive act in this domain. The agent is capped at answering questions about blockers from approved knowledge; even shadow mode is not proposed, because a shadow activation list invites a one-click bulk apply."
+    },
+    {
+      "capability_id": "internship.active_project_drift_detection",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The module is pure and report-only by deliberate design. A supervised production pilot of the report is reachable; raising the agent to an action level would mean writing the pointer, which the module's own header forbids."
+    },
+    {
+      "capability_id": "internship.admission_decision_recording",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Internship acceptance is always a human decision. The agent may reach shadow mode, producing a would-be posture compared against the human outcome, and no further: R6 and above would imply a pilot in which the agent acts, and there is no action here it is permitted to take."
+    },
+    {
+      "capability_id": "internship.ai_voice_interview_and_transcript_capture",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Placing a real call to a real applicant is an external side effect on a person holding two separate consents. Sandbox exercise is legitimate; production dialling is not proposed at any level in this task."
+    },
+    {
+      "capability_id": "internship.applicant_pii_access_audit",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Nothing exists. The write audit on state transitions is real, but no READ audit over the document or transcript routes was found, so there is no evidence to promote on and definition work is the only justifiable level."
+    },
+    {
+      "capability_id": "internship.applicant_readiness_assessment",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The assessment is advisory by construction and the state machine refuses its output as a transition input. Shadow comparison against decisions Dhee actually made is the highest useful level; anything above it would imply the assessment acts, which the design forbids."
+    },
+    {
+      "capability_id": "internship.application_intake_and_state_transitions",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The writer is the gate for every admission outcome. An agent may exercise it against sandbox fixtures, but production writes to internship_applications.state would let an agent move a real applicant, so no level above R4 is proposed."
+    },
+    {
+      "capability_id": "internship.build_progress_and_pace_monitoring",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Monitoring reads and reports and writes nothing to a person's record, so a separately approved supervised production pilot is reachable. It stays below action automation because the actions that follow a bad pace reading, nudging and exiting, are separate capabilities with their own ceilings."
+    },
+    {
+      "capability_id": "internship.career_support_handoff",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Nothing is built and the join between the two systems does not exist. A handoff transfers accountability for a person, which is a human act, so the agent is capped at describing the gap until Dhee defines the contract."
+    },
+    {
+      "capability_id": "internship.certification_readiness_tracking",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Read-only over an existing subsystem the internship domain is instructed not to change, so a separately approved supervised production pilot of the report is the reasonable ceiling."
+    },
+    {
+      "capability_id": "internship.class_internship_movement",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The move touches entitlement and the enrollment identity that roughly twenty route files read. A wrong move shows a student a complete, coherent, wrong portal with nothing logged, which is why the agent is capped at explaining the model rather than operating it."
+    },
+    {
+      "capability_id": "internship.cohort_kpi_reporting",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Reporting reads and aggregates and writes nothing to a person's record, so a separately approved supervised production pilot is reachable. The weekly report names individuals and is sent to staff, so the sending half would need its own authorized action class before any higher level."
+    },
+    {
+      "capability_id": "internship.comp_expiry_advance_warning",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Nothing is built, so no evidence exists for any level. A manager-facing warning is low blast radius, but the comp data model location is unknown and the lead time is unset, so shadow mode is the honest ceiling until both are resolved."
+    },
+    {
+      "capability_id": "internship.da_cohort_analysis_automation",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The owner named DA work transitioning to AI as a source of proposed responsibilities, but no specific internship DA deliverable was identified, so there is nothing to validate and nothing to measure. R0 definition work with at most R2 question-answering is the honest ceiling."
+    },
+    {
+      "capability_id": "internship.deterministic_requirement_checks",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The computation is pure, deterministic and read-only, so a separately approved supervised production pilot is reachable on evidence. It never writes and never decides, which is what keeps it below the action-automation levels."
+    },
+    {
+      "capability_id": "internship.employment_readiness_gap_flag",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "It writes a task, not a change to a person, and already runs deterministically on a cron. A separately approved supervised production pilot under the new employee is reachable, but the shared runDomainFlag shape means the blast radius of a change reaches four sibling directors, so no higher level is proposed."
+    },
+    {
+      "capability_id": "internship.existing_intern_conversion_planning",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The dry run is a zero-write sandbox-safe operation, which is exactly R4 work. Commit changes the lifecycle state of real people in bulk, which is the highest-blast-radius write in the domain and stays with a human."
+    },
+    {
+      "capability_id": "internship.generated_build_project_authoring",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Generation is stateful multi-step sandbox work the pipeline already supports, so R4 fits the drafting half. Publication puts a plan in front of a named intern and is reserved to the reviewer, so no level above R4 is proposed."
+    },
+    {
+      "capability_id": "internship.inactivity_escalation_and_exit_recommendation",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Removing a person from the programme is irreversible in practice and the repo already carries two documented false positives on named interns. The agent may reach shadow mode on the escalation list; the exit act stays with a human permanently."
+    },
+    {
+      "capability_id": "internship.intern_project_portfolio_assembly",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Assembly is a pure projection with no writes, so a separately approved supervised production pilot is reachable. It stays below action automation because everything that makes the portfolio public is the separate publication capability."
+    },
+    {
+      "capability_id": "internship.intern_project_to_catalog_matching",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Nothing exists. The owner's candidate named project matching recommendations, and what the application actually has is project GENERATION plus a readiness gate, which is a different capability. Until Dhee says a catalog should exist, R0 definition work and at most R2 question-answering is all that can be justified."
+    },
+    {
+      "capability_id": "internship.interview_preparation_support",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R7",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Like the reminder capability, the sending half is an approved-template action class with a one-beat-per-day idempotency key, so R7 is reachable for that class alone once separately approved. R8 and R9 are not proposed, because handing a candidate onward is a human act that ends at recruiters."
+    },
+    {
+      "capability_id": "internship.manager_check_in_brief_and_follow_up",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Preparing a brief is safe and already deterministic. Posting the note speaks in a named human's voice through a token that acts as Ali, so shadow mode is the ceiling until an agent-attributed write path exists."
+    },
+    {
+      "capability_id": "internship.manager_surface_access_verification",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R2",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "This is the governance prerequisite for every other capability here. Granting or changing a role is an authorization change, which no agent may make at any level, so the ceiling is explaining the chain and its gap."
+    },
+    {
+      "capability_id": "internship.offer_document_package_generation",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Rendering a package in sandbox is safe and testable. Generating a real document attaches a legal-looking artifact to a named person, so production generation is not proposed here."
+    },
+    {
+      "capability_id": "internship.onboarding_checklist_tracking",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The checklist is a pure read-and-resolve over evidence another capability writes. It changes nothing, so a separately approved supervised production pilot of the reporting view is reachable on measured evidence."
+    },
+    {
+      "capability_id": "internship.payment_gate_monitoring",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Reading and reporting the unpaid set is safe. Expiring an application withdraws a real person's place, so the ceiling is shadow mode and the expiry act stays with the reviewer or the existing system edge."
+    },
+    {
+      "capability_id": "internship.portfolio_publication_readiness",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Publication makes a named person's work public under their own slug. The agent may reach shadow mode on the readiness score and the queue ordering; approval and visibility stay with a career reviewer permanently."
+    },
+    {
+      "capability_id": "internship.project_assignment_readiness_gating",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R6",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Pure read-and-derive with no writes and no external side effects, so a separately approved supervised production pilot of the readiness report is reachable on measured evidence."
+    },
+    {
+      "capability_id": "internship.review_queue_triage_and_profile_signals",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The queue is the widest applicant-PII read surface in the domain and mgmtRoles.ts calls it a materially wider grant than editing curriculum. Production agent access is not proposed and the ceiling stays at sandbox stateful work."
+    },
+    {
+      "capability_id": "internship.routine_document_reminder_sending",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R7",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "This is the owner's worked example: an internship agent may eventually send approved routine document reminders while internship acceptance remains a human decision. R7 automates only that explicitly authorized action class, bounded to the fixed template allowlist and the day-scoped idempotency key. R8 and R9 are not proposed, because a handoff or an ownership claim would widen the action class beyond reminders."
+    },
+    {
+      "capability_id": "internship.signed_document_verification",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [
+        "human_decision_required_at_every_level"
+      ],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R5",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Verification is the gate between a submitted file and a granted entitlement, and the state machine admits no automated actor. Shadow completeness checks are the highest useful level; the verification act is reserved to a human permanently."
+    },
+    {
+      "capability_id": "internship.skill_gap_identification_for_interns",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The underlying genome exists and can be read in sandbox, so R4 analysis work is justifiable. Production use is not, because the target profile the gap is measured against does not exist and a gap reported without it would be a number about a person with no referent."
+    },
+    {
+      "capability_id": "internship.standup_attendance_tracking",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "The data is known-unreliable and the product has already decided not to render it. Until a denominator exists, nothing above sandbox analysis can be justified, because a production attendance report would be a number nobody can defend."
+    },
+    {
+      "capability_id": "internship.two_channel_structured_interview",
+      "effective_autonomy": "autonomy:R0",
+      "reasons": [],
+      "approved_autonomy": "autonomy:R0",
+      "approved_autonomy_note": null,
+      "max_permitted_autonomy": "autonomy:R4",
+      "max_permitted_autonomy_note": null,
+      "ceiling_reason": "Authoring and validating question sets is sandbox-safe work. Writing an applicant's own answers in production is the applicant's act, not the agent's, so R4 is the ceiling."
+    }
+  ],
+  "authority_rule": {
+    "rule": "A capability approved above autonomy:R2 with no granted tools is forced back down to autonomy:R2, with the reason no_tool_grants. Tool grants are the throttle.",
+    "approved_above_r2": 0,
+    "binds_nothing": true,
+    "note": "When this binds nothing, say so in words. It means no capability in this domain has been approved above autonomy:R2 yet, not that the rule is absent or that the panel failed."
+  },
+  "governance": {
+    "disclosure": "A filed request grants nothing. Status is what a named human decided, and a pending row means nobody has decided yet.",
+    "requests": [],
+    "pending": 0
+  },
+  "verification": {
+    "known": true,
+    "disclosure": "A criterion counts as passing when it is marked in `.colaberry/progress.json` in this repository. The verifier reads that file on every sync and records what it found. A story showing 0 of N is not a rejection: nothing has been claimed yet.",
+    "summary": {
+      "stories": 107,
+      "checked": 41,
+      "verified": 5,
+      "awaiting_criteria": 36,
+      "outstanding_criteria": 38
+    },
+    "stories": [
+      {
+        "story_id": "internship.CAP.activation_and_entitlement_grant",
+        "title": "Internship activation and curriculum entitlement grant",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.activation_and_entitlement_grant and changes a file. Commit your work with a `Story: internship.CAP.activation_and_entitlement_grant` trailer (or internship.CAP.activation_and_entitlement_grant in the subject line) and push."
+        ],
+        "outstanding": [
+          "Blocker list matches activationBlockers() exactly; the output never contains an activation instruction or a ready-to-activate verdict"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.activation_and_entitlement_grant.autonomy:R2",
+        "title": "Internship activation and curriculum entitlement grant · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.active_project_drift_detection",
+        "title": "Active project drift detection",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.active_project_drift_detection and changes a file. Commit your work with a `Story: internship.CAP.active_project_drift_detection` trailer (or internship.CAP.active_project_drift_detection in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches DriftCode and the module header; never proposes a correction"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.active_project_drift_detection.autonomy:R2",
+        "title": "Active project drift detection · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.active_project_drift_detection.autonomy:R6",
+        "title": "Active project drift detection · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.admission_decision_recording",
+        "title": "Admission decision recording with a mandatory student-safe reason",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.admission_decision_recording and changes a file. Commit your work with a `Story: internship.CAP.admission_decision_recording` trailer (or internship.CAP.admission_decision_recording in the subject line) and push."
+        ],
+        "outstanding": [
+          "Explanations match REASON_DEFINITIONS; any output phrased as a decision fails the release"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.admission_decision_recording.autonomy:R2",
+        "title": "Admission decision recording with a mandatory student-safe reason · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.admission_decision_recording.autonomy:R5",
+        "title": "Admission decision recording with a mandatory student-safe reason · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.ai_voice_interview_and_transcript_capture",
+        "title": "AI voice interview with dual consent, transcript capture and answer extraction",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.ai_voice_interview_and_transcript_capture and changes a file. Commit your work with a `Story: internship.CAP.ai_voice_interview_and_transcript_capture` trailer (or internship.CAP.ai_voice_interview_and_transcript_capture in the subject line) and push."
+        ],
+        "outstanding": [
+          "Explanation matches internshipCallService.ts:19-26 with no claim that a fallback agent exists"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.ai_voice_interview_and_transcript_capture.autonomy:R2",
+        "title": "AI voice interview with dual consent, transcript capture and answer extraction · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.ai_voice_interview_and_transcript_capture.autonomy:R4",
+        "title": "AI voice interview with dual consent, transcript capture and answer extraction · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.applicant_pii_access_audit",
+        "title": "Applicant PII access audit over the internship surface",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.applicant_pii_access_audit and changes a file. Commit your work with a `Story: internship.CAP.applicant_pii_access_audit` trailer (or internship.CAP.applicant_pii_access_audit in the subject line) and push."
+        ],
+        "outstanding": [
+          "Dhee accepts the audit question set in writing; until then this capability stays absent and no coverage is claimed"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.applicant_pii_access_audit.autonomy:R0",
+        "title": "Applicant PII access audit over the internship surface · R0",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.applicant_readiness_assessment",
+        "title": "Internship readiness assessment for the reviewer",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.applicant_readiness_assessment and changes a file. Commit your work with a `Story: internship.CAP.applicant_readiness_assessment` trailer (or internship.CAP.applicant_readiness_assessment in the subject line) and push."
+        ],
+        "outstanding": [
+          "Zero unsourced claims across a named sample reviewed by Dhee; any invented fact fails the release"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.applicant_readiness_assessment.autonomy:R2",
+        "title": "Internship readiness assessment for the reviewer · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.applicant_readiness_assessment.autonomy:R5",
+        "title": "Internship readiness assessment for the reviewer · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.application_intake_and_state_transitions",
+        "title": "Internship application intake and single-writer state transitions",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.application_intake_and_state_transitions and changes a file. Commit your work with a `Story: internship.CAP.application_intake_and_state_transitions` trailer (or internship.CAP.application_intake_and_state_transitions in the subject line) and push."
+        ],
+        "outstanding": [
+          "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.application_intake_and_state_transitions.autonomy:R2",
+        "title": "Internship application intake and single-writer state transitions · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.application_intake_and_state_transitions.autonomy:R4",
+        "title": "Internship application intake and single-writer state transitions · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.build_progress_and_pace_monitoring",
+        "title": "Project progress, pace and deadline monitoring",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.build_progress_and_pace_monitoring and changes a file. Commit your work with a `Story: internship.CAP.build_progress_and_pace_monitoring` trailer (or internship.CAP.build_progress_and_pace_monitoring in the subject line) and push."
+        ],
+        "outstanding": [
+          "Figures match paceFor(), dayOfInternship() and deterministicStanding() exactly; zero dates or percentages originate from the model"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.build_progress_and_pace_monitoring.autonomy:R2",
+        "title": "Project progress, pace and deadline monitoring · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.build_progress_and_pace_monitoring.autonomy:R6",
+        "title": "Project progress, pace and deadline monitoring · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.career_support_handoff",
+        "title": "Career preparation and support handoff out of the internship",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.career_support_handoff and changes a file. Commit your work with a `Story: internship.CAP.career_support_handoff` trailer (or internship.CAP.career_support_handoff in the subject line) and push."
+        ],
+        "outstanding": [
+          "Dhee names the receiving human and the trigger in writing; until then this capability stays absent"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.career_support_handoff.autonomy:R0",
+        "title": "Career preparation and support handoff out of the internship · R0",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.certification_readiness_tracking",
+        "title": "Certification readiness and attempt tracking for interns",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.certification_readiness_tracking and changes a file. Commit your work with a `Story: internship.CAP.certification_readiness_tracking` trailer (or internship.CAP.certification_readiness_tracking in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches internCertification() and toCertAttempts(); no pass prediction appears and no issued credential is implied"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.certification_readiness_tracking.autonomy:R2",
+        "title": "Certification readiness and attempt tracking for interns · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.certification_readiness_tracking.autonomy:R6",
+        "title": "Certification readiness and attempt tracking for interns · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.class_internship_movement",
+        "title": "Moving a person between class and internship without losing history",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.class_internship_movement and changes a file. Commit your work with a `Story: internship.CAP.class_internship_movement` trailer (or internship.CAP.class_internship_movement in the subject line) and push."
+        ],
+        "outstanding": [
+          "Explanation names the duplicate-sweep, comp-entitlement and pickBestEnrollment failures with their citations and claims no capability that does not exist"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.class_internship_movement.autonomy:R2",
+        "title": "Moving a person between class and internship without losing history · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.cohort_kpi_reporting",
+        "title": "Internship cohort KPI and funnel reporting",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.cohort_kpi_reporting and changes a file. Commit your work with a `Story: internship.CAP.cohort_kpi_reporting` trailer (or internship.CAP.cohort_kpi_reporting in the subject line) and push."
+        ],
+        "outstanding": [
+          "Counts match internshipKpis(); every unknown is labelled unknown rather than rendered as zero"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.cohort_kpi_reporting.autonomy:R2",
+        "title": "Internship cohort KPI and funnel reporting · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.cohort_kpi_reporting.autonomy:R6",
+        "title": "Internship cohort KPI and funnel reporting · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.comp_expiry_advance_warning",
+        "title": "Comped-access expiry advance warning to the manager",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.comp_expiry_advance_warning and changes a file. Commit your work with a `Story: internship.CAP.comp_expiry_advance_warning` trailer (or internship.CAP.comp_expiry_advance_warning in the subject line) and push."
+        ],
+        "outstanding": [
+          "Dhee accepts the lead time, the recipient and the once-per-window rule in writing"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.comp_expiry_advance_warning.autonomy:R0",
+        "title": "Comped-access expiry advance warning to the manager · R0",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.comp_expiry_advance_warning.autonomy:R5",
+        "title": "Comped-access expiry advance warning to the manager · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.da_cohort_analysis_automation",
+        "title": "Data-analyst cohort analysis moving to the AI employee",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.da_cohort_analysis_automation and changes a file. Commit your work with a `Story: internship.CAP.da_cohort_analysis_automation` trailer (or internship.CAP.da_cohort_analysis_automation in the subject line) and push."
+        ],
+        "outstanding": [
+          "Dhee names at least one specific deliverable; the inventory lists only artifacts that were observed, with no invented reports"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.da_cohort_analysis_automation.autonomy:R0",
+        "title": "Data-analyst cohort analysis moving to the AI employee · R0",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.deterministic_requirement_checks",
+        "title": "Deterministic eligibility and commitment requirement checks",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.deterministic_requirement_checks and changes a file. Commit your work with a `Story: internship.CAP.deterministic_requirement_checks` trailer (or internship.CAP.deterministic_requirement_checks in the subject line) and push."
+        ],
+        "outstanding": [
+          "Zero disagreements against checkRequirements() across a named fixture set, and every unclear accompanied by the missing key"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.deterministic_requirement_checks.autonomy:R2",
+        "title": "Deterministic eligibility and commitment requirement checks · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.deterministic_requirement_checks.autonomy:R5",
+        "title": "Deterministic eligibility and commitment requirement checks · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.employment_readiness_gap_flag",
+        "title": "Daily employment-readiness gap flag as a workforce task",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.employment_readiness_gap_flag and changes a file. Commit your work with a `Story: internship.CAP.employment_readiness_gap_flag` trailer (or internship.CAP.employment_readiness_gap_flag in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches the registry row and directorActions.ts:72 exactly; no claim of analysis the row does not perform"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.employment_readiness_gap_flag.autonomy:R2",
+        "title": "Daily employment-readiness gap flag as a workforce task · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.employment_readiness_gap_flag.autonomy:R6",
+        "title": "Daily employment-readiness gap flag as a workforce task · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.existing_intern_conversion_planning",
+        "title": "Existing-intern conversion planning with a zero-write dry run",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.existing_intern_conversion_planning and changes a file. Commit your work with a `Story: internship.CAP.existing_intern_conversion_planning` trailer (or internship.CAP.existing_intern_conversion_planning in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches ConversionPlan and the no-transaction guarantee; never claims a conversion was applied"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.existing_intern_conversion_planning.autonomy:R2",
+        "title": "Existing-intern conversion planning with a zero-write dry run · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.existing_intern_conversion_planning.autonomy:R4",
+        "title": "Existing-intern conversion planning with a zero-write dry run · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.generated_build_project_authoring",
+        "title": "Generated build-project authoring and reviewer assignment",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.generated_build_project_authoring and changes a file. Commit your work with a `Story: internship.CAP.generated_build_project_authoring` trailer (or internship.CAP.generated_build_project_authoring in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches normalizeSize() and the planGate violation split; never claims a plan is ready to assign"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.generated_build_project_authoring.autonomy:R2",
+        "title": "Generated build-project authoring and reviewer assignment · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.generated_build_project_authoring.autonomy:R4",
+        "title": "Generated build-project authoring and reviewer assignment · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.inactivity_escalation_and_exit_recommendation",
+        "title": "Inactivity escalation ladder and exit recommendation",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.inactivity_escalation_and_exit_recommendation and changes a file. Commit your work with a `Story: internship.CAP.inactivity_escalation_and_exit_recommendation` trailer (or internship.CAP.inactivity_escalation_and_exit_recommendation in the subject line) and push."
+        ],
+        "outstanding": [
+          "Thresholds match internActivityTracker.js:11-17 and the UNKNOWN rule is stated, not omitted"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.inactivity_escalation_and_exit_recommendation.autonomy:R2",
+        "title": "Inactivity escalation ladder and exit recommendation · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.inactivity_escalation_and_exit_recommendation.autonomy:R5",
+        "title": "Inactivity escalation ladder and exit recommendation · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.intern_project_portfolio_assembly",
+        "title": "Intern project portfolio assembly and demonstration evidence",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.intern_project_portfolio_assembly and changes a file. Commit your work with a `Story: internship.CAP.intern_project_portfolio_assembly` trailer (or internship.CAP.intern_project_portfolio_assembly in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches assembleProjectPortfolio() on fixtures; self-reported items are never described as verified"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.intern_project_portfolio_assembly.autonomy:R2",
+        "title": "Intern project portfolio assembly and demonstration evidence · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.intern_project_portfolio_assembly.autonomy:R6",
+        "title": "Intern project portfolio assembly and demonstration evidence · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.intern_project_to_catalog_matching",
+        "title": "Project matching recommendation against a project catalog",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.intern_project_to_catalog_matching and changes a file. Commit your work with a `Story: internship.CAP.intern_project_to_catalog_matching` trailer (or internship.CAP.intern_project_to_catalog_matching in the subject line) and push."
+        ],
+        "outstanding": [
+          "Dhee states in writing whether a catalog should exist; until then this capability stays absent and no evidence is claimed"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.intern_project_to_catalog_matching.autonomy:R0",
+        "title": "Project matching recommendation against a project catalog · R0",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.interview_preparation_support",
+        "title": "Career interview preparation support and nudges",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.interview_preparation_support and changes a file. Commit your work with a `Story: internship.CAP.interview_preparation_support` trailer (or internship.CAP.interview_preparation_support in the subject line) and push."
+        ],
+        "outstanding": [
+          "Stage and beat match interviewPrepData.normalize and interviewPrepNudges on the unit fixtures"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.interview_preparation_support.autonomy:R2",
+        "title": "Career interview preparation support and nudges · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.interview_preparation_support.autonomy:R5",
+        "title": "Career interview preparation support and nudges · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.interview_preparation_support.autonomy:R7",
+        "title": "Career interview preparation support and nudges · R7",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.manager_check_in_brief_and_follow_up",
+        "title": "Manager check-in preparation and follow-up note",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.manager_check_in_brief_and_follow_up and changes a file. Commit your work with a `Story: internship.CAP.manager_check_in_brief_and_follow_up` trailer (or internship.CAP.manager_check_in_brief_and_follow_up in the subject line) and push."
+        ],
+        "outstanding": [
+          "Percentages and dates match internDeliveryCoachNote.js arithmetic exactly; zero figures originate from the model"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.manager_check_in_brief_and_follow_up.autonomy:R2",
+        "title": "Manager check-in preparation and follow-up note · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.manager_check_in_brief_and_follow_up.autonomy:R5",
+        "title": "Manager check-in preparation and follow-up note · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.manager_surface_access_verification",
+        "title": "Verifying the accountable manager can actually reach the agent surface",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.manager_surface_access_verification and changes a file. Commit your work with a `Story: internship.CAP.manager_surface_access_verification` trailer (or internship.CAP.manager_surface_access_verification in the subject line) and push."
+        ],
+        "outstanding": [
+          "Names the requireAdmin-only state of the agent routes and does not claim a manager-scoped gate that has not shipped"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.manager_surface_access_verification.autonomy:R2",
+        "title": "Verifying the accountable manager can actually reach the agent surface · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.offer_document_package_generation",
+        "title": "Offer and onboarding document package generation",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.offer_document_package_generation and changes a file. Commit your work with a `Story: internship.CAP.offer_document_package_generation` trailer (or internship.CAP.offer_document_package_generation in the subject line) and push."
+        ],
+        "outstanding": [
+          "nextMonday outputs reproduced exactly for a fixed set of input dates including a Sunday and a Monday boundary"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.offer_document_package_generation.autonomy:R2",
+        "title": "Offer and onboarding document package generation · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.offer_document_package_generation.autonomy:R4",
+        "title": "Offer and onboarding document package generation · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.onboarding_checklist_tracking",
+        "title": "Document and onboarding checklist tracking",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.onboarding_checklist_tracking and changes a file. Commit your work with a `Story: internship.CAP.onboarding_checklist_tracking` trailer (or internship.CAP.onboarding_checklist_tracking in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches resolveChecklist() and nextStudentAction() on every fixture; a Colaberry-owned step is never reported as the intern being late"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.onboarding_checklist_tracking.autonomy:R2",
+        "title": "Document and onboarding checklist tracking · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.onboarding_checklist_tracking.autonomy:R6",
+        "title": "Document and onboarding checklist tracking · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.payment_gate_monitoring",
+        "title": "Payment gate and unpaid-limbo monitoring",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.payment_gate_monitoring and changes a file. Commit your work with a `Story: internship.CAP.payment_gate_monitoring` trailer (or internship.CAP.payment_gate_monitoring in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches stateAfterDocumentsVerified() for all four input combinations"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.payment_gate_monitoring.autonomy:R2",
+        "title": "Payment gate and unpaid-limbo monitoring · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.payment_gate_monitoring.autonomy:R5",
+        "title": "Payment gate and unpaid-limbo monitoring · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.portfolio_publication_readiness",
+        "title": "Portfolio and demonstration publication readiness",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.portfolio_publication_readiness and changes a file. Commit your work with a `Story: internship.CAP.portfolio_publication_readiness` trailer (or internship.CAP.portfolio_publication_readiness in the subject line) and push."
+        ],
+        "outstanding": [
+          "Unmet list matches computeReadiness() under DEFAULT_POLICY; any employability language fails the release"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.portfolio_publication_readiness.autonomy:R2",
+        "title": "Portfolio and demonstration publication readiness · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.portfolio_publication_readiness.autonomy:R5",
+        "title": "Portfolio and demonstration publication readiness · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.project_assignment_readiness_gating",
+        "title": "Project assignment readiness gating on the weeks 1 to 3 training gate",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.project_assignment_readiness_gating and changes a file. Commit your work with a `Story: internship.CAP.project_assignment_readiness_gating` trailer (or internship.CAP.project_assignment_readiness_gating in the subject line) and push."
+        ],
+        "outstanding": [
+          "Matches readyForProject() and the handoff phase table; an unknown week never yields a late reading"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.project_assignment_readiness_gating.autonomy:R2",
+        "title": "Project assignment readiness gating on the weeks 1 to 3 training gate · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.project_assignment_readiness_gating.autonomy:R6",
+        "title": "Project assignment readiness gating on the weeks 1 to 3 training gate · R6",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.review_queue_triage_and_profile_signals",
+        "title": "Review queue triage with reliability-labelled profile signals",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.review_queue_triage_and_profile_signals and changes a file. Commit your work with a `Story: internship.CAP.review_queue_triage_and_profile_signals` trailer (or internship.CAP.review_queue_triage_and_profile_signals in the subject line) and push."
+        ],
+        "outstanding": [
+          "Bucket explanations match BUCKET_STATES exactly and no applicant identity is quoted"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.review_queue_triage_and_profile_signals.autonomy:R2",
+        "title": "Review queue triage with reliability-labelled profile signals · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.review_queue_triage_and_profile_signals.autonomy:R4",
+        "title": "Review queue triage with reliability-labelled profile signals · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.routine_document_reminder_sending",
+        "title": "Approved routine document and activity reminder sending",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.routine_document_reminder_sending and changes a file. Commit your work with a `Story: internship.CAP.routine_document_reminder_sending` trailer (or internship.CAP.routine_document_reminder_sending in the subject line) and push."
+        ],
+        "outstanding": [
+          "Template selection matches the precondition table for every fixture; zero send attempts recorded"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.routine_document_reminder_sending.autonomy:R2",
+        "title": "Approved routine document and activity reminder sending · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.routine_document_reminder_sending.autonomy:R5",
+        "title": "Approved routine document and activity reminder sending · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.routine_document_reminder_sending.autonomy:R7",
+        "title": "Approved routine document and activity reminder sending · R7",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.signed_document_verification",
+        "title": "Signed document verification by a human reviewer",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.signed_document_verification and changes a file. Commit your work with a `Story: internship.CAP.signed_document_verification` trailer (or internship.CAP.signed_document_verification in the subject line) and push."
+        ],
+        "outstanding": [
+          "Outstanding list matches outstandingRequirements(); no document bytes are read"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.signed_document_verification.autonomy:R2",
+        "title": "Signed document verification by a human reviewer · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.signed_document_verification.autonomy:R5",
+        "title": "Signed document verification by a human reviewer · R5",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.skill_gap_identification_for_interns",
+        "title": "Skill-gap identification for interns",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.skill_gap_identification_for_interns and changes a file. Commit your work with a `Story: internship.CAP.skill_gap_identification_for_interns` trailer (or internship.CAP.skill_gap_identification_for_interns in the subject line) and push."
+        ],
+        "outstanding": [
+          "Dhee accepts a target profile definition in writing; until then the gap output stays unavailable"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.skill_gap_identification_for_interns.autonomy:R0",
+        "title": "Skill-gap identification for interns · R0",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.skill_gap_identification_for_interns.autonomy:R4",
+        "title": "Skill-gap identification for interns · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.standup_attendance_tracking",
+        "title": "Standup and required-meeting attendance tracking",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.standup_attendance_tracking and changes a file. Commit your work with a `Story: internship.CAP.standup_attendance_tracking` trailer (or internship.CAP.standup_attendance_tracking in the subject line) and push."
+        ],
+        "outstanding": [
+          "The explanation states the missing denominator and never quotes an attendance percentage"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.standup_attendance_tracking.autonomy:R2",
+        "title": "Standup and required-meeting attendance tracking · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.standup_attendance_tracking.autonomy:R4",
+        "title": "Standup and required-meeting attendance tracking · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.two_channel_structured_interview",
+        "title": "Two-channel structured interview over one versioned question bank",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 1,
+        "reasons": [
+          "None of the 1 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.CAP.two_channel_structured_interview and changes a file. Commit your work with a `Story: internship.CAP.two_channel_structured_interview` trailer (or internship.CAP.two_channel_structured_interview in the subject line) and push."
+        ],
+        "outstanding": [
+          "Answers match activeQuestionKeys() exactly for ten sampled questions; evaluator is a diff against the module"
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.two_channel_structured_interview.autonomy:R2",
+        "title": "Two-channel structured interview over one versioned question bank · R2",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.two_channel_structured_interview.autonomy:R4",
+        "title": "Two-channel structured interview over one versioned question bank · R4",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.LEGACY-MIGRATION-PLAN",
+        "title": "Legacy migration plan",
+        "status": "not_started",
+        "verification_state": "in_progress",
+        "verified": false,
+        "criteria_passed": 0,
+        "criteria_total": 3,
+        "reasons": [
+          "None of the 3 acceptance criteria are marked as passing yet.",
+          "No commit in the repo names internship.LEGACY-MIGRATION-PLAN and changes a file. Commit your work with a `Story: internship.LEGACY-MIGRATION-PLAN` trailer (or internship.LEGACY-MIGRATION-PLAN in the subject line) and push."
+        ],
+        "outstanding": [
+          "The plan accounts for every inherited legacy record for this domain, each one kept, merged or retired with a reason.",
+          "The migration is described as replayable: running it twice leaves the same end state, with no duplicated side effects.",
+          "The plan states what happens to a record the migration cannot classify, rather than assuming none exist."
+        ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.RESEARCH-1-SYSTEM-CLASSES",
+        "title": "Compare the five system classes, and place this domain among them",
+        "status": "complete",
+        "verification_state": "verified",
+        "verified": true,
+        "criteria_passed": 3,
+        "criteria_total": 3,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": "13547bccb48a0fc3bdc203d7c4f045283a436d7a"
+      },
+      {
+        "story_id": "internship.RESEARCH-2-AGENT-ANATOMY",
+        "title": "Map the nine anatomy elements onto this domain's agent",
+        "status": "complete",
+        "verification_state": "verified",
+        "verified": true,
+        "criteria_passed": 3,
+        "criteria_total": 3,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": "95f72d772cfb13c259e6d33f566c72fa1ec7974c"
+      },
+      {
+        "story_id": "internship.RESEARCH-3-ROLE-AND-DA-TRANSITION",
+        "title": "Document Dhee's role, and which DA responsibilities transition",
+        "status": "complete",
+        "verification_state": "verified",
+        "verified": true,
+        "criteria_passed": 3,
+        "criteria_total": 3,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": "916c5d3ed3e52b8d5fc8b6027762a4876306ec98"
+      },
+      {
+        "story_id": "internship.RESEARCH-4-MANAGER-INTERVIEW",
+        "title": "Prepare a 30-minute interview with Dhee and propose a weekly check-in",
+        "status": "complete",
+        "verification_state": "verified",
+        "verified": true,
+        "criteria_passed": 3,
+        "criteria_total": 3,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": "5fe2163588f110737fc6ebd821735817ca9411f8"
+      },
+      {
+        "story_id": "internship.RESEARCH-5-THREE-PROPOSED-TASKS",
+        "title": "Capture three proposed agent tasks with boundaries and completion evidence",
+        "status": "complete",
+        "verification_state": "verified",
+        "verified": true,
+        "criteria_passed": 3,
+        "criteria_total": 3,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": "fc8f78449f29b2262175f253cd1a930630aa6324"
+      },
+      {
+        "story_id": "internship.STORY-000",
+        "title": "STORY-000 · Build your Command Center",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      }
+    ]
+  },
+  "not_recorded": [
+    {
+      "field": "agent.autonomy_level_set_by",
+      "reason": "The platform does not store who set an agent's autonomy level. `ai_agents` carries `autonomy_level_set_at` and `autonomy_level_source` but no `set_by` column, so the time and whether a person chose it are known and the identity is not. Do not render a name here."
+    }
+  ]
+}
