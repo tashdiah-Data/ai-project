@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-13T18:32:47.597Z",
+  "generated_at": "2026-11-13T20:06:37.411Z",
   "plan_version": 1,
   "plan_sha256": "315c78f430773cc110dce00105d96c98114acde5f83e6461e563413369915595",
-  "correlation_id": "cc-20261113-q7m2-tash-resync",
+  "correlation_id": "cc-20261113-q7m2-postladder-internship",
   "project_id": "778350cb-5eaf-5651-b9b8-ba3e957d49fd",
   "truth_revision": null,
   "files": [
@@ -192,7 +192,7 @@
     },
     {
       "path": "docs/stories/internship.STORY-000.md",
-      "sha256": "8341fa6b91e76932bda868a6244699e4dad072ffffedc0fcd547fd9e6d812a0b"
+      "sha256": "73dbf5486a96767f4a11c1a47c2b927dc61105882be9b9484ecde98e983e8c6a"
     },
     {
       "path": ".colaberry/plan.json",
@@ -208,7 +208,7 @@
     },
     {
       "path": ".colaberry/agent-domain.json",
-      "sha256": "3122bbff3b93913a8e85bfc15b1a3af84b3579c0b4cf01e08fbb44e767ee79e7"
+      "sha256": "2204878f14a2efde6ca0f7dd240498b27639d10c7ecdc381c6ec40c67b40a7ad"
     },
     {
       "path": "docs/stories/STORY-000.md",
