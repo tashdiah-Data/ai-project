@@ -113,10 +113,10 @@ const stageIndex = (s) => AUTONOMY_STAGES.indexOf(s);
 // Coordinated handoff between agents does not exist on the platform (story brief).
 const UNREACHABLE_BY_FACT = 'autonomy:R8';
 
-// From the story brief (docs/stories/internship.STORY-000.md:16-17), shown labelled as such.
+// From the story brief (docs/stories/internship.STORY-000.md:6-7), shown labelled as such.
 const BRIEF = { accountable_human: 'Dhee', employee: 'does not exist yet' };
 
-// From the story prompt (docs/stories/internship.STORY-000.md:177-192), not from the snapshot file.
+// From the story prompt (docs/stories/internship.STORY-000.md:126-141), not from the snapshot file.
 const TOOLS_PROMPT_SAYS_NEEDED = [
   'sandbox_database_read', 'sandbox_database_write', 'internship_admin_api_read', 'audit_event_write',
   'structured_output_validation', 'voice_call_trigger_sandbox', 'transcript_extraction',
@@ -186,7 +186,7 @@ function renderEmployee(d) {
   const setByGap = (d.not_recorded || []).find((n) => n.field === 'agent.autonomy_level_set_by');
   const brief = h('div', { class: 'brief' }, h('strong', {}, 'Per the story brief'),
     dl([['Accountable human', BRIEF.accountable_human], ['Employee', BRIEF.employee]]),
-    h('span', { class: 'src' }, 'docs/stories/internship.STORY-000.md:16-17'));
+    h('span', { class: 'src' }, 'docs/stories/internship.STORY-000.md:6-7'));
   if (!a) { fill('p1', h('div', { class: 'na' }, h('strong', {}, 'The snapshot file has no agent record.'), 'This is a finished answer, not a loading state.'), brief, src(AGENT_FILE + ' → agent'), h('p', { class: 'src' }, endpoint(d, 'agent'))); return; }
   const tools = Array.isArray(a.tools_granted) ? a.tools_granted : [];
   const agentScale = d.autonomy_models && d.autonomy_models.agent_level;
