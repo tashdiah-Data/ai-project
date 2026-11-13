@@ -4,11 +4,11 @@
   "totals": {
     "stories_total": 46,
     "stories_verified": 5,
-    "stories_submitted": 0,
-    "stories_in_progress": 36,
-    "stories_not_started": 5,
-    "criteria_total": 53,
-    "criteria_passed": 15,
+    "stories_submitted": 1,
+    "stories_in_progress": 40,
+    "stories_not_started": 0,
+    "criteria_total": 69,
+    "criteria_passed": 20,
     "points_awarded": 95
   },
   "stories": [
@@ -227,15 +227,18 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
-        "criteria_total": 0,
+        "criteria_total": 2,
         "verified_at": null,
         "commit_sha": null,
         "commit_url": null,
         "commit_at": null,
         "points_awarded": null,
-        "outstanding": []
+        "outstanding": [
+          "The capability was performed end to end by hand, producing its real outcome on real inputs.",
+          "A run log exists recording the date, the elapsed time, each step actually performed, every judgment call made, and at least one way the recorded workflow differed from what the work was really like."
+        ]
       }
     },
     {
@@ -257,15 +260,18 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
-        "criteria_total": 0,
+        "criteria_total": 2,
         "verified_at": null,
         "commit_sha": null,
         "commit_url": null,
         "commit_at": null,
         "points_awarded": null,
-        "outstanding": []
+        "outstanding": [
+          "The same outcome was produced a second time using only the product, with no agent, no script and no direct database edit -- or the exact step that made this impossible is written down as a named gap.",
+          "The app route was compared against the step 1 run log, and every difference between them is recorded."
+        ]
       }
     },
     {
@@ -291,15 +297,19 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
-        "criteria_total": 0,
+        "criteria_total": 3,
         "verified_at": null,
         "commit_sha": null,
         "commit_url": null,
         "commit_at": null,
         "points_awarded": null,
-        "outstanding": []
+        "outstanding": [
+          "A change request for a tool exists against this domain, filed by the builder, naming the tool, its scope, what it must never touch, and who approves a run.",
+          "The request cites the step 1 run log and the step 2 result as its evidence.",
+          "A named human other than the builder has recorded a decision on it. A decline counts; an undecided request does not."
+        ]
       }
     },
     {
@@ -325,15 +335,19 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
+        "state": "in_progress",
         "criteria_passed": 0,
-        "criteria_total": 0,
+        "criteria_total": 3,
         "verified_at": null,
         "commit_sha": null,
         "commit_url": null,
         "commit_at": null,
         "points_awarded": null,
-        "outstanding": []
+        "outstanding": [
+          "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts",
+          "The agent produced the same outcome as the step 1 run log, on the same inputs, including the exceptions recorded there.",
+          "Every run in the evidence window was approved by a named human before it took effect, and the record shows who."
+        ]
       }
     },
     {
@@ -1363,15 +1377,17 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "not_started",
-        "criteria_passed": 0,
-        "criteria_total": 0,
+        "state": "submitted",
+        "criteria_passed": 5,
+        "criteria_total": 6,
         "verified_at": null,
-        "commit_sha": null,
-        "commit_url": null,
-        "commit_at": null,
+        "commit_sha": "81d7e80d063043de5385686b4c8e2b7a760faa98",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/81d7e80d063043de5385686b4c8e2b7a760faa98",
+        "commit_at": "2026-11-13T22:23:25Z",
         "points_awarded": null,
-        "outstanding": []
+        "outstanding": [
+          "Given the governance panel, when a tool request is shown, then nothing on the page states or implies that filing it granted anything."
+        ]
       }
     }
   ]
