@@ -1,5 +1,7 @@
 # internship.CAP.certification_readiness_tracking — Certification readiness and attempt tracking for interns
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 A manager sees each intern's certification readiness, their official claim and every sitting with its item count, so a stalled certification is visible before it becomes a surprise.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -9,7 +11,7 @@ A manager sees each intern's certification readiness, their official claim and e
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

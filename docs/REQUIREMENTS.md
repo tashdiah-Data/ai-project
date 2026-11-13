@@ -1,4 +1,4 @@
-# internship — Requirements
+# Internship & Career Readiness — Requirements
 
 The internship domain agent.
 

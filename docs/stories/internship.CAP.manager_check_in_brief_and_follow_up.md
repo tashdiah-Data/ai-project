@@ -1,5 +1,7 @@
 # internship.CAP.manager_check_in_brief_and_follow_up — Manager check-in preparation and follow-up note
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 Before a check-in, the manager has the intern's real position, what they are working on and the projected completion date, and afterwards a supportive accountability note the manager can post as their own words.
 
 **Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -11,7 +13,7 @@ Before a check-in, the manager has the intern's real position, what they are wor
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

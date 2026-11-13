@@ -1,5 +1,7 @@
 # internship.CAP.career_support_handoff — Career preparation and support handoff out of the internship
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An intern who lands a role, or who needs placement support, is handed to the right human with their evidence intact, instead of falling between the internship console and the placement pipeline.
 
 **Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -11,7 +13,7 @@ An intern who lands a role, or who needs placement support, is handed to the rig
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

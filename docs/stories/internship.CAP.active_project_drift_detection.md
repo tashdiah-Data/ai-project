@@ -1,5 +1,7 @@
 # internship.CAP.active_project_drift_detection — Active project drift detection
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An intern whose portal points at one project while their work is in another is found before they lose a day wondering why verified work shows zero.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -9,7 +11,7 @@ An intern whose portal points at one project while their work is in another is f
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

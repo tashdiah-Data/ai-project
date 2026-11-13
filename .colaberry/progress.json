@@ -1,12 +1,12 @@
 {
   "schema_version": 2,
-  "project": "internship",
+  "project": "Internship & Career Readiness",
   "totals": {
-    "stories_total": 42,
+    "stories_total": 46,
     "stories_verified": 5,
     "stories_submitted": 0,
     "stories_in_progress": 36,
-    "stories_not_started": 1,
+    "stories_not_started": 5,
     "criteria_total": 53,
     "criteria_passed": 15,
     "points_awarded": 95
@@ -14,7 +14,7 @@
   "stories": [
     {
       "id": "internship.CAP.activation_and_entitlement_grant",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -42,7 +42,7 @@
     },
     {
       "id": "internship.CAP.active_project_drift_detection",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -70,7 +70,7 @@
     },
     {
       "id": "internship.CAP.admission_decision_recording",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -98,7 +98,7 @@
     },
     {
       "id": "internship.CAP.ai_voice_interview_and_transcript_capture",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -126,7 +126,7 @@
     },
     {
       "id": "internship.CAP.applicant_pii_access_audit",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -154,7 +154,7 @@
     },
     {
       "id": "internship.CAP.applicant_readiness_assessment",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -182,7 +182,7 @@
     },
     {
       "id": "internship.CAP.application_intake_and_state_transitions",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -209,8 +209,136 @@
       }
     },
     {
+      "id": "internship.CAP.application_intake_and_state_transitions.L1-BY-HAND",
+      "release": "autonomy:R0",
+      "acceptance_total": 2,
+      "criteria": [
+        {
+          "text": "The capability was performed end to end by hand, producing its real outcome on real inputs.",
+          "passed": false
+        },
+        {
+          "text": "A run log exists recording the date, the elapsed time, each step actually performed, every judgment call made, and at least one way the recorded workflow differed from what the work was really like.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 0,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": []
+      }
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP",
+      "release": "autonomy:R0",
+      "acceptance_total": 2,
+      "criteria": [
+        {
+          "text": "The same outcome was produced a second time using only the product, with no agent, no script and no direct database edit -- or the exact step that made this impossible is written down as a named gap.",
+          "passed": false
+        },
+        {
+          "text": "The app route was compared against the step 1 run log, and every difference between them is recorded.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 0,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": []
+      }
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST",
+      "release": "autonomy:R0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "A change request for a tool exists against this domain, filed by the builder, naming the tool, its scope, what it must never touch, and who approves a run.",
+          "passed": false
+        },
+        {
+          "text": "The request cites the step 1 run log and the step 2 result as its evidence.",
+          "passed": false
+        },
+        {
+          "text": "A named human other than the builder has recorded a decision on it. A decline counts; an undecided request does not.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 0,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": []
+      }
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED",
+      "release": "autonomy:R0",
+      "acceptance_total": 3,
+      "criteria": [
+        {
+          "text": "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts",
+          "passed": false
+        },
+        {
+          "text": "The agent produced the same outcome as the step 1 run log, on the same inputs, including the exceptions recorded there.",
+          "passed": false
+        },
+        {
+          "text": "Every run in the evidence window was approved by a named human before it took effect, and the record shows who.",
+          "passed": false
+        }
+      ],
+      "files_touched": [],
+      "tests_added": [],
+      "notes": null,
+      "updated_at": null,
+      "verification": {
+        "state": "not_started",
+        "criteria_passed": 0,
+        "criteria_total": 0,
+        "verified_at": null,
+        "commit_sha": null,
+        "commit_url": null,
+        "commit_at": null,
+        "points_awarded": null,
+        "outstanding": []
+      }
+    },
+    {
       "id": "internship.CAP.build_progress_and_pace_monitoring",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -238,7 +366,7 @@
     },
     {
       "id": "internship.CAP.career_support_handoff",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -266,7 +394,7 @@
     },
     {
       "id": "internship.CAP.certification_readiness_tracking",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -294,7 +422,7 @@
     },
     {
       "id": "internship.CAP.class_internship_movement",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -322,7 +450,7 @@
     },
     {
       "id": "internship.CAP.cohort_kpi_reporting",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -350,7 +478,7 @@
     },
     {
       "id": "internship.CAP.comp_expiry_advance_warning",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -378,7 +506,7 @@
     },
     {
       "id": "internship.CAP.da_cohort_analysis_automation",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -406,7 +534,7 @@
     },
     {
       "id": "internship.CAP.deterministic_requirement_checks",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -434,7 +562,7 @@
     },
     {
       "id": "internship.CAP.employment_readiness_gap_flag",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -462,7 +590,7 @@
     },
     {
       "id": "internship.CAP.existing_intern_conversion_planning",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -490,7 +618,7 @@
     },
     {
       "id": "internship.CAP.generated_build_project_authoring",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -518,7 +646,7 @@
     },
     {
       "id": "internship.CAP.inactivity_escalation_and_exit_recommendation",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -546,7 +674,7 @@
     },
     {
       "id": "internship.CAP.intern_project_portfolio_assembly",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -574,7 +702,7 @@
     },
     {
       "id": "internship.CAP.intern_project_to_catalog_matching",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -602,7 +730,7 @@
     },
     {
       "id": "internship.CAP.interview_preparation_support",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -630,7 +758,7 @@
     },
     {
       "id": "internship.CAP.manager_check_in_brief_and_follow_up",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -658,7 +786,7 @@
     },
     {
       "id": "internship.CAP.manager_surface_access_verification",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -686,7 +814,7 @@
     },
     {
       "id": "internship.CAP.offer_document_package_generation",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -714,7 +842,7 @@
     },
     {
       "id": "internship.CAP.onboarding_checklist_tracking",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -742,7 +870,7 @@
     },
     {
       "id": "internship.CAP.payment_gate_monitoring",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -770,7 +898,7 @@
     },
     {
       "id": "internship.CAP.portfolio_publication_readiness",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -798,7 +926,7 @@
     },
     {
       "id": "internship.CAP.project_assignment_readiness_gating",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -826,7 +954,7 @@
     },
     {
       "id": "internship.CAP.review_queue_triage_and_profile_signals",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -854,7 +982,7 @@
     },
     {
       "id": "internship.CAP.routine_document_reminder_sending",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -882,7 +1010,7 @@
     },
     {
       "id": "internship.CAP.signed_document_verification",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -910,7 +1038,7 @@
     },
     {
       "id": "internship.CAP.skill_gap_identification_for_interns",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -938,7 +1066,7 @@
     },
     {
       "id": "internship.CAP.standup_attendance_tracking",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -966,7 +1094,7 @@
     },
     {
       "id": "internship.CAP.two_channel_structured_interview",
-      "release": "r2",
+      "release": "autonomy:R0",
       "acceptance_total": 1,
       "criteria": [
         {
@@ -994,7 +1122,7 @@
     },
     {
       "id": "internship.LEGACY-MIGRATION-PLAN",
-      "release": "r1",
+      "release": "autonomy:R0",
       "acceptance_total": 3,
       "criteria": [
         {
@@ -1032,7 +1160,7 @@
     },
     {
       "id": "internship.RESEARCH-1-SYSTEM-CLASSES",
-      "release": "r0",
+      "release": "autonomy:R0",
       "acceptance_total": 3,
       "criteria": [
         {
@@ -1066,7 +1194,7 @@
     },
     {
       "id": "internship.RESEARCH-2-AGENT-ANATOMY",
-      "release": "r0",
+      "release": "autonomy:R0",
       "acceptance_total": 3,
       "criteria": [
         {
@@ -1100,7 +1228,7 @@
     },
     {
       "id": "internship.RESEARCH-3-ROLE-AND-DA-TRANSITION",
-      "release": "r0",
+      "release": "autonomy:R0",
       "acceptance_total": 3,
       "criteria": [
         {
@@ -1134,7 +1262,7 @@
     },
     {
       "id": "internship.RESEARCH-4-MANAGER-INTERVIEW",
-      "release": "r0",
+      "release": "autonomy:R0",
       "acceptance_total": 3,
       "criteria": [
         {
@@ -1168,7 +1296,7 @@
     },
     {
       "id": "internship.RESEARCH-5-THREE-PROPOSED-TASKS",
-      "release": "r0",
+      "release": "autonomy:R0",
       "acceptance_total": 3,
       "criteria": [
         {

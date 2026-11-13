@@ -1,5 +1,7 @@
 # internship.CAP.intern_project_to_catalog_matching — Project matching recommendation against a project catalog
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An intern is matched to the project that best fits their skills, interests and the organisation's needs, instead of having a project generated from scratch every time.
 
 **Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -10,7 +12,7 @@ An intern is matched to the project that best fits their skills, interests and t
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

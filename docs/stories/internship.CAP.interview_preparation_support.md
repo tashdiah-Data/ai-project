@@ -1,5 +1,7 @@
 # internship.CAP.interview_preparation_support — Career interview preparation support and nudges
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An intern or alumnus with a real interview booked is moved one step down the preparation funnel at a time, and the staff report shows who is least prepared with the least time left.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -11,7 +13,7 @@ An intern or alumnus with a real interview booked is moved one step down the pre
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

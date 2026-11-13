@@ -1,46 +1,14 @@
 {
   "schema_version": 2,
-  "project_name": "internship",
+  "project_name": "Internship & Career Readiness",
   "descriptor": "The internship domain agent.",
   "requirements": [],
   "releases": [
     {
-      "key": "r0",
-      "demo": "The r0 documents exist in the repository and their acceptance criteria are met.",
-      "goal": "Deliver every r0 story for internship.",
-      "name": "Discovery and validation",
-      "week_end": 0,
-      "week_start": 0,
-      "story_ids": [
-        "internship.RESEARCH-1-SYSTEM-CLASSES",
-        "internship.RESEARCH-2-AGENT-ANATOMY",
-        "internship.RESEARCH-3-ROLE-AND-DA-TRANSITION",
-        "internship.RESEARCH-4-MANAGER-INTERVIEW",
-        "internship.RESEARCH-5-THREE-PROPOSED-TASKS"
-      ],
-      "starts_on": "2026-09-20",
-      "ends_on": "2026-09-20",
-      "is_demo_target": true
-    },
-    {
-      "key": "r1",
-      "demo": "The r1 documents exist in the repository and their acceptance criteria are met.",
-      "goal": "Deliver every r1 story for internship.",
+      "key": "autonomy:R0",
+      "demo": "The autonomy:R0 documents exist in the repository and their acceptance criteria are met.",
+      "goal": "Deliver every autonomy:R0 story for Internship & Career Readiness.",
       "name": "Legacy migration plan",
-      "week_end": 0,
-      "week_start": 0,
-      "story_ids": [
-        "internship.LEGACY-MIGRATION-PLAN"
-      ],
-      "starts_on": "2026-09-20",
-      "ends_on": "2026-09-20",
-      "is_demo_target": false
-    },
-    {
-      "key": "r2",
-      "demo": "The r2 documents exist in the repository and their acceptance criteria are met.",
-      "goal": "Deliver every r2 story for internship.",
-      "name": "r2",
       "week_end": 0,
       "week_start": 0,
       "story_ids": [
@@ -51,6 +19,10 @@
         "internship.CAP.applicant_pii_access_audit",
         "internship.CAP.applicant_readiness_assessment",
         "internship.CAP.application_intake_and_state_transitions",
+        "internship.CAP.application_intake_and_state_transitions.L1-BY-HAND",
+        "internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP",
+        "internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST",
+        "internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED",
         "internship.CAP.build_progress_and_pace_monitoring",
         "internship.CAP.career_support_handoff",
         "internship.CAP.certification_readiness_tracking",
@@ -78,20 +50,27 @@
         "internship.CAP.signed_document_verification",
         "internship.CAP.skill_gap_identification_for_interns",
         "internship.CAP.standup_attendance_tracking",
-        "internship.CAP.two_channel_structured_interview"
+        "internship.CAP.two_channel_structured_interview",
+        "internship.LEGACY-MIGRATION-PLAN",
+        "internship.RESEARCH-1-SYSTEM-CLASSES",
+        "internship.RESEARCH-2-AGENT-ANATOMY",
+        "internship.RESEARCH-3-ROLE-AND-DA-TRANSITION",
+        "internship.RESEARCH-4-MANAGER-INTERVIEW",
+        "internship.RESEARCH-5-THREE-PROPOSED-TASKS",
+        "internship.STORY-000"
       ],
       "starts_on": "2026-09-20",
       "ends_on": "2026-09-20",
-      "is_demo_target": false
+      "is_demo_target": true
     }
   ],
   "stories": [
     {
       "id": "internship.CAP.activation_and_entitlement_grant",
       "title": "Internship activation and curriculum entitlement grant",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern gains full training access only when every blocker is cleared, and activation is an explicit human act rather than a side effect of a file arriving.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant\n- Dhee has not validated what the agent may surface about activation readiness\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern gains full training access only when every blocker is cleared, and activation is an explicit human act rather than a side effect of a file arriving.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant\n- Dhee has not validated what the agent may surface about activation readiness\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Blocker list matches activationBlockers() exactly; the output never contains an activation instruction or a ready-to-activate verdict"
       ],
@@ -104,9 +83,9 @@
     {
       "id": "internship.CAP.active_project_drift_detection",
       "title": "Active project drift detection",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern whose portal points at one project while their work is in another is found before they lose a day wondering why verified work shows zero.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated who receives a drift finding\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern whose portal points at one project while their work is in another is found before they lose a day wondering why verified work shows zero.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated who receives a drift finding\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches DriftCode and the module header; never proposes a correction"
       ],
@@ -119,9 +98,9 @@
     {
       "id": "internship.CAP.admission_decision_recording",
       "title": "Admission decision recording with a mandatory student-safe reason",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Acceptance, rejection, waitlist and information requests are recorded by a named human with a reason code the applicant can be told, so no one is declined without an explanation and no decision is anonymous.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant; no path to agent decisioning exists in this or any later task\n- Dhee has not validated the shadow comparison design\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAcceptance, rejection, waitlist and information requests are recorded by a named human with a reason code the applicant can be told, so no one is declined without an explanation and no decision is anonymous.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant; no path to agent decisioning exists in this or any later task\n- Dhee has not validated the shadow comparison design\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Explanations match REASON_DEFINITIONS; any output phrased as a decision fails the release"
       ],
@@ -134,9 +113,9 @@
     {
       "id": "internship.CAP.ai_voice_interview_and_transcript_capture",
       "title": "AI voice interview with dual consent, transcript capture and answer extraction",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An applicant who prefers to talk completes the same interview by phone, with permission to call and permission to record held as separate consents, and the transcript converted into the same keyed answers a form would produce.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated scope\n- no sandbox voice endpoint identified\n- SYNTHFLOW_INTERNSHIP_AGENT_ID provisioning state unknown\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn applicant who prefers to talk completes the same interview by phone, with permission to call and permission to record held as separate consents, and the transcript converted into the same keyed answers a form would produce.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated scope\n- no sandbox voice endpoint identified\n- SYNTHFLOW_INTERNSHIP_AGENT_ID provisioning state unknown\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Explanation matches internshipCallService.ts:19-26 with no claim that a fallback agent exists"
       ],
@@ -149,9 +128,9 @@
     {
       "id": "internship.CAP.applicant_pii_access_audit",
       "title": "Applicant PII access audit over the internship surface",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Every read of an applicant's resume, phone number or interview transcript is attributable, so the widest PII grant in the platform can be shown to have been used appropriately.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- not implemented\n- no read-access log over the internship PII routes exists\n- Dhee has not said whether an access audit is wanted\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nEvery read of an applicant's resume, phone number or interview transcript is attributable, so the widest PII grant in the platform can be shown to have been used appropriately.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- not implemented\n- no read-access log over the internship PII routes exists\n- Dhee has not said whether an access audit is wanted\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Dhee accepts the audit question set in writing; until then this capability stays absent and no coverage is claimed"
       ],
@@ -164,9 +143,9 @@
     {
       "id": "internship.CAP.applicant_readiness_assessment",
       "title": "Internship readiness assessment for the reviewer",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "A reviewer opens a plain-language reading of an applicant plus a suggested posture, grounded in the applicant's own words and in deterministic requirement results, which shortens review without ever substituting for it.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what a useful posture looks like\n- no measured agreement rate against human decisions exists\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nA reviewer opens a plain-language reading of an applicant plus a suggested posture, grounded in the applicant's own words and in deterministic requirement results, which shortens review without ever substituting for it.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what a useful posture looks like\n- no measured agreement rate against human decisions exists\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Zero unsourced claims across a named sample reviewed by Dhee; any invented fact fails the release"
       ],
@@ -179,9 +158,9 @@
     {
       "id": "internship.CAP.application_intake_and_state_transitions",
       "title": "Internship application intake and single-writer state transitions",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Every applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated scope\n- no sandbox fixture set covering the 22 states exists yet\n\nFull build prompt is attached to this story.",
+      "narrative": "**IN FLIGHT.** This capability is the one this domain is building right now. The work itself is its four ladder stories -- do it by hand, do it in the app, request the tool, then let the agent do it watched -- and they run in that order. This row is the capability they belong to, not a fifth piece of work.\n\nEvery applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated scope\n- no sandbox fixture set covering the 22 states exists yet\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts"
       ],
@@ -192,11 +171,77 @@
       "due_baseline_on": "2026-09-20"
     },
     {
+      "id": "internship.CAP.application_intake_and_state_transitions.L1-BY-HAND",
+      "title": "Internship application intake and single-writer state transitions · 1 · do it by hand",
+      "release": "autonomy:R0",
+      "fulfills": [],
+      "narrative": "**Understand the work by doing it yourself, before anything automates it.**\n\nDo this capability yourself, by hand, once, end to end. Not a simulation and not a description -- the real task, with the real inputs, producing the real outcome.\n\n**The outcome you are producing**\nEvery applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\n\n**The workflow as it was recorded during research.** Treat this as a claim to be tested, not as instructions. Where it is wrong or incomplete, that difference is the single most valuable thing this story produces.\n- Applicant starts an application; the open-application unique index makes a second start idempotent\n- Administrative intake (Group A) is upserted against the application\n- Applicant selects form or phone interview channel\n- Any state change calls transition(), which locks the row, asserts the move for that actor, and writes state plus audit event in one transaction\n- Terminal states (completed, withdrawn, removed, rejected) have empty outbound rows and refuse all further moves\n\n**What goes in**\n- enrollment id\n- cohort id\n- administrative intake fields\n- interview channel choice\n- target state\n- actor and actor id\n\n**What comes out**\n- internship_applications row\n- internship_status_events audit row\n- InternshipStatusView for the Today card\n\n**Exceptions the research expects you to hit**\n- Concurrent reviewers: the row lock serialises them; the second write is an idempotent no-op or an InvalidInternshipTransitionError\n- Illegal transition raises InvalidInternshipTransitionError with error_class ContractViolation (internshipStateMachine.ts:245)\n- Terminal record: the console route pre-checks isTerminal() and returns 409 (internshipRoutes.ts:213-221)\n- A system actor may never create approval; it can only move an already-approved application (internshipStateMachine.ts:177-178)\n- Ruth Kumera sits at signed_documents_uploaded and must not be advanced by anything in this programme\n\n**Write a run log.** It is the deliverable of this story and every later step cites it. Record the date, how long it actually took, each step you really performed, every judgment call you made and what you based it on, and at least one thing that was harder, slower or more ambiguous than the workflow above implies.\n\nWhile you work, keep asking which parts are mechanical and which need judgment. That split is what the tool request in step 3 will be argued from.\n\nThe four steps of this capability run in order. A later step opened before its predecessor is complete is the thing this ladder exists to prevent -- say so and go back rather than working ahead.",
+      "acceptance": [
+        "The capability was performed end to end by hand, producing its real outcome on real inputs.",
+        "A run log exists recording the date, the elapsed time, each step actually performed, every judgment call made, and at least one way the recorded workflow differed from what the work was really like."
+      ],
+      "owner_agent": "",
+      "failure_paths": [],
+      "task_guidance": "# Internship application intake and single-writer state transitions\n**Domain:** Internship & Career Readiness · **Capability:** `internship.application_intake_and_state_transitions`\n**Accountable human:** Dhee · **Validation state:** draft\n**Built today:** implemented · **Source:** existing_application\n## The business outcome\nEvery applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\nIntended users: applicant, Dhee, internship-section staff.\n## The human-operable process, as it works now\nThis must be operable by a person before an agent touches it. If a human cannot do it by hand\nagainst the surfaces below, the agent version has nothing to stand on.\n**Workflow**\n- Applicant starts an application; the open-application unique index makes a second start idempotent\n- Administrative intake (Group A) is upserted against the application\n- Applicant selects form or phone interview channel\n- Any state change calls transition(), which locks the row, asserts the move for that actor, and writes state plus audit event in one transaction\n- Terminal states (completed, withdrawn, removed, rejected) have empty outbound rows and refuse all further moves\n**Inputs**\n- enrollment id\n- cohort id\n- administrative intake fields\n- interview channel choice\n- target state\n- actor and actor id\n**Outputs**\n- internship_applications row\n- internship_status_events audit row\n- InternshipStatusView for the Today card\n**Exceptions that must be handled**\n- Concurrent reviewers: the row lock serialises them; the second write is an idempotent no-op or an InvalidInternshipTransitionError\n- Illegal transition raises InvalidInternshipTransitionError with error_class ContractViolation (internshipStateMachine.ts:245)\n- Terminal record: the console route pre-checks isTerminal() and returns 409 (internshipRoutes.ts:213-221)\n- A system actor may never create approval; it can only move an already-approved application (internshipStateMachine.ts:177-178)\n- Ruth Kumera sits at signed_documents_uploaded and must not be advanced by anything in this programme\n## The tool interface\n**Tools this capability requires** (none is one of the eight default-denied capabilities;\nanything that would need one is listed under blockers instead)\n- sandbox_database_read\n- sandbox_database_write\n- internship_admin_api_read\n- audit_event_write\n**Application surfaces**\n- student Today card\n- admin internship review queue\n- admin Intern Console Manage drawer\n- POST /api/admin/internship/applications/:id/transition\n**Source modules**\n- backend/src/services/internship/internshipApplicationService.ts\n- backend/src/services/internship/internshipStateMachine.ts\n- backend/src/models/InternshipApplication.ts\n- backend/src/models/InternshipStatusEvent.ts\n- backend/src/db/ensureInternshipSchema.ts\n**Dependencies**\n- enrollments\n- cohort_memberships\n- internshipStateMachine (pure)\n- internshipAnalytics event emitter\n## The agent behaviour that uses it\nStarting autonomy **autonomy:R0**; ceiling **autonomy:R4**.\nWhy that ceiling: The writer is the gate for every admission outcome. An agent may exercise it against sandbox fixtures, but production writes to internship_applications.state would let an agent move a real applicant, so no level above R4 is proposed.\n\nNot a human-reserved decision, but promotion is still evidence-based and one step at a time.\n**First release behaviour (autonomy:R2)**\nAnswers which states an application can legally reach next, and for which actor, citing the state machine\n\nAcceptance: Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts\n## Before you start\n- Dhee has not validated scope\n- no sandbox fixture set covering the 22 states exists yet\n## Evidence this is done\nCite the real thing: a named passing test, a measured figure with its query, or a file:line.\n**None of these count:** this story being marked complete, elapsed time, a conversation that\nwent well, or a mocked test passing. Dhee evaluates the evidence, and\nnothing here is validated yet.\n## Evidence this capability rests on\n- internshipApplicationService.ts:23-34 (the ONLY writer of internship_applications.state)\n- internshipApplicationService.ts:55 transition(), :63-66 SELECT FOR UPDATE, :79 assertTransition, :81-95 state write and audit event in one transaction\n- internshipStateMachine.ts:33-63 (22 states), :77 actor union applicant|reviewer|system, :266-279 canTransition has no force/isAdmin/override parameter\n- internshipApplicationService.ts:140 startApplication (idempotent), :194 saveAdministrativeIntake, :245 selectInterviewChannel, :312 getStatus\n- ensureInternshipSchema.ts:107 uq_internship_applications_open (one live application per person), :427 names it load-bearing\n- tables: internship_applications, internship_status_events, internship_administrative_intakes, internship_card_dismissals",
+      "due_on": "2026-09-20",
+      "due_baseline_on": "2026-09-20"
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP",
+      "title": "Internship application intake and single-writer state transitions · 2 · do it in the app",
+      "release": "autonomy:R0",
+      "fulfills": [],
+      "narrative": "**Prove the product can already do it, with no agent involved.**\n\nProduce the same outcome a second time, using only the product. No agent, no script, and no direct database edit. If you cannot finish it this way, that is not a failure of this story -- it is the finding, and it is what this story is for.\n\n**The pages this capability was recorded against**\n- student Today card\n- admin internship review queue\n- admin Intern Console Manage drawer\n\n**APIs behind those pages**, for reading when a page behaves in a way you did not expect:\n- POST /api/admin/internship/applications/:id/transition\n\n**Compare against your run log from step 1.** Same inputs, same outcome? Where the product made you do something the manual route did not, or could not do something the manual route could, write it down as a named gap: what you were trying to do, which page, and what happened instead.\n\n**A gap found here is a result, not a blocker.** Record it, and say plainly whether the capability can be completed in the product today. An agent cannot be given a tool for something the product itself cannot do, so an honest \"not yet\" here saves the whole capability from being automated on top of a hole.\n\nThe four steps of this capability run in order. A later step opened before its predecessor is complete is the thing this ladder exists to prevent -- say so and go back rather than working ahead.",
+      "acceptance": [
+        "The same outcome was produced a second time using only the product, with no agent, no script and no direct database edit -- or the exact step that made this impossible is written down as a named gap.",
+        "The app route was compared against the step 1 run log, and every difference between them is recorded."
+      ],
+      "owner_agent": "",
+      "failure_paths": [],
+      "task_guidance": "# Internship application intake and single-writer state transitions\n**Domain:** Internship & Career Readiness · **Capability:** `internship.application_intake_and_state_transitions`\n**Accountable human:** Dhee · **Validation state:** draft\n**Built today:** implemented · **Source:** existing_application\n## The business outcome\nEvery applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\nIntended users: applicant, Dhee, internship-section staff.\n## The human-operable process, as it works now\nThis must be operable by a person before an agent touches it. If a human cannot do it by hand\nagainst the surfaces below, the agent version has nothing to stand on.\n**Workflow**\n- Applicant starts an application; the open-application unique index makes a second start idempotent\n- Administrative intake (Group A) is upserted against the application\n- Applicant selects form or phone interview channel\n- Any state change calls transition(), which locks the row, asserts the move for that actor, and writes state plus audit event in one transaction\n- Terminal states (completed, withdrawn, removed, rejected) have empty outbound rows and refuse all further moves\n**Inputs**\n- enrollment id\n- cohort id\n- administrative intake fields\n- interview channel choice\n- target state\n- actor and actor id\n**Outputs**\n- internship_applications row\n- internship_status_events audit row\n- InternshipStatusView for the Today card\n**Exceptions that must be handled**\n- Concurrent reviewers: the row lock serialises them; the second write is an idempotent no-op or an InvalidInternshipTransitionError\n- Illegal transition raises InvalidInternshipTransitionError with error_class ContractViolation (internshipStateMachine.ts:245)\n- Terminal record: the console route pre-checks isTerminal() and returns 409 (internshipRoutes.ts:213-221)\n- A system actor may never create approval; it can only move an already-approved application (internshipStateMachine.ts:177-178)\n- Ruth Kumera sits at signed_documents_uploaded and must not be advanced by anything in this programme\n## The tool interface\n**Tools this capability requires** (none is one of the eight default-denied capabilities;\nanything that would need one is listed under blockers instead)\n- sandbox_database_read\n- sandbox_database_write\n- internship_admin_api_read\n- audit_event_write\n**Application surfaces**\n- student Today card\n- admin internship review queue\n- admin Intern Console Manage drawer\n- POST /api/admin/internship/applications/:id/transition\n**Source modules**\n- backend/src/services/internship/internshipApplicationService.ts\n- backend/src/services/internship/internshipStateMachine.ts\n- backend/src/models/InternshipApplication.ts\n- backend/src/models/InternshipStatusEvent.ts\n- backend/src/db/ensureInternshipSchema.ts\n**Dependencies**\n- enrollments\n- cohort_memberships\n- internshipStateMachine (pure)\n- internshipAnalytics event emitter\n## The agent behaviour that uses it\nStarting autonomy **autonomy:R0**; ceiling **autonomy:R4**.\nWhy that ceiling: The writer is the gate for every admission outcome. An agent may exercise it against sandbox fixtures, but production writes to internship_applications.state would let an agent move a real applicant, so no level above R4 is proposed.\n\nNot a human-reserved decision, but promotion is still evidence-based and one step at a time.\n**First release behaviour (autonomy:R2)**\nAnswers which states an application can legally reach next, and for which actor, citing the state machine\n\nAcceptance: Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts\n## Before you start\n- Dhee has not validated scope\n- no sandbox fixture set covering the 22 states exists yet\n## Evidence this is done\nCite the real thing: a named passing test, a measured figure with its query, or a file:line.\n**None of these count:** this story being marked complete, elapsed time, a conversation that\nwent well, or a mocked test passing. Dhee evaluates the evidence, and\nnothing here is validated yet.\n## Evidence this capability rests on\n- internshipApplicationService.ts:23-34 (the ONLY writer of internship_applications.state)\n- internshipApplicationService.ts:55 transition(), :63-66 SELECT FOR UPDATE, :79 assertTransition, :81-95 state write and audit event in one transaction\n- internshipStateMachine.ts:33-63 (22 states), :77 actor union applicant|reviewer|system, :266-279 canTransition has no force/isAdmin/override parameter\n- internshipApplicationService.ts:140 startApplication (idempotent), :194 saveAdministrativeIntake, :245 selectInterviewChannel, :312 getStatus\n- ensureInternshipSchema.ts:107 uq_internship_applications_open (one live application per person), :427 names it load-bearing\n- tables: internship_applications, internship_status_events, internship_administrative_intakes, internship_card_dismissals",
+      "due_on": "2026-09-20",
+      "due_baseline_on": "2026-09-20"
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST",
+      "title": "Internship application intake and single-writer state transitions · 3 · request the tool",
+      "release": "autonomy:R0",
+      "fulfills": [],
+      "narrative": "**Ask for the tool, and let a human decide whether the agent may have it.**\n\nFile a tool request for this capability, and let it be decided. This is a real governance gate with a real human on the other side of it, not paperwork.\n\n**How to file it.** Open the Change Requests page in the admin and file one against `internship`, the domain you own. It posts to `POST /api/admin/agent-domain-change-requests-mine`. Dhee or an admin decides it at `POST /api/admin/agent-domain-change-requests/:id/decide`. You cannot decide your own.\n\n**The tools this capability was recorded as needing**\n- sandbox_database_read\n- sandbox_database_write\n- internship_admin_api_read\n- audit_event_write\n\n**What the request has to say**, and all of it comes from work you have already done:\n- The exact thing the tool would do, in one sentence.\n- Why it is needed, citing your step 1 run log -- what was slow, repetitive or error-prone.\n- What you proved in step 2: that the product can already produce this outcome by hand, or exactly which gap stops it.\n- The scope: what the tool may touch and what it must never touch.\n- Who approves a run, and what happens when the tool is wrong.\n\nSay explicitly which parts of the work the tool takes and which stay with a person.\n\n**A declined request is a completed story.** The decision is the outcome, not the approval. Record what was decided and why, and if it was declined, what would have to change.\n\nThe four steps of this capability run in order. A later step opened before its predecessor is complete is the thing this ladder exists to prevent -- say so and go back rather than working ahead.",
+      "acceptance": [
+        "A change request for a tool exists against this domain, filed by the builder, naming the tool, its scope, what it must never touch, and who approves a run.",
+        "The request cites the step 1 run log and the step 2 result as its evidence.",
+        "A named human other than the builder has recorded a decision on it. A decline counts; an undecided request does not."
+      ],
+      "owner_agent": "",
+      "failure_paths": [],
+      "task_guidance": "# Internship application intake and single-writer state transitions\n**Domain:** Internship & Career Readiness · **Capability:** `internship.application_intake_and_state_transitions`\n**Accountable human:** Dhee · **Validation state:** draft\n**Built today:** implemented · **Source:** existing_application\n## The business outcome\nEvery applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\nIntended users: applicant, Dhee, internship-section staff.\n## The human-operable process, as it works now\nThis must be operable by a person before an agent touches it. If a human cannot do it by hand\nagainst the surfaces below, the agent version has nothing to stand on.\n**Workflow**\n- Applicant starts an application; the open-application unique index makes a second start idempotent\n- Administrative intake (Group A) is upserted against the application\n- Applicant selects form or phone interview channel\n- Any state change calls transition(), which locks the row, asserts the move for that actor, and writes state plus audit event in one transaction\n- Terminal states (completed, withdrawn, removed, rejected) have empty outbound rows and refuse all further moves\n**Inputs**\n- enrollment id\n- cohort id\n- administrative intake fields\n- interview channel choice\n- target state\n- actor and actor id\n**Outputs**\n- internship_applications row\n- internship_status_events audit row\n- InternshipStatusView for the Today card\n**Exceptions that must be handled**\n- Concurrent reviewers: the row lock serialises them; the second write is an idempotent no-op or an InvalidInternshipTransitionError\n- Illegal transition raises InvalidInternshipTransitionError with error_class ContractViolation (internshipStateMachine.ts:245)\n- Terminal record: the console route pre-checks isTerminal() and returns 409 (internshipRoutes.ts:213-221)\n- A system actor may never create approval; it can only move an already-approved application (internshipStateMachine.ts:177-178)\n- Ruth Kumera sits at signed_documents_uploaded and must not be advanced by anything in this programme\n## The tool interface\n**Tools this capability requires** (none is one of the eight default-denied capabilities;\nanything that would need one is listed under blockers instead)\n- sandbox_database_read\n- sandbox_database_write\n- internship_admin_api_read\n- audit_event_write\n**Application surfaces**\n- student Today card\n- admin internship review queue\n- admin Intern Console Manage drawer\n- POST /api/admin/internship/applications/:id/transition\n**Source modules**\n- backend/src/services/internship/internshipApplicationService.ts\n- backend/src/services/internship/internshipStateMachine.ts\n- backend/src/models/InternshipApplication.ts\n- backend/src/models/InternshipStatusEvent.ts\n- backend/src/db/ensureInternshipSchema.ts\n**Dependencies**\n- enrollments\n- cohort_memberships\n- internshipStateMachine (pure)\n- internshipAnalytics event emitter\n## The agent behaviour that uses it\nStarting autonomy **autonomy:R0**; ceiling **autonomy:R4**.\nWhy that ceiling: The writer is the gate for every admission outcome. An agent may exercise it against sandbox fixtures, but production writes to internship_applications.state would let an agent move a real applicant, so no level above R4 is proposed.\n\nNot a human-reserved decision, but promotion is still evidence-based and one step at a time.\n**First release behaviour (autonomy:R2)**\nAnswers which states an application can legally reach next, and for which actor, citing the state machine\n\nAcceptance: Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts\n## Before you start\n- Dhee has not validated scope\n- no sandbox fixture set covering the 22 states exists yet\n## Evidence this is done\nCite the real thing: a named passing test, a measured figure with its query, or a file:line.\n**None of these count:** this story being marked complete, elapsed time, a conversation that\nwent well, or a mocked test passing. Dhee evaluates the evidence, and\nnothing here is validated yet.\n## Evidence this capability rests on\n- internshipApplicationService.ts:23-34 (the ONLY writer of internship_applications.state)\n- internshipApplicationService.ts:55 transition(), :63-66 SELECT FOR UPDATE, :79 assertTransition, :81-95 state write and audit event in one transaction\n- internshipStateMachine.ts:33-63 (22 states), :77 actor union applicant|reviewer|system, :266-279 canTransition has no force/isAdmin/override parameter\n- internshipApplicationService.ts:140 startApplication (idempotent), :194 saveAdministrativeIntake, :245 selectInterviewChannel, :312 getStatus\n- ensureInternshipSchema.ts:107 uq_internship_applications_open (one live application per person), :427 names it load-bearing\n- tables: internship_applications, internship_status_events, internship_administrative_intakes, internship_card_dismissals",
+      "due_on": "2026-09-20",
+      "due_baseline_on": "2026-09-20"
+    },
+    {
+      "id": "internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED",
+      "title": "Internship application intake and single-writer state transitions · 4 · agent does it, watched",
+      "release": "autonomy:R0",
+      "fulfills": [],
+      "narrative": "**Let the agent do it at its starting rung, with a human approving every run.**\n\nOnly start this once step 3 has a recorded decision and the tool exists. The agent now does the capability at **R0**, its own starting rung, with a named human approving every single run before it takes effect.\n\n**The behaviour to reach**\nAnswers which states an application can legally reach next, and for which actor, citing the state machine\n\n**How it is judged**\nNamed scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts\n\n**Measure it against your run log, not against a feeling.** Same inputs, same outcome, and the exceptions from step 1 handled the way you handled them. A run that differs is evidence, and it belongs in the record whether or not it is convenient.\n\n**This capability's ceiling is autonomy:R4.** The writer is the gate for every admission outcome. An agent may exercise it against sandbox fixtures, but production writes to internship_applications.state would let an agent move a real applicant, so no level above R4 is proposed.\n\nHigher rungs are not part of this story and are not tasks. A rung is earned by a named human on evidence, after this one is working and has a record behind it.\n\n**When this passes, the capability is done and the next one starts.** One at a time is the point: pick the next capability with your manager and open its step 1.",
+      "acceptance": [
+        "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts",
+        "The agent produced the same outcome as the step 1 run log, on the same inputs, including the exceptions recorded there.",
+        "Every run in the evidence window was approved by a named human before it took effect, and the record shows who."
+      ],
+      "owner_agent": "",
+      "failure_paths": [],
+      "task_guidance": "# Internship application intake and single-writer state transitions · R2\n**Domain:** Internship & Career Readiness · **Capability:** `internship.application_intake_and_state_transitions`\n**Accountable human:** Dhee · **Validation state:** draft\n**Built today:** implemented · **Source:** existing_application\n## The business outcome\nEvery applicant has exactly one live application whose state moves only through one audited, lock-protected writer, so no two reviewers and no retry can produce divergent records.\nIntended users: applicant, Dhee, internship-section staff.\n## The human-operable process, as it works now\nThis must be operable by a person before an agent touches it. If a human cannot do it by hand\nagainst the surfaces below, the agent version has nothing to stand on.\n**Workflow**\n- Applicant starts an application; the open-application unique index makes a second start idempotent\n- Administrative intake (Group A) is upserted against the application\n- Applicant selects form or phone interview channel\n- Any state change calls transition(), which locks the row, asserts the move for that actor, and writes state plus audit event in one transaction\n- Terminal states (completed, withdrawn, removed, rejected) have empty outbound rows and refuse all further moves\n**Inputs**\n- enrollment id\n- cohort id\n- administrative intake fields\n- interview channel choice\n- target state\n- actor and actor id\n**Outputs**\n- internship_applications row\n- internship_status_events audit row\n- InternshipStatusView for the Today card\n**Exceptions that must be handled**\n- Concurrent reviewers: the row lock serialises them; the second write is an idempotent no-op or an InvalidInternshipTransitionError\n- Illegal transition raises InvalidInternshipTransitionError with error_class ContractViolation (internshipStateMachine.ts:245)\n- Terminal record: the console route pre-checks isTerminal() and returns 409 (internshipRoutes.ts:213-221)\n- A system actor may never create approval; it can only move an already-approved application (internshipStateMachine.ts:177-178)\n- Ruth Kumera sits at signed_documents_uploaded and must not be advanced by anything in this programme\n## The tool interface\n**Tools this capability requires** (none is one of the eight default-denied capabilities;\nanything that would need one is listed under blockers instead)\n- sandbox_database_read\n- sandbox_database_write\n- internship_admin_api_read\n- audit_event_write\n**Application surfaces**\n- student Today card\n- admin internship review queue\n- admin Intern Console Manage drawer\n- POST /api/admin/internship/applications/:id/transition\n**Source modules**\n- backend/src/services/internship/internshipApplicationService.ts\n- backend/src/services/internship/internshipStateMachine.ts\n- backend/src/models/InternshipApplication.ts\n- backend/src/models/InternshipStatusEvent.ts\n- backend/src/db/ensureInternshipSchema.ts\n**Dependencies**\n- enrollments\n- cohort_memberships\n- internshipStateMachine (pure)\n- internshipAnalytics event emitter\n## The agent behaviour that uses it\nStarting autonomy **autonomy:R0**; ceiling **autonomy:R4**.\nWhy that ceiling: The writer is the gate for every admission outcome. An agent may exercise it against sandbox fixtures, but production writes to internship_applications.state would let an agent move a real applicant, so no level above R4 is proposed.\n\nNot a human-reserved decision, but promotion is still evidence-based and one step at a time.\n**This story is one rung: autonomy:R2**\nAnswers which states an application can legally reach next, and for which actor, citing the state machine\n\nAcceptance: Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts\n\n**Satisfying this does not promote anything.** It makes autonomy:R2 *eligible*. A named human promotes the capability one step, on this evidence. Story completion, elapsed time, a conversation that went well and a passing mocked test are all recorded as non-promoting signals, so none of them moves the rung.\n## Before you start\n- Dhee has not validated scope\n- no sandbox fixture set covering the 22 states exists yet\n## Evidence this is done\nCite the real thing: a named passing test, a measured figure with its query, or a file:line.\n**None of these count:** this story being marked complete, elapsed time, a conversation that\nwent well, or a mocked test passing. Dhee evaluates the evidence, and\nnothing here is validated yet.\n## Evidence this capability rests on\n- internshipApplicationService.ts:23-34 (the ONLY writer of internship_applications.state)\n- internshipApplicationService.ts:55 transition(), :63-66 SELECT FOR UPDATE, :79 assertTransition, :81-95 state write and audit event in one transaction\n- internshipStateMachine.ts:33-63 (22 states), :77 actor union applicant|reviewer|system, :266-279 canTransition has no force/isAdmin/override parameter\n- internshipApplicationService.ts:140 startApplication (idempotent), :194 saveAdministrativeIntake, :245 selectInterviewChannel, :312 getStatus\n- ensureInternshipSchema.ts:107 uq_internship_applications_open (one live application per person), :427 names it load-bearing\n- tables: internship_applications, internship_status_events, internship_administrative_intakes, internship_card_dismissals",
+      "due_on": "2026-09-20",
+      "due_baseline_on": "2026-09-20"
+    },
+    {
       "id": "internship.CAP.build_progress_and_pace_monitoring",
       "title": "Project progress, pace and deadline monitoring",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "A manager sees where each intern is against their build, how fast they are moving and when they are projected to finish, from deterministic arithmetic rather than a model's impression.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the pace thresholds\n- the escalation ladder is Ali policy from 2026-05-30 and has not been re-validated for the internship cohort\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nA manager sees where each intern is against their build, how fast they are moving and when they are projected to finish, from deterministic arithmetic rather than a model's impression.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the pace thresholds\n- the escalation ladder is Ali policy from 2026-05-30 and has not been re-validated for the internship cohort\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Figures match paceFor(), dayOfInternship() and deterministicStanding() exactly; zero dates or percentages originate from the model"
       ],
@@ -209,9 +254,9 @@
     {
       "id": "internship.CAP.career_support_handoff",
       "title": "Career preparation and support handoff out of the internship",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern who lands a role, or who needs placement support, is handed to the right human with their evidence intact, instead of falling between the internship console and the placement pipeline.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- not implemented\n- no in-code join between the internship lifecycle and the placement pipeline\n- Dhee has not named the receiving human or the trigger\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern who lands a role, or who needs placement support, is handed to the right human with their evidence intact, instead of falling between the internship console and the placement pipeline.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- not implemented\n- no in-code join between the internship lifecycle and the placement pipeline\n- Dhee has not named the receiving human or the trigger\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Dhee names the receiving human and the trigger in writing; until then this capability stays absent"
       ],
@@ -224,9 +269,9 @@
     {
       "id": "internship.CAP.certification_readiness_tracking",
       "title": "Certification readiness and attempt tracking for interns",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "A manager sees each intern's certification readiness, their official claim and every sitting with its item count, so a stalled certification is visible before it becomes a surprise.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what certification signal matters for interns\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nA manager sees each intern's certification readiness, their official claim and every sitting with its item count, so a stalled certification is visible before it becomes a surprise.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what certification signal matters for interns\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches internCertification() and toCertAttempts(); no pass prediction appears and no issued credential is implied"
       ],
@@ -239,9 +284,9 @@
     {
       "id": "internship.CAP.class_internship_movement",
       "title": "Moving a person between class and internship without losing history",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "A student can join the internship, or an intern can drop into a live class, with their progress, cohort and history intact and no second divergent record of who they are.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no dedicated move endpoint was identified in this pass\n- Dhee has not validated the move workflow\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nA student can join the internship, or an intern can drop into a live class, with their progress, cohort and history intact and no second divergent record of who they are.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no dedicated move endpoint was identified in this pass\n- Dhee has not validated the move workflow\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Explanation names the duplicate-sweep, comp-entitlement and pickBestEnrollment failures with their citations and claims no capability that does not exist"
       ],
@@ -254,9 +299,9 @@
     {
       "id": "internship.CAP.cohort_kpi_reporting",
       "title": "Internship cohort KPI and funnel reporting",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "The programme's funnel and health are reported as numbers with their reliability stated, so a decision about the internship rests on measured volume rather than impression.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated which KPIs matter\n- no accepted threshold exists for any KPI\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nThe programme's funnel and health are reported as numbers with their reliability stated, so a decision about the internship rests on measured volume rather than impression.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated which KPIs matter\n- no accepted threshold exists for any KPI\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Counts match internshipKpis(); every unknown is labelled unknown rather than rendered as zero"
       ],
@@ -269,9 +314,9 @@
     {
       "id": "internship.CAP.comp_expiry_advance_warning",
       "title": "Comped-access expiry advance warning to the manager",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Dhee is warned before a comped intern's free access lapses, so a past student is never dropped to a paywall without anyone intending it.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- not implemented\n- comp expiry storage location unknown\n- Dhee has not set the warning lead time or the recipient\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nDhee is warned before a comped intern's free access lapses, so a past student is never dropped to a paywall without anyone intending it.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- not implemented\n- comp expiry storage location unknown\n- Dhee has not set the warning lead time or the recipient\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Dhee accepts the lead time, the recipient and the once-per-window rule in writing"
       ],
@@ -284,9 +329,9 @@
     {
       "id": "internship.CAP.da_cohort_analysis_automation",
       "title": "Data-analyst cohort analysis moving to the AI employee",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "The recurring cohort and funnel analysis a data analyst assembles by hand is produced by the AI employee with its sources cited, freeing analyst time for questions nobody has asked yet.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no DA deliverable for this domain identified\n- Dhee has not named which analyst work should transition\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nThe recurring cohort and funnel analysis a data analyst assembles by hand is produced by the AI employee with its sources cited, freeing analyst time for questions nobody has asked yet.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no DA deliverable for this domain identified\n- Dhee has not named which analyst work should transition\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Dhee names at least one specific deliverable; the inventory lists only artifacts that were observed, with no invented reports"
       ],
@@ -299,9 +344,9 @@
     {
       "id": "internship.CAP.deterministic_requirement_checks",
       "title": "Deterministic eligibility and commitment requirement checks",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "The eight hard requirements a reviewer trusts are computed by arithmetic over the applicant's own quoted answers, never by a model, so the green and red a reviewer acts on cannot be hallucinated.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the eight rules as the current requirement set\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nThe eight hard requirements a reviewer trusts are computed by arithmetic over the applicant's own quoted answers, never by a model, so the green and red a reviewer acts on cannot be hallucinated.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the eight rules as the current requirement set\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Zero disagreements against checkRequirements() across a named fixture set, and every unclear accompanied by the missing key"
       ],
@@ -314,9 +359,9 @@
     {
       "id": "internship.CAP.employment_readiness_gap_flag",
       "title": "Daily employment-readiness gap flag as a workforce task",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "The day's largest employment-readiness gap is raised as a task with an owner, so a career-readiness problem gets a ticket rather than a mention.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated that this flag is worth keeping\n- the reliability of the underlying career signal is unknown\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nThe day's largest employment-readiness gap is raised as a task with an owner, so a career-readiness problem gets a ticket rather than a mention.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated that this flag is worth keeping\n- the reliability of the underlying career signal is unknown\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches the registry row and directorActions.ts:72 exactly; no claim of analysis the row does not perform"
       ],
@@ -329,9 +374,9 @@
     {
       "id": "internship.CAP.existing_intern_conversion_planning",
       "title": "Existing-intern conversion planning with a zero-write dry run",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Interns who predate the portal are brought onto the managed lifecycle from a plan a human has read, with the dry run guaranteed to write nothing and send nothing.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant for commit\n- Dhee has not validated the conversion plan shape\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nInterns who predate the portal are brought onto the managed lifecycle from a plan a human has read, with the dry run guaranteed to write nothing and send nothing.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant for commit\n- Dhee has not validated the conversion plan shape\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches ConversionPlan and the no-transaction guarantee; never claims a conversion was applied"
       ],
@@ -344,9 +389,9 @@
     {
       "id": "internship.CAP.generated_build_project_authoring",
       "title": "Generated build-project authoring and reviewer assignment",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern's project is generated by the Student Build Pipeline rather than typed story by story, rests at drafted for review, and ships only when the reviewer approves the exact plan they read.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the project tiers or the review hold\n- no sandbox SBP fixture set for intern projects identified\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern's project is generated by the Student Build Pipeline rather than typed story by story, rests at drafted for review, and ships only when the reviewer approves the exact plan they read.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the project tiers or the review hold\n- no sandbox SBP fixture set for intern projects identified\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches normalizeSize() and the planGate violation split; never claims a plan is ready to assign"
       ],
@@ -359,9 +404,9 @@
     {
       "id": "internship.CAP.inactivity_escalation_and_exit_recommendation",
       "title": "Inactivity escalation ladder and exit recommendation",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern who has gone silent is escalated on a known ladder and, at the exit cliff, surfaced to a human with the exact next step rather than quietly dropped or quietly kept.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant for exit\n- Dhee has not validated the ladder thresholds for the internship cohort\n- Basecamp token acts as Ali, so an agent write would be attributed to him\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern who has gone silent is escalated on a known ladder and, at the exit cliff, surfaced to a human with the exact next step rather than quietly dropped or quietly kept.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant for exit\n- Dhee has not validated the ladder thresholds for the internship cohort\n- Basecamp token acts as Ali, so an agent write would be attributed to him\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Thresholds match internActivityTracker.js:11-17 and the UNKNOWN rule is stated, not omitted"
       ],
@@ -374,9 +419,9 @@
     {
       "id": "internship.CAP.intern_project_portfolio_assembly",
       "title": "Intern project portfolio assembly and demonstration evidence",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern's build becomes a presentable portfolio of releases and stories with real evidence attached, so what they did can be shown rather than described.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what belongs in an intern portfolio\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern's build becomes a presentable portfolio of releases and stories with real evidence attached, so what they did can be shown rather than described.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what belongs in an intern portfolio\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches assembleProjectPortfolio() on fixtures; self-reported items are never described as verified"
       ],
@@ -389,9 +434,9 @@
     {
       "id": "internship.CAP.intern_project_to_catalog_matching",
       "title": "Project matching recommendation against a project catalog",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern is matched to the project that best fits their skills, interests and the organisation's needs, instead of having a project generated from scratch every time.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no project catalog exists in the application\n- Dhee has not said whether matching is wanted instead of generation\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern is matched to the project that best fits their skills, interests and the organisation's needs, instead of having a project generated from scratch every time.\n\n**Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no project catalog exists in the application\n- Dhee has not said whether matching is wanted instead of generation\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Dhee states in writing whether a catalog should exist; until then this capability stays absent and no evidence is claimed"
       ],
@@ -404,9 +449,9 @@
     {
       "id": "internship.CAP.interview_preparation_support",
       "title": "Career interview preparation support and nudges",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern or alumnus with a real interview booked is moved one step down the preparation funnel at a time, and the staff report shows who is least prepared with the least time left.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- live email is a default-denied capability (executionPolicy.ts:33), so production sending requires a separately approved action class\n- Dhee has not confirmed this pipeline belongs to the internship domain rather than to placement\n- the CCPP view's current column contract was validated in 2026-06 and has not been re-verified in this pass\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern or alumnus with a real interview booked is moved one step down the preparation funnel at a time, and the staff report shows who is least prepared with the least time left.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- live email is a default-denied capability (executionPolicy.ts:33), so production sending requires a separately approved action class\n- Dhee has not confirmed this pipeline belongs to the internship domain rather than to placement\n- the CCPP view's current column contract was validated in 2026-06 and has not been re-verified in this pass\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Stage and beat match interviewPrepData.normalize and interviewPrepNudges on the unit fixtures"
       ],
@@ -419,9 +464,9 @@
     {
       "id": "internship.CAP.manager_check_in_brief_and_follow_up",
       "title": "Manager check-in preparation and follow-up note",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Before a check-in, the manager has the intern's real position, what they are working on and the projected completion date, and afterwards a supportive accountability note the manager can post as their own words.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no check-in record model exists\n- the Basecamp token acts as Ali, so agent attribution is impossible today\n- Dhee has not validated the check-in cadence\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nBefore a check-in, the manager has the intern's real position, what they are working on and the projected completion date, and afterwards a supportive accountability note the manager can post as their own words.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no check-in record model exists\n- the Basecamp token acts as Ali, so agent attribution is impossible today\n- Dhee has not validated the check-in cadence\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Percentages and dates match internDeliveryCoachNote.js arithmetic exactly; zero figures originate from the model"
       ],
@@ -434,9 +479,9 @@
     {
       "id": "internship.CAP.manager_surface_access_verification",
       "title": "Verifying the accountable manager can actually reach the agent surface",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Dhee can open the AI employee's detail and talk surfaces under a scoped role, so accountability is exercisable rather than nominal.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- requireAgentManagerOrAdmin is proposed and not built\n- no org_members.id is present in the JWT on any login path today\n- verification that Dhee opened the surface has not happened\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nDhee can open the AI employee's detail and talk surfaces under a scoped role, so accountability is exercisable rather than nominal.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- requireAgentManagerOrAdmin is proposed and not built\n- no org_members.id is present in the JWT on any login path today\n- verification that Dhee opened the surface has not happened\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Names the requireAdmin-only state of the agent routes and does not claim a manager-scoped gate that has not shipped"
       ],
@@ -449,9 +494,9 @@
     {
       "id": "internship.CAP.offer_document_package_generation",
       "title": "Offer and onboarding document package generation",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An approved applicant receives the correct document package with the right rolling start date, and every signed upload is stored as a new revision so a submitted file is never overwritten.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the template set or the start-date rule\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn approved applicant receives the correct document package with the right rolling start date, and every signed upload is stored as a new revision so a submitted file is never overwritten.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the template set or the start-date rule\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "nextMonday outputs reproduced exactly for a fixed set of input dates including a Sunday and a Monday boundary"
       ],
@@ -464,9 +509,9 @@
     {
       "id": "internship.CAP.onboarding_checklist_tracking",
       "title": "Document and onboarding checklist tracking",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Both the intern and the manager see exactly which onboarding step is outstanding and whose move it is, so waiting on Colaberry never reads as the intern being late.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the checklist step set or the actor split\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nBoth the intern and the manager see exactly which onboarding step is outstanding and whose move it is, so waiting on Colaberry never reads as the intern being late.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the checklist step set or the actor split\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches resolveChecklist() and nextStudentAction() on every fixture; a Colaberry-owned step is never reported as the intern being late"
       ],
@@ -479,9 +524,9 @@
     {
       "id": "internship.CAP.payment_gate_monitoring",
       "title": "Payment gate and unpaid-limbo monitoring",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An accepted applicant who has not paid does not silently stall forever, and document verification never grants paid training for free.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no scheduler wires the expiry or the payment reminder today\n- Dhee has not set the expiry window\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn accepted applicant who has not paid does not silently stall forever, and document verification never grants paid training for free.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no scheduler wires the expiry or the payment reminder today\n- Dhee has not set the expiry window\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches stateAfterDocumentsVerified() for all four input combinations"
       ],
@@ -494,9 +539,9 @@
     {
       "id": "internship.CAP.portfolio_publication_readiness",
       "title": "Portfolio and demonstration publication readiness",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern's portfolio is scored for whether it has enough substance to be worth a human review, and publication happens only after a reviewer approves it.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant for publication\n- Dhee has not validated the readiness policy for interns specifically\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern's portfolio is scored for whether it has enough substance to be worth a human review, and publication happens only after a reviewer approves it.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant for publication\n- Dhee has not validated the readiness policy for interns specifically\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Unmet list matches computeReadiness() under DEFAULT_POLICY; any employability language fails the release"
       ],
@@ -509,9 +554,9 @@
     {
       "id": "internship.CAP.project_assignment_readiness_gating",
       "title": "Project assignment readiness gating on the weeks 1 to 3 training gate",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Projects are assigned to interns who have cleared the training gate, and an intern waiting on Colaberry to assign is shown as waiting on us rather than as behind.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the weeks 1 to 3 gate as the current rule\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nProjects are assigned to interns who have cleared the training gate, and an intern waiting on Colaberry to assign is shown as waiting on us rather than as behind.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the weeks 1 to 3 gate as the current rule\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Matches readyForProject() and the handoff phase table; an unknown week never yields a late reading"
       ],
@@ -524,9 +569,9 @@
     {
       "id": "internship.CAP.review_queue_triage_and_profile_signals",
       "title": "Review queue triage with reliability-labelled profile signals",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Applications are bucketed so the reviewer sees what is actually waiting on them, with each supporting signal labelled reliable or unknown rather than silently defaulted.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what the agent may read\n- no PII-minimised agent projection of QueueRow exists\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nApplications are bucketed so the reviewer sees what is actually waiting on them, with each supporting signal labelled reliable or unknown rather than silently defaulted.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated what the agent may read\n- no PII-minimised agent projection of QueueRow exists\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Bucket explanations match BUCKET_STATES exactly and no applicant identity is quoted"
       ],
@@ -539,9 +584,9 @@
     {
       "id": "internship.CAP.routine_document_reminder_sending",
       "title": "Approved routine document and activity reminder sending",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern who has gone quiet or has an outstanding document gets a timely reminder from an approved template, exactly once per day per template, without a human having to notice first.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- live email is a default-denied capability (executionPolicy.ts:33), so production sending requires a separately approved action class and a named approver, not this matrix\n- no cron wires internshipNudge today; sending is manager-triggered from the console, so the scheduled path does not exist yet\n- Dhee has not validated which templates may ever fire without a human click\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern who has gone quiet or has an outstanding document gets a timely reminder from an approved template, exactly once per day per template, without a human having to notice first.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- live email is a default-denied capability (executionPolicy.ts:33), so production sending requires a separately approved action class and a named approver, not this matrix\n- no cron wires internshipNudge today; sending is manager-triggered from the console, so the scheduled path does not exist yet\n- Dhee has not validated which templates may ever fire without a human click\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Template selection matches the precondition table for every fixture; zero send attempts recorded"
       ],
@@ -554,9 +599,9 @@
     {
       "id": "internship.CAP.signed_document_verification",
       "title": "Signed document verification by a human reviewer",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Documents an applicant has already submitted are checked by a named person before any entitlement moves, so onboarding cannot be completed by a system that only saw a file arrive.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant\n- Dhee has not validated what a completeness pre-check may surface\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nDocuments an applicant has already submitted are checked by a named person before any entitlement moves, so onboarding cannot be completed by a system that only saw a file arrive.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- human-decision invariant\n- Dhee has not validated what a completeness pre-check may surface\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Outstanding list matches outstandingRequirements(); no document bytes are read"
       ],
@@ -569,9 +614,9 @@
     {
       "id": "internship.CAP.skill_gap_identification_for_interns",
       "title": "Skill-gap identification for interns",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "An intern and their manager see which skills are demonstrated, which are decaying and which are missing for the work ahead, so coaching targets a gap rather than a guess.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no target skill profile for internship work exists\n- skillGenomeService is not wired into the internship domain\n- Dhee has not defined what a gap means here\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nAn intern and their manager see which skills are demonstrated, which are decaying and which are missing for the work ahead, so coaching targets a gap rather than a guess.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no target skill profile for internship work exists\n- skillGenomeService is not wired into the internship domain\n- Dhee has not defined what a gap means here\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Dhee accepts a target profile definition in writing; until then the gap output stays unavailable"
       ],
@@ -584,9 +629,9 @@
     {
       "id": "internship.CAP.standup_attendance_tracking",
       "title": "Standup and required-meeting attendance tracking",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Participation in the Monday and Friday scrum is recorded where it can be recorded, and where no denominator exists it is reported as unknown rather than as absence.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no denominator of required meetings is recorded, so a rate cannot be computed\n- Dhee has not defined required attendance\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nParticipation in the Monday and Friday scrum is recorded where it can be recorded, and where no denominator exists it is reported as unknown rather than as absence.\n\n**Built today:** partial. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- no denominator of required meetings is recorded, so a rate cannot be computed\n- Dhee has not defined required attendance\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "The explanation states the missing denominator and never quotes an attendance percentage"
       ],
@@ -599,9 +644,9 @@
     {
       "id": "internship.CAP.two_channel_structured_interview",
       "title": "Two-channel structured interview over one versioned question bank",
-      "release": "r2",
+      "release": "autonomy:R0",
       "fulfills": [],
-      "narrative": "Form and phone applicants answer the same canonical questions under the same keys, so a reviewer compares like with like and no channel collects less than the other.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the question bank scope\n\nFull build prompt is attached to this story.",
+      "narrative": "**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is \"not started\" rather than \"behind\".\n\nForm and phone applicants answer the same canonical questions under the same keys, so a reviewer compares like with like and no channel collects less than the other.\n\n**Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures\n\n**Blocked by**\n- Dhee has not validated the question bank scope\n\nFull build prompt is attached to this story.",
       "acceptance": [
         "Answers match activeQuestionKeys() exactly for ten sampled questions; evaluator is a diff against the module"
       ],
@@ -614,7 +659,7 @@
     {
       "id": "internship.LEGACY-MIGRATION-PLAN",
       "title": "Legacy migration plan",
-      "release": "r1",
+      "release": "autonomy:R0",
       "fulfills": [],
       "narrative": "Disposition of this domain's 1 inherited legacy agent record(s).\n\n- **migrated_to_capability**: 1\n\n### Not covered by this plan\nThe 21 legacy records whose `proposed_owner_domain` is `unresolved` belong to no domain and are therefore not in any project's plan. Five of them are live production rows. They need an owner decision, and naming that here is the point.",
       "acceptance": [
@@ -631,7 +676,7 @@
     {
       "id": "internship.RESEARCH-1-SYSTEM-CLASSES",
       "title": "Compare the five system classes, and place this domain among them",
-      "release": "r0",
+      "release": "autonomy:R0",
       "fulfills": [],
       "narrative": "Write a short, evidenced comparison of chatbots, fixed workflows, tool-using agents, agentic systems and multi-agent systems. Then say which one **Internship & Career Readiness** actually needs, and why.\n\nGround it in this domain, not in the abstract: it has **35 candidate capabilities** and **1 inherited legacy records**. Of those capabilities, 10 are reserved to a human at every level. A comparison that does not change depending on that number has not been applied.\n\nState explicitly which class this domain does NOT need, and what would have to change for the next class up to be justified.",
       "acceptance": [
@@ -648,7 +693,7 @@
     {
       "id": "internship.RESEARCH-2-AGENT-ANATOMY",
       "title": "Map the nine anatomy elements onto this domain's agent",
-      "release": "r0",
+      "release": "autonomy:R0",
       "fulfills": [],
       "narrative": "Map each of reasoning, memory, inputs, communication, tools, procedures, coordination, safeguards and verification onto **the AI employee this project will define (none exists yet)**.\n\nFor each element, answer with evidence or with \"unknown\": what exists today, what is missing, and what the first honest version looks like. Because no agent exists yet, every element is a design question and \"unknown\" is an acceptable answer.\n\nCoordination specifically: agent-to-agent handoff does NOT exist in this platform. Record what coordination would require rather than describing it as available.",
       "acceptance": [
@@ -665,7 +710,7 @@
     {
       "id": "internship.RESEARCH-3-ROLE-AND-DA-TRANSITION",
       "title": "Document Dhee's role, and which DA responsibilities transition",
-      "release": "r0",
+      "release": "autonomy:R0",
       "fulfills": [],
       "narrative": "Study the employee's role as it is actually performed. Write down the existing Data Analyst responsibilities in this domain and which of them are intended to transition to AI.\n\n**A warning from discovery:** no document in this repository enumerates DA duties for ANY domain. Three independent researchers confirmed this separately. So this story's honest output may be \"the source material does not exist, and here is what would have to be written\" -- which is a real deliverable. Do not infer a duty list from a job title.\n\nRecord each responsibility as: stays human / transitions to AI / splits, with the reason.",
       "acceptance": [
@@ -682,7 +727,7 @@
     {
       "id": "internship.RESEARCH-4-MANAGER-INTERVIEW",
       "title": "Prepare a 30-minute interview with Dhee and propose a weekly check-in",
-      "release": "r0",
+      "release": "autonomy:R0",
       "fulfills": [],
       "narrative": "Produce the interview agenda and the questions, as project work.\n\n**This story sends nothing.** No calendar invite, no scheduling link, no attendee list, no email. Arranging the meeting is a human action taken outside this project, and this story is complete when the agenda exists -- not when a meeting is booked. Any wording that implies a meeting is scheduled is wrong.\n\nCover: which capabilities they want first, which must stay human forever, what \"good\" looks like in measurable terms, and what they would want switched off immediately if it misbehaved.\n\nDhee can reach the agent surface today, so the check-in can review real state.",
       "acceptance": [
@@ -699,7 +744,7 @@
     {
       "id": "internship.RESEARCH-5-THREE-PROPOSED-TASKS",
       "title": "Capture three proposed agent tasks with boundaries and completion evidence",
-      "release": "r0",
+      "release": "autonomy:R0",
       "fulfills": [],
       "narrative": "Pick three candidate tasks for this domain and write each one up with: the tools and data it needs, its approval boundary, and what counts as evidence it completed correctly.\n\nChoose from this domain's own draft capabilities rather than inventing tasks -- there are 35 to choose from. For each, state the starting autonomy and the ceiling, and why the ceiling is where it is.\n\n**Completion evidence may not be any of these:** a story being marked done, time having passed, a conversation that went well, or a mocked test passing. This platform already has 106 approval rows whose only recorded decider is a 4.25-hour timer, which is the failure this requirement exists to prevent.",
       "acceptance": [
@@ -712,26 +757,43 @@
       "task_guidance": "# Capture three proposed agent tasks with boundaries and completion evidence\n**Domain:** Internship & Career Readiness · **Release:** Discovery and validation · **Story:** `internship.RESEARCH-5-THREE-PROPOSED-TASKS`\n**Accountable human:** Dhee · **Deliverable:** `docs/discovery/05-three-proposed-tasks.md`\n\n## What this is\n\nThis is Claude Code work, and the product is a written document. There is no feature to ship\nand no agent to switch on. The document is the thing your manager reviews, so it is written\nto be read by them rather than by you.\n\n## The specification is the brief on this story, not this prompt\n\nRead the brief above this prompt on the story page. It names this domain's real figures, your\naccountable human, and the specific blockers discovery already found. **Those numbers are not\nrepeated here on purpose:** a second copy drifts from the first, and then nobody knows which\nis true. Work from the brief; this prompt tells you how to turn it into a document.\n\n## How to build it\n\n- **Choose from this domain's own draft capabilities rather than inventing tasks.** The brief says how many there are to choose from. An invented task cannot be validated against anything.\n- For each, state the starting autonomy and the ceiling on the `autonomy:R0` to `autonomy:R9` ladder, and WHY the ceiling is where it is. Read `backend/src/services/agentDomain/autonomyLadder.ts` for what each rung means.\n- Write the completion evidence before the task description. If you cannot say what would prove it worked, the task is not ready to propose.\n\n## What the document must contain\n\n- Three tasks, each with: the tools and data it needs, its approval boundary, and what counts as evidence it completed correctly.\n- Starting autonomy and ceiling for each, with the reason for the ceiling.\n- The named human who approves each one.\n- An explicit statement, per task, of what would make you switch it off.\n\nWrite it as Markdown with real headings. A wall of prose is not a deliverable, and neither is\na bulleted restatement of the brief.\n\n## The evidence rule this story exists to teach\n\n**Completion evidence may not be any of these:** a story marked done, time having passed, a\nconversation that went well, or a mocked test passing. This platform already carries 106\napproval rows whose only recorded decider is a 4.25-hour timer. That is the failure this\nrequirement exists to prevent, and proposing a task with timer-shaped evidence repeats it.\n\n## Evidence this is done\n\nCite the real thing. For this story that is the committed file `docs/discovery/05-three-proposed-tasks.md`, and inside it,\nevery claim carrying either a source or the word unknown.\n\n**None of these count:** this story being marked complete, elapsed time, a conversation that\nwent well, a document that restates the brief without answering it, or a confident sentence\nwith no source. Your accountable manager evaluates the evidence.\n\n**Unknown is a real answer and is worth more than a guess.** Several of these questions have\nno source material in this repository. Writing \"the source does not exist, and here is what\nwould have to be written\" is a complete answer, not a failure to find one.\n\n## Before you start\n\n- **The platform source is PUBLIC. You do not need access granted.** Wherever this brief\n  cites a file like `backend/src/services/agentRegistrySeed.ts`, it means the Colaberry\n  platform repository:\n  **https://github.com/ColaberryIntern/ColaberryEnterprise_AI_LeadershipAccelerator**\n  Clone it read-only beside your own project and point Claude Code at it. Sarbjit hit this\n  within hours of starting and was right to stop rather than invent an answer: a brief that\n  cites a path without naming its repository is the brief being wrong, not you.\n- **Nothing in this story authorizes an outbound message.** Do not send an invitation, an\n  email or a direct message, and do not record a meeting as booked. Arranging anything with a\n  person is a human action taken outside this project.\n- **Nothing here changes an agent.** Do not enable one, grant it a tool, or raise an autonomy\n  level. A capability stays `draft` until your manager has actually reviewed it.\n- Your repo may not be connected yet. The prompt works either way; the story cannot be\n  verified and no points are awarded until a repo is connected, because verification is a\n  read of your repo.",
       "due_on": "2026-09-20",
       "due_baseline_on": "2026-10-20"
+    },
+    {
+      "id": "internship.STORY-000",
+      "title": "STORY-000 · Build your Command Center",
+      "release": "autonomy:R0",
+      "fulfills": [],
+      "narrative": "Build one page that shows what you are building and how far along it is, so you can see your\nown domain and demonstrate from it.\n\n**Your domain** is Internship & Career Readiness (`internship`). **Your employee** is the AI employee this project will define, which does not exist yet.\n**Your accountable human** is Dhee.\n\n**The scope you are being handed:** 35 researched capabilities, of which\n10 are permanently human decisions that no autonomy level ever automates, and\n35 carry a recorded blocker. 1 legacy agent rows have a\ndisposition recorded against this domain. Capability research was recorded 2026-10-09.\n\n**The ladder you will walk it down:** ten rungs, `autonomy:R0` to `autonomy:R9`. Your\ncapabilities name 6 distinct rungs between them\n(autonomy:R0, autonomy:R2, autonomy:R4, autonomy:R5, autonomy:R6, autonomy:R7), and 65 per-rung behaviours with their own\nacceptance criteria are already written into the capability records. Those are not yours to\ninvent; they are yours to read, render and then satisfy one rung at a time.\n\n**Nothing here is validated yet.** Every capability is `draft` until your accountable human\nhas reviewed it. This page must show that state honestly rather than rendering a plan as a\nplan that somebody agreed to.",
+      "acceptance": [
+        "Given the Command Center, when it is opened, then all six panels render and each one names the endpoint it read.",
+        "Given a panel whose endpoint returned nothing, when it renders, then it says so in words and is visibly distinct from a panel that is still loading.",
+        "Given the autonomy ladder panel, when it renders, then all ten rungs are present with the owner's wording, and each capability's ceiling is marked against the rung it stops at.",
+        "Given the autonomy ladder panel, when a capability's authority is shown, then the page shows the effective authority `effectiveAuthority()` returns rather than the level the capability record asks for, and names the `no_tool_grants` rule with the number of capabilities it currently constrains, saying so in words when that number is zero.",
+        "Given the governance panel, when a tool request is shown, then nothing on the page states or implies that filing it granted anything.",
+        "Trust -- no panel shows a number, a grant, a rung or a result this domain has not actually produced."
+      ],
+      "owner_agent": "",
+      "failure_paths": [],
+      "task_guidance": "# STORY-000 · Build your Command Center -- Internship & Career Readiness\n\nThis is Claude Code work, and the product is a page in this repository. It is the first thing\nyou build and the last thing you delete: every later story reports into it.\n\n## The specification is the brief on this story, not this prompt\n\nRead the brief above this prompt on the story page. It names your domain's real counts, your\naccountable human and your employee. **Those numbers are not repeated here on purpose:** a\nsecond copy drifts from the first, and then nobody knows which is true. Work from the brief.\n\n## The six panels, and the question each one answers\n\n**1. Your employee -- \"does it exist, and what is it allowed to do?\"**\n\nRead `GET /api/admin/agent-domains-mine`. Render the agent's `agent_name`, whether it is\n`enabled`, its `autonomy_level`, how many tools are granted to it, and when its autonomy was\nlast set and by whom. If the agent does not appear, say so in those words and do not draw an\nempty card that looks like a loading state. An agent with no identity rows renders as nothing,\nand a panel that cannot tell \"no agent\" from \"still fetching\" is the panel that wasted a day.\n\n**2. Your capability inventory -- \"what am I actually building?\"**\n\nRead `GET /api/admin/agent-domains/internship` and\n`GET /api/admin/agent-domains/internship/coverage`. One row per capability showing its\nname, `classification`, `implementation_state`, `requirement_validation_state`,\n`starting_autonomy`, `max_permitted_autonomy`, and a clear mark on the ones where\n`human_decision` is true. Sort by nothing clever: the order the records come in is the order\nresearch recorded them.\n\n**3. The autonomy ladder -- \"where is this going?\"**\n\nRender all ten rungs, in the owner's own words, with your employee's current rung marked and\neach capability's ceiling marked against the rung it stops at:\n\n| Rung | What it means |\n|---|---|\n| `autonomy:R0` | Define the workflow, requirements, risks and human decisions. |\n| `autonomy:R1` | Prepare isolated development, fixtures and baseline tests. |\n| `autonomy:R2` | Answer questions using approved knowledge and records. |\n| `autonomy:R3` | Perform approved, user-initiated sandbox tool operations. |\n| `autonomy:R4` | Execute and verify stateful, multi-step sandbox tasks. |\n| `autonomy:R5` | Evaluate in shadow mode against approved reference outcomes. |\n| `autonomy:R6` | Conduct a separately approved, supervised production pilot. |\n| `autonomy:R7` | Automate only explicitly authorized action classes within limits. |\n| `autonomy:R8` | Coordinate necessary, authorized handoffs with other agents. |\n| `autonomy:R9` | Demonstrate reliable operation, monitoring, recovery and ownership. |\n\nRungs above a capability's ceiling are drawn as unreachable for that capability rather than as\nfuture work. A ceiling is a decision somebody made with a reason, and the reason is on the\nrecord -- show it.\n\n**4. Per-rung behaviour -- \"what does the next rung require of me?\"**\n\nEach capability record carries `release_behaviour[]`: one entry per rung, each with a\n`behaviour` and its own `acceptance_criteria`. Render them under their rung. This is the panel\nthat turns the ladder from a diagram into a list of things to do, and none of it is invented\nby you -- it is already written down.\n\n**5. Your governance queue -- \"what am I waiting on a human for?\"**\n\nRead `GET /api/admin/agent-domain-change-requests-mine`. Show change requests and tool\nrequests separately, with status, who proposed, who decided and when. A tool request is how\nyou ask for a capability your agent needs; it grants nothing by itself, and this panel must\nnot imply that filing one did.\n\n**6. What is not available -- \"what would I be lying about?\"**\n\nA panel that names the gaps, because the gaps are the work. Specifically:\n\n- Coordinated handoff between two agents does not exist in this platform today, so the rung that asks for it -- `autonomy:R8` -- is unreachable by fact rather than by choice. Say so; do not draw it as merely incomplete.\n- A capability whose `requirement_validation_state` is `draft` has not been agreed by anyone.\n- A capability with an empty `release_behaviour[]` has no defined next rung, and defining it is the first piece of work on it.\n- Anything this page cannot source from a real endpoint is left blank and labelled, never filled with a plausible example.\n\n## The rules this page must not break\n\n**Tool grants are the throttle, and they are not yours.** `effectiveAuthority()` in\n`backend/src/services/agentDomain/autonomyLadder.ts` forces any capability above `autonomy:R2`\nback down to `autonomy:R2` when no tools are granted, with the reason `no_tool_grants`. Read\nthat function before you render any authority figure, and render what it returns rather than\nwhat the capability record asks for. The two differ on purpose.\n\n**Finishing work does not promote anything.** `NON_PROMOTING_SIGNALS` in\n`promotionCriteria.ts` names the four things that must never raise autonomy: a story marked\ncomplete, elapsed time, a conversation that went well, and a mocked test passing. This page\nmay show progress; it may never show progress as authority. A named human promotes an agent,\none rung at a time, on evidence.\n\n**Draft is not approved.** Render `draft` as draft everywhere. No panel may read as though a\nmanager has signed anything off.\n\n## Tools your capabilities say they will need\n\n- sandbox_database_read\n- sandbox_database_write\n- internship_admin_api_read\n- audit_event_write\n- structured_output_validation\n- voice_call_trigger_sandbox\n- transcript_extraction\n- llm_text_generation\n- prompt_injection_fencing\n- reason_code_catalog_read\n- document_template_render\n- sandbox_file_write\n\nNone of these is granted today. Each one is a request you file and a human approves.\n\n## Evidence this story is done\n\nCite the real thing: a named passing test, a screenshot of the rendered page beside the\nendpoint response it was built from, or a file:line. **None of these count:** this story being\nmarked complete, elapsed time, a conversation that went well, or a mocked test passing.\nDhee evaluates the evidence.",
+      "due_on": "2026-09-20",
+      "due_baseline_on": "2026-09-20"
     }
   ],
   "agents": [],
   "project": {
-    "name": "internship",
+    "name": "Internship & Career Readiness",
     "descriptor": "The internship domain agent.",
     "repo_url": "https://github.com/tashdiah-Data/ai-project",
-    "plan_version": 1,
-    "plan_sha256": "315c78f430773cc110dce00105d96c98114acde5f83e6461e563413369915595"
+    "plan_version": 2,
+    "plan_sha256": "324c8b0b35802261e8c216f95f91bbf1df84fbd1a9a61da064c3656cbb0753c1"
   },
   "schedule": {
     "build_start": "2026-09-20",
     "build_end": "2026-09-20",
     "demo_day": "2026-09-27",
     "build_weeks": 1,
-    "demo_release_key": "r0",
-    "roadmap_release_keys": [
-      "r1",
-      "r2"
-    ],
+    "demo_release_key": "autonomy:R0",
+    "roadmap_release_keys": [],
     "prep": [
       {
         "key": "PREP-1",
@@ -773,8 +835,8 @@
     "counts": {
       "requirements_total": 0,
       "requirements_by_kind": {},
-      "stories_total": 41,
-      "releases_total": 3,
+      "stories_total": 46,
+      "releases_total": 1,
       "agents_total": 0,
       "failure_paths_total": 0,
       "agents_by_autonomy": {}

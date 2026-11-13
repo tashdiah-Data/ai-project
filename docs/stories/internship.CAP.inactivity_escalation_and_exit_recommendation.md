@@ -1,5 +1,7 @@
 # internship.CAP.inactivity_escalation_and_exit_recommendation — Inactivity escalation ladder and exit recommendation
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An intern who has gone silent is escalated on a known ladder and, at the exit cliff, surfaced to a human with the exact next step rather than quietly dropped or quietly kept.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -11,7 +13,7 @@ An intern who has gone silent is escalated on a known ladder and, at the exit cl
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

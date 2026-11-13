@@ -8,7 +8,7 @@ Cover: which capabilities they want first, which must stay human forever, what "
 
 Dhee can reach the agent surface today, so the check-in can review real state.
 
-**Release:** r0 · Discovery and validation (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

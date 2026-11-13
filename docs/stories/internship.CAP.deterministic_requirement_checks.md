@@ -1,5 +1,7 @@
 # internship.CAP.deterministic_requirement_checks — Deterministic eligibility and commitment requirement checks
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 The eight hard requirements a reviewer trusts are computed by arithmetic over the applicant's own quoted answers, never by a model, so the green and red a reviewer acts on cannot be hallucinated.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -9,7 +11,7 @@ The eight hard requirements a reviewer trusts are computed by arithmetic over th
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

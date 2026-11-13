@@ -1,5 +1,7 @@
 # internship.CAP.da_cohort_analysis_automation — Data-analyst cohort analysis moving to the AI employee
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 The recurring cohort and funnel analysis a data analyst assembles by hand is produced by the AI employee with its sources cited, freeing analyst time for questions nobody has asked yet.
 
 **Built today:** absent. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -10,7 +12,7 @@ The recurring cohort and funnel analysis a data analyst assembles by hand is pro
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

@@ -1,5 +1,7 @@
 # internship.CAP.project_assignment_readiness_gating — Project assignment readiness gating on the weeks 1 to 3 training gate
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 Projects are assigned to interns who have cleared the training gate, and an intern waiting on Colaberry to assign is shown as waiting on us rather than as behind.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -9,7 +11,7 @@ Projects are assigned to interns who have cleared the training gate, and an inte
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

@@ -1,6 +1,6 @@
-# internship — Stories
+# Internship & Career Readiness — Stories
 
-41 stories across 3 releases, walking-skeleton first:
+46 stories across 1 releases, walking-skeleton first:
 the earliest release proves the thinnest end-to-end path including the trust
 spine, and later releases stack features on top of something already working.
 
@@ -13,28 +13,10 @@ the page you keep open for the rest of the programme and demo from. It belongs t
 release and fulfils none of your requirements, because it is the window onto your
 system rather than a part of it.
 
-## r0 · Discovery and validation — weeks 0–0
+## autonomy:R0 · Legacy migration plan — weeks 0–0
 
-**Goal:** Deliver every r0 story for internship.
-**Done when you can show:** The r0 documents exist in the repository and their acceptance criteria are met.
-
-- **[internship.RESEARCH-1-SYSTEM-CLASSES](stories/internship.RESEARCH-1-SYSTEM-CLASSES.md)** — Compare the five system classes, and place this domain among them
-- **[internship.RESEARCH-2-AGENT-ANATOMY](stories/internship.RESEARCH-2-AGENT-ANATOMY.md)** — Map the nine anatomy elements onto this domain's agent
-- **[internship.RESEARCH-3-ROLE-AND-DA-TRANSITION](stories/internship.RESEARCH-3-ROLE-AND-DA-TRANSITION.md)** — Document Dhee's role, and which DA responsibilities transition
-- **[internship.RESEARCH-4-MANAGER-INTERVIEW](stories/internship.RESEARCH-4-MANAGER-INTERVIEW.md)** — Prepare a 30-minute interview with Dhee and propose a weekly check-in
-- **[internship.RESEARCH-5-THREE-PROPOSED-TASKS](stories/internship.RESEARCH-5-THREE-PROPOSED-TASKS.md)** — Capture three proposed agent tasks with boundaries and completion evidence
-
-## r1 · Legacy migration plan — weeks 0–0
-
-**Goal:** Deliver every r1 story for internship.
-**Done when you can show:** The r1 documents exist in the repository and their acceptance criteria are met.
-
-- **[internship.LEGACY-MIGRATION-PLAN](stories/internship.LEGACY-MIGRATION-PLAN.md)** — Legacy migration plan
-
-## r2 · r2 — weeks 0–0
-
-**Goal:** Deliver every r2 story for internship.
-**Done when you can show:** The r2 documents exist in the repository and their acceptance criteria are met.
+**Goal:** Deliver every autonomy:R0 story for Internship & Career Readiness.
+**Done when you can show:** The autonomy:R0 documents exist in the repository and their acceptance criteria are met.
 
 - **[internship.CAP.activation_and_entitlement_grant](stories/internship.CAP.activation_and_entitlement_grant.md)** — Internship activation and curriculum entitlement grant
 - **[internship.CAP.active_project_drift_detection](stories/internship.CAP.active_project_drift_detection.md)** — Active project drift detection
@@ -43,6 +25,10 @@ system rather than a part of it.
 - **[internship.CAP.applicant_pii_access_audit](stories/internship.CAP.applicant_pii_access_audit.md)** — Applicant PII access audit over the internship surface
 - **[internship.CAP.applicant_readiness_assessment](stories/internship.CAP.applicant_readiness_assessment.md)** — Internship readiness assessment for the reviewer
 - **[internship.CAP.application_intake_and_state_transitions](stories/internship.CAP.application_intake_and_state_transitions.md)** — Internship application intake and single-writer state transitions
+- **[internship.CAP.application_intake_and_state_transitions.L1-BY-HAND](stories/internship.CAP.application_intake_and_state_transitions.L1-BY-HAND.md)** — Internship application intake and single-writer state transitions · 1 · do it by hand
+- **[internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP](stories/internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP.md)** — Internship application intake and single-writer state transitions · 2 · do it in the app
+- **[internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST](stories/internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST.md)** — Internship application intake and single-writer state transitions · 3 · request the tool
+- **[internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED](stories/internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED.md)** — Internship application intake and single-writer state transitions · 4 · agent does it, watched
 - **[internship.CAP.build_progress_and_pace_monitoring](stories/internship.CAP.build_progress_and_pace_monitoring.md)** — Project progress, pace and deadline monitoring
 - **[internship.CAP.career_support_handoff](stories/internship.CAP.career_support_handoff.md)** — Career preparation and support handoff out of the internship
 - **[internship.CAP.certification_readiness_tracking](stories/internship.CAP.certification_readiness_tracking.md)** — Certification readiness and attempt tracking for interns
@@ -71,3 +57,10 @@ system rather than a part of it.
 - **[internship.CAP.skill_gap_identification_for_interns](stories/internship.CAP.skill_gap_identification_for_interns.md)** — Skill-gap identification for interns
 - **[internship.CAP.standup_attendance_tracking](stories/internship.CAP.standup_attendance_tracking.md)** — Standup and required-meeting attendance tracking
 - **[internship.CAP.two_channel_structured_interview](stories/internship.CAP.two_channel_structured_interview.md)** — Two-channel structured interview over one versioned question bank
+- **[internship.LEGACY-MIGRATION-PLAN](stories/internship.LEGACY-MIGRATION-PLAN.md)** — Legacy migration plan
+- **[internship.RESEARCH-1-SYSTEM-CLASSES](stories/internship.RESEARCH-1-SYSTEM-CLASSES.md)** — Compare the five system classes, and place this domain among them
+- **[internship.RESEARCH-2-AGENT-ANATOMY](stories/internship.RESEARCH-2-AGENT-ANATOMY.md)** — Map the nine anatomy elements onto this domain's agent
+- **[internship.RESEARCH-3-ROLE-AND-DA-TRANSITION](stories/internship.RESEARCH-3-ROLE-AND-DA-TRANSITION.md)** — Document Dhee's role, and which DA responsibilities transition
+- **[internship.RESEARCH-4-MANAGER-INTERVIEW](stories/internship.RESEARCH-4-MANAGER-INTERVIEW.md)** — Prepare a 30-minute interview with Dhee and propose a weekly check-in
+- **[internship.RESEARCH-5-THREE-PROPOSED-TASKS](stories/internship.RESEARCH-5-THREE-PROPOSED-TASKS.md)** — Capture three proposed agent tasks with boundaries and completion evidence
+- **[internship.STORY-000](stories/internship.STORY-000.md)** — STORY-000 · Build your Command Center

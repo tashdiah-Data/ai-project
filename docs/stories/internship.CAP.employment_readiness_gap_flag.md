@@ -1,5 +1,7 @@
 # internship.CAP.employment_readiness_gap_flag — Daily employment-readiness gap flag as a workforce task
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 The day's largest employment-readiness gap is raised as a task with an owner, so a career-readiness problem gets a ticket rather than a mention.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -10,7 +12,7 @@ The day's largest employment-readiness gap is raised as a task with an owner, so
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

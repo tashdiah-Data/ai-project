@@ -1,5 +1,7 @@
 # internship.CAP.ai_voice_interview_and_transcript_capture — AI voice interview with dual consent, transcript capture and answer extraction
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An applicant who prefers to talk completes the same interview by phone, with permission to call and permission to record held as separate consents, and the transcript converted into the same keyed answers a form would produce.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -11,7 +13,7 @@ An applicant who prefers to talk completes the same interview by phone, with per
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 

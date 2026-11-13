@@ -1,5 +1,7 @@
 # internship.CAP.activation_and_entitlement_grant — Internship activation and curriculum entitlement grant
 
+**CANDIDATE -- not started, not assigned.** This is one line on this domain's list of everything its agent could eventually do. It becomes real work only when the builder picks it and their manager agrees, at which point it opens as four stories. Until then it is deliberately inert, and the honest status of it is "not started" rather than "behind".
+
 An intern gains full training access only when every blocker is cleared, and activation is an explicit human act rather than a side effect of a file arriving.
 
 **Built today:** implemented. **Requirement validated:** draft -- Dhee must confirm scope, exceptions and success measures
@@ -10,7 +12,7 @@ An intern gains full training access only when every blocker is cleared, and act
 
 Full build prompt is attached to this story.
 
-**Release:** r2 · r2 (weeks 0–0)
+**Release:** autonomy:R0 · Legacy migration plan (weeks 0–0)
 **Owner:** 
 **Blocked by:** nothing — you can start this now
 
