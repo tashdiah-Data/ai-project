@@ -34,8 +34,8 @@ Sources: `services/agentDomain/capabilities/internship.json` (`legacy_dispositio
 |---|---|---|---|
 | 1 | Whether the daily `career` employment-readiness signal is reliable | Where is the signal computed, and has anyone checked its values against real cases? | Dhee, as accountable human, to name the owner. The inventory records this as not verified (`internship.json`, `legacy_dispositions[0].reason`) |
 | 2 | Who owns the shared function behind this job | Who approves a change to `runDomainFlag`, which seven directors use? | Unknown. I did not find an owner in the sources I read |
-| 3 | Which domain absorbs each of the 8 "absorb" rows | Name one absorbing domain per row | Ali, who made the ruling, with the domain owners (`_unresolved.json`, rows with `ruling: absorb`) |
-| 4 | Who owns the 5 parked rows, and what is their autonomy source | Which domain owns each, and what limits what it may do? | Ali. The file records "no owner recorded and no autonomy source" (`_unresolved.json`, rows with `ruling: parked`) |
+| 3 | Which domain absorbs each of the 8 "absorb" rows | Name one absorbing domain per row | Ali, who made the ruling, with the domain owners (`_unresolved.json`, rows with `owner_decision.ruling: absorb`) |
+| 4 | Who owns the 5 parked rows, and what is their autonomy source | Which domain owns each, and what limits what it may do? | Ali. The file records "no owner recorded and no autonomy source" (`_unresolved.json`, rows with `owner_decision.ruling: parked`) |
 | 5 | Whether the 8 retired rows have actually been removed from the platform | Has the retirement ruling been carried out on the live registry? | Unknown. I checked that the rows are recorded as retired, disabled and never run. I did not check the live registry |
 
 ## 3. The 21 records that belong to no domain
