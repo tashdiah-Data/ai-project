@@ -102,7 +102,7 @@ I checked these against the platform repository at commit `22f3efa` on 2026-11-1
 | `services/agentRegistrySeed.ts:2260-2269` | The job's registry entry | **Stale.** The entry is now at lines 2431-2439. Lines 2260-2269 hold a different agent |
 | `_unresolved.json` run counts | Total 1,491,129 | Correct. The 8 absorb rows, the 5 parked rows and the file's total reconcile |
 
-**Still to do:** Tashima re-checks the four code citations above with Claude Code and records the date here: 2026-11-13.
+**Re-checked:** Tashima re-checked the four code citations above with Claude Code on 2026-11-13.
 
 ## 8. What I believe is wrong in the brief
 
