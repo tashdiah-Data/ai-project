@@ -7,6 +7,38 @@
   "truth_revision": null,
   "files": [
     {
+      "path": ".colaberry/agent-domain.json",
+      "sha256": "4214634cc2032184c9c6a57921b1611c62eb11f1a16cea666db1884f6ec64938"
+    },
+    {
+      "path": ".colaberry/plan.json",
+      "sha256": "4e0e90b3703636bd04172f59bf2dd85b739f011bad8e9e2888c47e9996f78de8"
+    },
+    {
+      "path": ".colaberry/profile.json",
+      "sha256": "de37e34f9ff591e07ab8f9da67ff6f2982995ca3ce59652f54986af7535b5a37"
+    },
+    {
+      "path": ".colaberry/progress.json",
+      "sha256": "de769c0720180a58a2eaf411485a2c73b4a4deea2aea98f61745b9f1d2ff2c59"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "2101290c7f939d79a0c6a4289fd72261c9592ce3812d31307e41f51936042dca"
+    },
+    {
+      "path": "artifacts/INDEX.md",
+      "sha256": "cefe467a58a55f729949e21bb76722ec182d4ad04b45370a6545a01e182e05ea"
+    },
+    {
+      "path": "artifacts/week-01/project-standards.md",
+      "sha256": "5350b7dbab4e491383d6e4aaa732dc6fbc62bb6659b29c7db4a201ff0a852279"
+    },
+    {
+      "path": "docs/DATA_CONTRACT.md",
+      "sha256": "d56e89edcfe36725945d961cf3479b646507d1fa855bba0dcdfff3f8f8a658b0"
+    },
+    {
       "path": "docs/REQUIREMENTS.md",
       "sha256": "39891cd9b38928174f22c32724df50e192f624aaa58fd3207e8a52e699f66f00"
     },
@@ -19,12 +51,8 @@
       "sha256": "964de0ca1eca1f49c8697dcb406367c60d6f8a5889f24e45eef14fd022d45501"
     },
     {
-      "path": "docs/DATA_CONTRACT.md",
-      "sha256": "d56e89edcfe36725945d961cf3479b646507d1fa855bba0dcdfff3f8f8a658b0"
-    },
-    {
-      "path": "CLAUDE.md",
-      "sha256": "2101290c7f939d79a0c6a4289fd72261c9592ce3812d31307e41f51936042dca"
+      "path": "docs/stories/STORY-000.md",
+      "sha256": "d2b4e8ea18e8f1a249d1fae875ae3479a6e76afbb07dafea04b4fd00aaab57a5"
     },
     {
       "path": "docs/stories/internship.CAP.activation_and_entitlement_grant.md",
@@ -51,10 +79,6 @@
       "sha256": "c2dc2bd3f139db4ab7fbde335bb757a86aa736fba0b49b05680c6c9bd3c72aaa"
     },
     {
-      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.md",
-      "sha256": "e999e40c05c2453945a97ce1c867d1072e5d77dc35fb80fc413de7df677bc599"
-    },
-    {
       "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L1-BY-HAND.md",
       "sha256": "3e2c689e24851368f7c556f2192c8e67b5fd32399cb1fce9882dbe411b3f797a"
     },
@@ -69,6 +93,10 @@
     {
       "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED.md",
       "sha256": "385e24da69f4d03b378c657f1ef862cec51f265438a36558a072fe7042148b59"
+    },
+    {
+      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.md",
+      "sha256": "e999e40c05c2453945a97ce1c867d1072e5d77dc35fb80fc413de7df677bc599"
     },
     {
       "path": "docs/stories/internship.CAP.build_progress_and_pace_monitoring.md",
@@ -209,26 +237,6 @@
     {
       "path": "docs/stories/internship.STORY-000.md",
       "sha256": "e11a856291904ab39af738ac29d1af32f233c2f63047b9314d6e95eb240c3074"
-    },
-    {
-      "path": ".colaberry/plan.json",
-      "sha256": "4e0e90b3703636bd04172f59bf2dd85b739f011bad8e9e2888c47e9996f78de8"
-    },
-    {
-      "path": ".colaberry/progress.json",
-      "sha256": "de769c0720180a58a2eaf411485a2c73b4a4deea2aea98f61745b9f1d2ff2c59"
-    },
-    {
-      "path": ".colaberry/profile.json",
-      "sha256": "de37e34f9ff591e07ab8f9da67ff6f2982995ca3ce59652f54986af7535b5a37"
-    },
-    {
-      "path": ".colaberry/agent-domain.json",
-      "sha256": "4214634cc2032184c9c6a57921b1611c62eb11f1a16cea666db1884f6ec64938"
-    },
-    {
-      "path": "docs/stories/STORY-000.md",
-      "sha256": "d2b4e8ea18e8f1a249d1fae875ae3479a6e76afbb07dafea04b4fd00aaab57a5"
     }
   ]
 }
