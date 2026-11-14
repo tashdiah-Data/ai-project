@@ -3,13 +3,13 @@
   "project": "Internship & Career Readiness",
   "totals": {
     "stories_total": 46,
-    "stories_verified": 5,
+    "stories_verified": 6,
     "stories_submitted": 1,
-    "stories_in_progress": 40,
+    "stories_in_progress": 39,
     "stories_not_started": 0,
     "criteria_total": 69,
-    "criteria_passed": 20,
-    "points_awarded": 95
+    "criteria_passed": 23,
+    "points_awarded": 112
   },
   "stories": [
     {
@@ -1157,19 +1157,15 @@
       "notes": null,
       "updated_at": null,
       "verification": {
-        "state": "in_progress",
-        "criteria_passed": 0,
+        "state": "verified",
+        "criteria_passed": 3,
         "criteria_total": 3,
-        "verified_at": null,
-        "commit_sha": null,
-        "commit_url": null,
-        "commit_at": null,
-        "points_awarded": null,
-        "outstanding": [
-          "The plan accounts for every inherited legacy record for this domain, each one kept, merged or retired with a reason.",
-          "The migration is described as replayable: running it twice leaves the same end state, with no duplicated side effects.",
-          "The plan states what happens to a record the migration cannot classify, rather than assuming none exist."
-        ]
+        "verified_at": "2026-11-14T00:28:05.255Z",
+        "commit_sha": "759d8beb720f7df86d56dd1a9909f07fbd7ac5d2",
+        "commit_url": "https://github.com/tashdiah-Data/ai-project/commit/759d8beb720f7df86d56dd1a9909f07fbd7ac5d2",
+        "commit_at": "2026-11-14T00:21:03Z",
+        "points_awarded": 17,
+        "outstanding": []
       }
     },
     {

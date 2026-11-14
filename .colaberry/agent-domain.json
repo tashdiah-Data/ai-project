@@ -413,9 +413,9 @@
     "summary": {
       "stories": 46,
       "checked": 46,
-      "verified": 5,
-      "awaiting_criteria": 40,
-      "outstanding_criteria": 49
+      "verified": 6,
+      "awaiting_criteria": 39,
+      "outstanding_criteria": 46
     },
     "stories": [
       {
@@ -1090,21 +1090,14 @@
       {
         "story_id": "internship.LEGACY-MIGRATION-PLAN",
         "title": "Legacy migration plan",
-        "status": "in_progress",
-        "verification_state": "in_progress",
-        "verified": false,
-        "criteria_passed": 0,
+        "status": "complete",
+        "verification_state": "verified",
+        "verified": true,
+        "criteria_passed": 3,
         "criteria_total": 3,
-        "reasons": [
-          "None of the 3 acceptance criteria are marked as passing yet.",
-          "No commit in the repo names internship.LEGACY-MIGRATION-PLAN and changes a file. Commit your work with a `Story: internship.LEGACY-MIGRATION-PLAN` trailer (or internship.LEGACY-MIGRATION-PLAN in the subject line) and push."
-        ],
-        "outstanding": [
-          "The plan accounts for every inherited legacy record for this domain, each one kept, merged or retired with a reason.",
-          "The migration is described as replayable: running it twice leaves the same end state, with no duplicated side effects.",
-          "The plan states what happens to a record the migration cannot classify, rather than assuming none exist."
-        ],
-        "commit_sha": null
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": "759d8beb720f7df86d56dd1a9909f07fbd7ac5d2"
       },
       {
         "story_id": "internship.RESEARCH-1-SYSTEM-CLASSES",
