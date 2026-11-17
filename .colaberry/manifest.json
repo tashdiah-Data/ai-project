@@ -28,11 +28,39 @@
     },
     {
       "path": "artifacts/INDEX.md",
-      "sha256": "cefe467a58a55f729949e21bb76722ec182d4ad04b45370a6545a01e182e05ea"
+      "sha256": "3d5a59ba62a73ab885be2993a86260deb5d3b24f5922be03b28cabd5c8e25713"
+    },
+    {
+      "path": "artifacts/week-00/01-system-classes.md",
+      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
+    },
+    {
+      "path": "artifacts/week-00/02-agent-anatomy.md",
+      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
+    },
+    {
+      "path": "artifacts/week-00/03-role-and-da-transition.md",
+      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
+    },
+    {
+      "path": "artifacts/week-00/04-manager-interview.md",
+      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
+    },
+    {
+      "path": "artifacts/week-00/05-three-proposed-tasks.md",
+      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
+    },
+    {
+      "path": "artifacts/week-00/legacy-migration-plan.md",
+      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
     },
     {
       "path": "artifacts/week-01/project-standards.md",
       "sha256": "5350b7dbab4e491383d6e4aaa732dc6fbc62bb6659b29c7db4a201ff0a852279"
+    },
+    {
+      "path": "artifacts/week-02/skill-template.md",
+      "sha256": "9cddcc6d3cd6b465e93a2bf60f9432ef38f0f9786768576b9b933d54ca49072d"
     },
     {
       "path": "docs/DATA_CONTRACT.md",
