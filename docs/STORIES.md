@@ -1,6 +1,6 @@
 # Internship & Career Readiness — Stories
 
-46 stories across 1 releases, walking-skeleton first:
+50 stories across 1 releases, walking-skeleton first:
 the earliest release proves the thinnest end-to-end path including the trust
 spine, and later releases stack features on top of something already working.
 
@@ -25,6 +25,9 @@ system rather than a part of it.
 - **[internship.CAP.applicant_pii_access_audit](stories/internship.CAP.applicant_pii_access_audit.md)** — Applicant PII access audit over the internship surface
 - **[internship.CAP.applicant_readiness_assessment](stories/internship.CAP.applicant_readiness_assessment.md)** — Internship readiness assessment for the reviewer
 - **[internship.CAP.application_intake_and_state_transitions](stories/internship.CAP.application_intake_and_state_transitions.md)** — Internship application intake and single-writer state transitions
+- **[internship.CAP.application_intake_and_state_transitions.L0-ASK-FOR-A-SCREEN](stories/internship.CAP.application_intake_and_state_transitions.L0-ASK-FOR-A-SCREEN.md)** — Internship application intake and single-writer state transitions · 0.3 · waiting on the platform
+- **[internship.CAP.application_intake_and_state_transitions.L0-CHOOSE](stories/internship.CAP.application_intake_and_state_transitions.L0-CHOOSE.md)** — Internship application intake and single-writer state transitions · 0.1 · pick one from the list
+- **[internship.CAP.application_intake_and_state_transitions.L0-SCOPE-SHEET](stories/internship.CAP.application_intake_and_state_transitions.L0-SCOPE-SHEET.md)** — Internship application intake and single-writer state transitions · 0.2 · write the scope sheet
 - **[internship.CAP.application_intake_and_state_transitions.L1-BY-HAND](stories/internship.CAP.application_intake_and_state_transitions.L1-BY-HAND.md)** — Internship application intake and single-writer state transitions · 1 · do it by hand
 - **[internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP](stories/internship.CAP.application_intake_and_state_transitions.L2-IN-THE-APP.md)** — Internship application intake and single-writer state transitions · 2 · do it in the app
 - **[internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST](stories/internship.CAP.application_intake_and_state_transitions.L3-TOOL-REQUEST.md)** — Internship application intake and single-writer state transitions · 3 · request the tool
@@ -57,6 +60,7 @@ system rather than a part of it.
 - **[internship.CAP.skill_gap_identification_for_interns](stories/internship.CAP.skill_gap_identification_for_interns.md)** — Skill-gap identification for interns
 - **[internship.CAP.standup_attendance_tracking](stories/internship.CAP.standup_attendance_tracking.md)** — Standup and required-meeting attendance tracking
 - **[internship.CAP.two_channel_structured_interview](stories/internship.CAP.two_channel_structured_interview.md)** — Two-channel structured interview over one versioned question bank
+- **[internship.GATE.R0.1](stories/internship.GATE.R0.1.md)** — R0 gate · 1 of 1 · a capability the agent does, watched
 - **[internship.LEGACY-MIGRATION-PLAN](stories/internship.LEGACY-MIGRATION-PLAN.md)** — Legacy migration plan
 - **[internship.RESEARCH-1-SYSTEM-CLASSES](stories/internship.RESEARCH-1-SYSTEM-CLASSES.md)** — Compare the five system classes, and place this domain among them
 - **[internship.RESEARCH-2-AGENT-ANATOMY](stories/internship.RESEARCH-2-AGENT-ANATOMY.md)** — Map the nine anatomy elements onto this domain's agent

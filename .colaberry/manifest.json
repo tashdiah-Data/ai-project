@@ -1,86 +1,38 @@
 {
-  "generated_at": "2026-11-14T00:29:24.253Z",
-  "plan_version": 2,
-  "plan_sha256": "324c8b0b35802261e8c216f95f91bbf1df84fbd1a9a61da064c3656cbb0753c1",
-  "correlation_id": "9aa3cc78-216f-48ea-949d-c4219d5788ec",
+  "generated_at": "2026-11-25T02:37:04.817Z",
+  "plan_version": 3,
+  "plan_sha256": "baee018d40c3f8f06dadf99bd96ae9f2e63b3e51ed7ed7d1748f9feeb903a065",
+  "correlation_id": "9e9eef16-d6da-42a1-8cac-1c82abe473a1",
   "project_id": "778350cb-5eaf-5651-b9b8-ba3e957d49fd",
   "truth_revision": null,
   "files": [
-    {
-      "path": ".colaberry/agent-domain.json",
-      "sha256": "4214634cc2032184c9c6a57921b1611c62eb11f1a16cea666db1884f6ec64938"
-    },
-    {
-      "path": ".colaberry/plan.json",
-      "sha256": "4e0e90b3703636bd04172f59bf2dd85b739f011bad8e9e2888c47e9996f78de8"
-    },
-    {
-      "path": ".colaberry/profile.json",
-      "sha256": "de37e34f9ff591e07ab8f9da67ff6f2982995ca3ce59652f54986af7535b5a37"
-    },
-    {
-      "path": ".colaberry/progress.json",
-      "sha256": "de769c0720180a58a2eaf411485a2c73b4a4deea2aea98f61745b9f1d2ff2c59"
-    },
-    {
-      "path": "CLAUDE.md",
-      "sha256": "2101290c7f939d79a0c6a4289fd72261c9592ce3812d31307e41f51936042dca"
-    },
-    {
-      "path": "artifacts/INDEX.md",
-      "sha256": "3d5a59ba62a73ab885be2993a86260deb5d3b24f5922be03b28cabd5c8e25713"
-    },
-    {
-      "path": "artifacts/week-00/01-system-classes.md",
-      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
-    },
-    {
-      "path": "artifacts/week-00/02-agent-anatomy.md",
-      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
-    },
-    {
-      "path": "artifacts/week-00/03-role-and-da-transition.md",
-      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
-    },
-    {
-      "path": "artifacts/week-00/04-manager-interview.md",
-      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
-    },
-    {
-      "path": "artifacts/week-00/05-three-proposed-tasks.md",
-      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
-    },
-    {
-      "path": "artifacts/week-00/legacy-migration-plan.md",
-      "sha256": "9e8dc362cf3e9085f1ca0bb2072a9bd8018bd25467ffe181fab269d28e72dafb"
-    },
-    {
-      "path": "artifacts/week-01/project-standards.md",
-      "sha256": "5350b7dbab4e491383d6e4aaa732dc6fbc62bb6659b29c7db4a201ff0a852279"
-    },
-    {
-      "path": "artifacts/week-02/skill-template.md",
-      "sha256": "9cddcc6d3cd6b465e93a2bf60f9432ef38f0f9786768576b9b933d54ca49072d"
-    },
-    {
-      "path": "docs/DATA_CONTRACT.md",
-      "sha256": "d56e89edcfe36725945d961cf3479b646507d1fa855bba0dcdfff3f8f8a658b0"
-    },
     {
       "path": "docs/REQUIREMENTS.md",
       "sha256": "39891cd9b38928174f22c32724df50e192f624aaa58fd3207e8a52e699f66f00"
     },
     {
       "path": "docs/STORIES.md",
-      "sha256": "ef9954792470600ef26b1cacd72a284556e19bd57f5d2c5f32ec28b22a2feceb"
+      "sha256": "2fe2a6f9a521f013e8911c6ed8468d70b486d340efb1193ff74e882ca0ad4587"
     },
     {
       "path": "docs/TRACEABILITY.md",
       "sha256": "964de0ca1eca1f49c8697dcb406367c60d6f8a5889f24e45eef14fd022d45501"
     },
     {
-      "path": "docs/stories/STORY-000.md",
-      "sha256": "d2b4e8ea18e8f1a249d1fae875ae3479a6e76afbb07dafea04b4fd00aaab57a5"
+      "path": "docs/DATA_CONTRACT.md",
+      "sha256": "f40e4c188037375d1a26fa99184eb5a550e81a492723e28e98f37d33deb02b72"
+    },
+    {
+      "path": "CLAUDE.md",
+      "sha256": "2101290c7f939d79a0c6a4289fd72261c9592ce3812d31307e41f51936042dca"
+    },
+    {
+      "path": "docs/agent/README.md",
+      "sha256": "d505a1cb65080cccaeb1309179099c72bafbb60f86b4ad28d71e5293c4d79826"
+    },
+    {
+      "path": "docs/agent/capability.md",
+      "sha256": "21c003d5fa56a4da809ffc5deacbc557aa692ae7518e59feae278010d1836263"
     },
     {
       "path": "docs/stories/internship.CAP.activation_and_entitlement_grant.md",
@@ -107,6 +59,22 @@
       "sha256": "c2dc2bd3f139db4ab7fbde335bb757a86aa736fba0b49b05680c6c9bd3c72aaa"
     },
     {
+      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.md",
+      "sha256": "e999e40c05c2453945a97ce1c867d1072e5d77dc35fb80fc413de7df677bc599"
+    },
+    {
+      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L0-ASK-FOR-A-SCREEN.md",
+      "sha256": "f74adedaba360c571c9af54377134db389baa235e8946fc3006dd746b47016a6"
+    },
+    {
+      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L0-CHOOSE.md",
+      "sha256": "e79f528f18bd6e3843ddfdf3af07d59327c286c364c4fc864cab097c16a566c0"
+    },
+    {
+      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L0-SCOPE-SHEET.md",
+      "sha256": "5ee806b7021908faa5fed89f188e1e0494184b1d3739962ff9cda0bfdcd5eda3"
+    },
+    {
       "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L1-BY-HAND.md",
       "sha256": "3e2c689e24851368f7c556f2192c8e67b5fd32399cb1fce9882dbe411b3f797a"
     },
@@ -121,10 +89,6 @@
     {
       "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.L4-AGENT-WATCHED.md",
       "sha256": "385e24da69f4d03b378c657f1ef862cec51f265438a36558a072fe7042148b59"
-    },
-    {
-      "path": "docs/stories/internship.CAP.application_intake_and_state_transitions.md",
-      "sha256": "e999e40c05c2453945a97ce1c867d1072e5d77dc35fb80fc413de7df677bc599"
     },
     {
       "path": "docs/stories/internship.CAP.build_progress_and_pace_monitoring.md",
@@ -239,8 +203,12 @@
       "sha256": "6bcafbc314f02141537de65db2d9005dee4fb2b1cb011aa9a450b381b98f70f8"
     },
     {
+      "path": "docs/stories/internship.GATE.R0.1.md",
+      "sha256": "b64199fcbb81655ad82f4f055104c67a53422022f86203c1226a278ed3c3ec1a"
+    },
+    {
       "path": "docs/stories/internship.LEGACY-MIGRATION-PLAN.md",
-      "sha256": "4eaa4fd31ff807c78344bee7729c8e03ebe3e6ab87f279dfdaa5caa81dae2639"
+      "sha256": "0c2f08717ca6d1b6f7056fa5d7a22ad9be480f26cb803f76091414fb34202f35"
     },
     {
       "path": "docs/stories/internship.RESEARCH-1-SYSTEM-CLASSES.md",
@@ -265,6 +233,30 @@
     {
       "path": "docs/stories/internship.STORY-000.md",
       "sha256": "e11a856291904ab39af738ac29d1af32f233c2f63047b9314d6e95eb240c3074"
+    },
+    {
+      "path": ".colaberry/plan.json",
+      "sha256": "a1f703f865b73294a530bcffe8ffbead5a4aceb45cee119086ac17fa8ba2e171"
+    },
+    {
+      "path": ".colaberry/progress.json",
+      "sha256": "7e155de80630ff6d5d077b5349ff595215b86c856434ff265a9e9c9d8d1b424a"
+    },
+    {
+      "path": ".colaberry/profile.json",
+      "sha256": "de37e34f9ff591e07ab8f9da67ff6f2982995ca3ce59652f54986af7535b5a37"
+    },
+    {
+      "path": ".colaberry/agent-domain.json",
+      "sha256": "357d112fb09a18b2ebe91711f4b82643c24f492aec25b83cadb177dfaeff2561"
+    },
+    {
+      "path": "docs/stories/STORY-000.md",
+      "sha256": "d2b4e8ea18e8f1a249d1fae875ae3479a6e76afbb07dafea04b4fd00aaab57a5"
+    },
+    {
+      "path": ".nojekyll",
+      "sha256": "d217e70c3bf6e6d9e36bf665911518f42d770a37127ccdef341cdd48fd3ece4b"
     }
   ]
 }

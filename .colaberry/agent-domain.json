@@ -3,8 +3,11 @@
   "domain_key": "internship",
   "sources": {
     "agent": "GET /api/admin/agent-domains-mine",
-    "capabilities": "GET /api/admin/agent-domains/internship",
-    "governance": "GET /api/admin/agent-domain-change-requests-mine"
+    "capabilities": "GET /api/admin/agent-domains-mine/internship",
+    "capability_ladder": "GET /api/admin/agent-domains-mine/internship/coverage",
+    "governance": "GET /api/admin/agent-domain-change-requests-mine",
+    "candidates": "GET /api/admin/agent-domain-candidates-mine",
+    "owed_by_product": "GET /api/admin/agent-domain-candidates-mine"
   },
   "autonomy_models": {
     "agent_level": "observe | suggest | act_audited | communicate -- a property of the employee",
@@ -24,6 +27,753 @@
     "tools_granted": [],
     "tools_granted_count": 0
   },
+  "capabilities": [
+    {
+      "capability_id": "internship.application_intake_and_state_transitions",
+      "name": "Internship application intake and single-writer state transitions",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Answers which states an application can legally reach next, and for which actor, citing the state machine",
+          "acceptance_criteria": "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Drives a multi-step application lifecycle end to end against sandbox fixtures",
+          "acceptance_criteria": "A seeded fixture walks started to active with an audit event per hop and no state written outside transition(); mutation-proven by a test that dies when the lock or assertTransition is removed"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.two_channel_structured_interview",
+      "name": "Two-channel structured interview over one versioned question bank",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Answers which questions exist, in which section order, and which keys are required for completion",
+          "acceptance_criteria": "Answers match activeQuestionKeys() exactly for ten sampled questions; evaluator is a diff against the module"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Proposes a versioned question-set revision in sandbox with a key-set equality test across both channels",
+          "acceptance_criteria": "A test asserts form and phone key sets are equal and fails when one key is dropped"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.ai_voice_interview_and_transcript_capture",
+      "name": "AI voice interview with dual consent, transcript capture and answer extraction",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains the consent model and why an unset agent slot results in no call",
+          "acceptance_criteria": "Explanation matches internshipCallService.ts:19-26 with no claim that a fallback agent exists"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Runs the full call lifecycle against sandbox fixtures including the reconcile path",
+          "acceptance_criteria": "A fixture with no completion callback resolves to the calls_failed bucket; a fixture with permission_to_call false records zero dial attempts"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.deterministic_requirement_checks",
+      "name": "Deterministic eligibility and commitment requirement checks",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "States which of the eight requirements an application meets and quotes the answer behind each",
+          "acceptance_criteria": "Zero disagreements against checkRequirements() across a named fixture set, and every unclear accompanied by the missing key"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-runs the checks against applications a human has already reviewed",
+          "acceptance_criteria": "Shadow output matches the deterministic module exactly; any divergence is a defect, not a tuning input"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.applicant_readiness_assessment",
+      "name": "Internship readiness assessment for the reviewer",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Summarises an application from approved stored answers with every claim traceable to a quoted answer",
+          "acceptance_criteria": "Zero unsourced claims across a named sample reviewed by Dhee; any invented fact fails the release"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-produces a posture alongside applications Dhee has already decided, with the comparison recorded and never shown as a verdict",
+          "acceptance_criteria": "Agreement rate measured and reported as proposed until Dhee accepts a threshold; a prompt-injection fixture produces no posture change"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.review_queue_triage_and_profile_signals",
+      "name": "Review queue triage with reliability-labelled profile signals",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains bucket membership and which signals are unknown, from approved documentation rather than live rows",
+          "acceptance_criteria": "Bucket explanations match BUCKET_STATES exactly and no applicant identity is quoted"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Triages a sandbox queue of synthetic applications and reports what is waiting on a human",
+          "acceptance_criteria": "Counts match queueCounts() on the fixture set; a synthetic record with no recording consent yields transcript_withheld"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.admission_decision_recording",
+      "name": "Admission decision recording with a mandatory student-safe reason",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains the ten reason codes, their scopes and their reapply windows, and refuses to suggest a decision",
+          "acceptance_criteria": "Explanations match REASON_DEFINITIONS; any output phrased as a decision fails the release"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Records a shadow posture beside decisions Dhee has already made, never visible to the applicant and never written to internship_decisions",
+          "acceptance_criteria": "Zero writes to internship_decisions attributable to the agent, proven by actor_id and decided_by audit; agreement reported as proposed until Dhee accepts it"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.offer_document_package_generation",
+      "name": "Offer and onboarding document package generation",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains which documents a given state requires and how the rolling start Monday is derived",
+          "acceptance_criteria": "nextMonday outputs reproduced exactly for a fixed set of input dates including a Sunday and a Monday boundary"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Generates and re-generates a package against sandbox fixtures and proves the revision index holds",
+          "acceptance_criteria": "A duplicate signed upload creates a revision rather than replacing a file; the test dies if the unique index is dropped"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.signed_document_verification",
+      "name": "Signed document verification by a human reviewer",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Lists which document types are outstanding for an application without opening any file content",
+          "acceptance_criteria": "Outstanding list matches outstandingRequirements(); no document bytes are read"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow pre-checks completeness beside verifications a human performed, flagging only presence and revision structure",
+          "acceptance_criteria": "Zero writes to internship_documents status attributable to the agent; verified_by never contains an agent identity"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.onboarding_checklist_tracking",
+      "name": "Document and onboarding checklist tracking",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "States which onboarding step is outstanding and whose move it is, for a named application",
+          "acceptance_criteria": "Matches resolveChecklist() and nextStudentAction() on every fixture; a Colaberry-owned step is never reported as the intern being late"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: produces a daily read-only outstanding-steps view for Dhee",
+          "acceptance_criteria": "Separately approved; zero writes; Dhee confirms the view matches the console for a measured period"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.routine_document_reminder_sending",
+      "name": "Approved routine document and activity reminder sending",
+      "classification": "existing_application",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R7",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains which template applies to an intern's current state and why, and sends nothing",
+          "acceptance_criteria": "Template selection matches the precondition table for every fixture; zero send attempts recorded"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow mode: proposes the day's reminder list beside what a human actually sent, into a sink rather than to a person",
+          "acceptance_criteria": "Zero email_send_ledger rows for real recipients; the proposed list is compared against Dhee's actual sends and the agreement reported as proposed until she accepts a threshold"
+        },
+        {
+          "autonomy": "autonomy:R7",
+          "behaviour": "Separately approved: sends only the explicitly authorized reminder templates, once per application per day, kill-switch first",
+          "acceptance_criteria": "A replay test produces exactly one send; a kill-switch-active test produces zero sends; a precondition-mismatch test produces zero sends and one escalation; a mutation test that removes the day from the business event fails the suite"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.payment_gate_monitoring",
+      "name": "Payment gate and unpaid-limbo monitoring",
+      "classification": "existing_application",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains why a given application resolved to payment_pending rather than activation_pending",
+          "acceptance_criteria": "Matches stateAfterDocumentsVerified() for all four input combinations"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-reports the unpaid-limbo list and proposed expiry dates beside what the manager acted on",
+          "acceptance_criteria": "Zero state writes attributable to the agent; the proposed list reconciles against the onboarding bucket with no false entries"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.comp_expiry_advance_warning",
+      "name": "Comped-access expiry advance warning to the manager",
+      "classification": "manager_defined",
+      "implementation_state": "absent",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R0",
+          "behaviour": "Defines the workflow, the risks and the human decisions for comp expiry warning",
+          "acceptance_criteria": "Dhee accepts the lead time, the recipient and the once-per-window rule in writing"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-produces the expiring-comp list into a sink",
+          "acceptance_criteria": "The list reconciles against the comped set with zero false expiries and zero sends to interns"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.activation_and_entitlement_grant",
+      "name": "Internship activation and curriculum entitlement grant",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Answers which blockers stand between an application and activation, citing the checklist",
+          "acceptance_criteria": "Blocker list matches activationBlockers() exactly; the output never contains an activation instruction or a ready-to-activate verdict"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.class_internship_movement",
+      "name": "Moving a person between class and internship without losing history",
+      "classification": "manager_defined",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains why the internship is a membership on one enrollment rather than a second enrollment, and what breaks under the alternative",
+          "acceptance_criteria": "Explanation names the duplicate-sweep, comp-entitlement and pickBestEnrollment failures with their citations and claims no capability that does not exist"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.generated_build_project_authoring",
+      "name": "Generated build-project authoring and reviewer assignment",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains the three size tiers, the gate violation classes and why staff-initiated builds hold for review",
+          "acceptance_criteria": "Matches normalizeSize() and the planGate violation split; never claims a plan is ready to assign"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Generates a complete drafted plan in sandbox and reports blocking violations",
+          "acceptance_criteria": "The plan rests at drafted with zero publish calls; a seeded blocking violation prevents publication and a mutation test that removes holdForReview fails"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.project_assignment_readiness_gating",
+      "name": "Project assignment readiness gating on the weeks 1 to 3 training gate",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "States whether an intern has cleared the training gate and whose move the handoff is",
+          "acceptance_criteria": "Matches readyForProject() and the handoff phase table; an unknown week never yields a late reading"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: produces the ready-for-project list for Dhee on a cadence",
+          "acceptance_criteria": "Separately approved; zero writes; the list reconciles against the endpoint for a measured period with no false readies"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.intern_project_to_catalog_matching",
+      "name": "Project matching recommendation against a project catalog",
+      "classification": "proposed_new",
+      "implementation_state": "absent",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R0",
+          "behaviour": "Defines whether matching is wanted, what a catalog would contain, and which human decides a match",
+          "acceptance_criteria": "Dhee states in writing whether a catalog should exist; until then this capability stays absent and no evidence is claimed"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.build_progress_and_pace_monitoring",
+      "name": "Project progress, pace and deadline monitoring",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Reports an intern's day N, weeks completed, pace and standing from stored facts",
+          "acceptance_criteria": "Figures match paceFor(), dayOfInternship() and deterministicStanding() exactly; zero dates or percentages originate from the model"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: produces the console roster summary for Dhee on a cadence",
+          "acceptance_criteria": "Separately approved; zero writes; an intern with missing activity data reports UNKNOWN rather than the worst level, proven by a fixture"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.active_project_drift_detection",
+      "name": "Active project drift detection",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains the drift codes and why auto-correction is refused",
+          "acceptance_criteria": "Matches DriftCode and the module header; never proposes a correction"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: reports drift findings across the intern cohort on a cadence",
+          "acceptance_criteria": "Separately approved; zero writes to enrollments; findings match detectActiveProjectDrift() on every fixture including the null-pointer case"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.inactivity_escalation_and_exit_recommendation",
+      "name": "Inactivity escalation ladder and exit recommendation",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains the ladder, the UNKNOWN exemption and why exit requires a human confirmation step",
+          "acceptance_criteria": "Thresholds match internActivityTracker.js:11-17 and the UNKNOWN rule is stated, not omitted"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-produces the day's escalation list and the exit-cliff set beside what a human acted on",
+          "acceptance_criteria": "Zero exits executed by the agent; a null-activity fixture reports UNKNOWN and appears in no exit set"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.manager_check_in_brief_and_follow_up",
+      "name": "Manager check-in preparation and follow-up note",
+      "classification": "existing_application",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Produces a check-in brief for one intern from stored facts, with every figure traceable",
+          "acceptance_criteria": "Percentages and dates match internDeliveryCoachNote.js arithmetic exactly; zero figures originate from the model"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-drafts the follow-up note beside the one the manager actually posted",
+          "acceptance_criteria": "Zero Basecamp writes attributable to the agent; the drafted note contains no em dash and no second sign-off"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.skill_gap_identification_for_interns",
+      "name": "Skill-gap identification for interns",
+      "classification": "manager_defined",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R0",
+          "behaviour": "Defines what skills internship work requires and who owns the target profile",
+          "acceptance_criteria": "Dhee accepts a target profile definition in writing; until then the gap output stays unavailable"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Computes a demonstrated-skill profile with decay against sandbox fixtures",
+          "acceptance_criteria": "Effective levels match skillGenomeService decay arithmetic; an evidence-free fixture reports unknown rather than zero"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.portfolio_publication_readiness",
+      "name": "Portfolio and demonstration publication readiness",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R5",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains which readiness requirements an intern's portfolio does not yet meet, and refuses to call anyone job ready",
+          "acceptance_criteria": "Unmet list matches computeReadiness() under DEFAULT_POLICY; any employability language fails the release"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-scores readiness beside reviewer decisions already made",
+          "acceptance_criteria": "Zero visibility or decision writes attributable to the agent; the score is reproducible from the projection alone"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.intern_project_portfolio_assembly",
+      "name": "Intern project portfolio assembly and demonstration evidence",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Describes what an intern's portfolio contains and which items are verified",
+          "acceptance_criteria": "Matches assembleProjectPortfolio() on fixtures; self-reported items are never described as verified"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: assembles portfolios across the cohort for reviewer triage",
+          "acceptance_criteria": "Separately approved; zero writes to student_tasks; an empty-build fixture yields an empty portfolio rather than an error"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.certification_readiness_tracking",
+      "name": "Certification readiness and attempt tracking for interns",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Reports an intern's certification readiness and sitting history without predicting an outcome",
+          "acceptance_criteria": "Matches internCertification() and toCertAttempts(); no pass prediction appears and no issued credential is implied"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: produces the cohort certification view for Dhee",
+          "acceptance_criteria": "Separately approved; zero writes to any cert table; a missing snapshot reports unknown"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.standup_attendance_tracking",
+      "name": "Standup and required-meeting attendance tracking",
+      "classification": "existing_application",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains why attendance is reported as unknown and what would be needed to make it reliable",
+          "acceptance_criteria": "The explanation states the missing denominator and never quotes an attendance percentage"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Computes join summaries against sandbox fixtures including the duplicate-join and Central-time boundary cases",
+          "acceptance_criteria": "A same-day duplicate join yields one record; an evening session near midnight Central lands on the correct day"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.interview_preparation_support",
+      "name": "Career interview preparation support and nudges",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R7",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains which funnel stage a candidate is in and which beat is next",
+          "acceptance_criteria": "Stage and beat match interviewPrepData.normalize and interviewPrepNudges on the unit fixtures"
+        },
+        {
+          "autonomy": "autonomy:R5",
+          "behaviour": "Shadow-produces the day's beat list into a sink beside what was actually sent",
+          "acceptance_criteria": "Zero sends to real candidates; a same-day re-run produces zero additional beats"
+        },
+        {
+          "autonomy": "autonomy:R7",
+          "behaviour": "Separately approved: sends only the authorized preparation beats, one per interview per day",
+          "acceptance_criteria": "A replay test produces exactly one beat; a post-interview fixture flips to the survey beat; a mutation test removing the beatKey state check fails the suite"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.career_support_handoff",
+      "name": "Career preparation and support handoff out of the internship",
+      "classification": "manager_defined",
+      "implementation_state": "absent",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R0",
+          "behaviour": "Defines the handoff trigger, the receiving human and the evidence that must travel with the person",
+          "acceptance_criteria": "Dhee names the receiving human and the trigger in writing; until then this capability stays absent"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.cohort_kpi_reporting",
+      "name": "Internship cohort KPI and funnel reporting",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Reports the funnel counts with reliability labels and refuses to state an unmeasured number",
+          "acceptance_criteria": "Counts match internshipKpis(); every unknown is labelled unknown rather than rendered as zero"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: produces the weekly internship report for staff review before any send",
+          "acceptance_criteria": "Separately approved; the draft reconciles against the live counts; zero sends without a human release"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.existing_intern_conversion_planning",
+      "name": "Existing-intern conversion planning with a zero-write dry run",
+      "classification": "existing_application",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R4",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains what a conversion plan contains and why the dry run cannot write",
+          "acceptance_criteria": "Matches ConversionPlan and the no-transaction guarantee; never claims a conversion was applied"
+        },
+        {
+          "autonomy": "autonomy:R4",
+          "behaviour": "Produces a conversion plan against sandbox fixtures",
+          "acceptance_criteria": "Zero writes and zero sends during planning, proven by a test that fails if a transaction is opened; a second plan on the same fixture is identical"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.employment_readiness_gap_flag",
+      "name": "Daily employment-readiness gap flag as a workforce task",
+      "classification": "inherited",
+      "implementation_state": "implemented",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R6",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains what the career director flags, on what schedule, and that it makes no model call",
+          "acceptance_criteria": "Matches the registry row and directorActions.ts:72 exactly; no claim of analysis the row does not perform"
+        },
+        {
+          "autonomy": "autonomy:R6",
+          "behaviour": "Supervised pilot: continues the daily flag under the new employee with the manager reviewing each task",
+          "acceptance_criteria": "Separately approved; a same-day re-run creates no duplicate task; Dhee confirms the flagged gaps were real for a measured period"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.da_cohort_analysis_automation",
+      "name": "Data-analyst cohort analysis moving to the AI employee",
+      "classification": "proposed_new",
+      "implementation_state": "absent",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R0",
+          "behaviour": "Inventories which recurring analyst deliverables touch the internship domain and which are candidates",
+          "acceptance_criteria": "Dhee names at least one specific deliverable; the inventory lists only artifacts that were observed, with no invented reports"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.applicant_pii_access_audit",
+      "name": "Applicant PII access audit over the internship surface",
+      "classification": "proposed_new",
+      "implementation_state": "absent",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": false,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R0",
+          "behaviour": "Defines what a PII access audit must answer and which reads must be logged",
+          "acceptance_criteria": "Dhee accepts the audit question set in writing; until then this capability stays absent and no coverage is claimed"
+        }
+      ]
+    },
+    {
+      "capability_id": "internship.manager_surface_access_verification",
+      "name": "Verifying the accountable manager can actually reach the agent surface",
+      "classification": "manager_defined",
+      "implementation_state": "partial",
+      "requirement_validation_state": "draft",
+      "starting_autonomy": "autonomy:R0",
+      "max_permitted_autonomy": "autonomy:R2",
+      "human_decision": true,
+      "release_behaviour": [
+        {
+          "autonomy": "autonomy:R2",
+          "behaviour": "Explains the manager chain, which surfaces the manager can reach, and the manager-versus-admin gap that still exists",
+          "acceptance_criteria": "Names the requireAdmin-only state of the agent routes and does not claim a manager-scoped gate that has not shipped"
+        }
+      ]
+    }
+  ],
   "authority": [
     {
       "capability_id": "internship.activation_and_entitlement_grant",
@@ -191,7 +941,7 @@
       "approved_autonomy_note": null,
       "max_permitted_autonomy": "autonomy:R6",
       "max_permitted_autonomy_note": null,
-      "ceiling_reason": "It writes a task, not a change to a person, and already runs deterministically on a cron. A separately approved supervised production pilot under the new employee is reachable, but the shared runDomainFlag shape means the blast radius of a change reaches four sibling directors, so no higher level is proposed."
+      "ceiling_reason": "It writes a task, not a change to a person, and already runs deterministically on a cron. A separately approved supervised production pilot under the new employee is reachable, but the shared runDomainFlag shape means the blast radius of a change reaches six sibling directors, so no higher level is proposed."
     },
     {
       "capability_id": "internship.existing_intern_conversion_planning",
@@ -411,7 +1161,7 @@
     "known": true,
     "disclosure": "A criterion counts as passing when it is marked in `.colaberry/progress.json` in this repository. The verifier reads that file on every sync and records what it found. A story showing 0 of N is not a rejection: nothing has been claimed yet.",
     "summary": {
-      "stories": 46,
+      "stories": 50,
       "checked": 46,
       "verified": 6,
       "awaiting_criteria": 39,
@@ -535,6 +1285,42 @@
         "outstanding": [
           "Named scenarios across all 22 states answered with zero illegal transitions asserted as legal; evaluator is a human reviewer against internshipStateMachine.ts"
         ],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.application_intake_and_state_transitions.L0-ASK-FOR-A-SCREEN",
+        "title": "Internship application intake and single-writer state transitions · 0.3 · waiting on the platform",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.application_intake_and_state_transitions.L0-CHOOSE",
+        "title": "Internship application intake and single-writer state transitions · 0.1 · pick one from the list",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
+        "story_id": "internship.CAP.application_intake_and_state_transitions.L0-SCOPE-SHEET",
+        "title": "Internship application intake and single-writer state transitions · 0.2 · write the scope sheet",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
         "commit_sha": null
       },
       {
@@ -1088,6 +1874,18 @@
         "commit_sha": null
       },
       {
+        "story_id": "internship.GATE.R0.1",
+        "title": "R0 gate · 1 of 1 · a capability the agent does, watched",
+        "status": "not_started",
+        "verification_state": null,
+        "verified": false,
+        "criteria_passed": null,
+        "criteria_total": null,
+        "reasons": [],
+        "outstanding": [],
+        "commit_sha": null
+      },
+      {
         "story_id": "internship.LEGACY-MIGRATION-PLAN",
         "title": "Legacy migration plan",
         "status": "complete",
@@ -1162,7 +1960,7 @@
       {
         "story_id": "internship.STORY-000",
         "title": "STORY-000 · Build your Command Center",
-        "status": "in_progress",
+        "status": "not_started",
         "verification_state": "submitted",
         "verified": false,
         "criteria_passed": 5,
@@ -1176,6 +1974,38 @@
         "commit_sha": "81d7e80d063043de5385686b4c8e2b7a760faa98"
       }
     ]
+  },
+  "candidates": {
+    "known": true,
+    "reason": "No candidates have been put on the list yet for internship. An empty list means nobody has proposed anything, not that nothing qualifies.",
+    "scoped_to_domains": [
+      "internship"
+    ],
+    "summary": {
+      "candidates": 0,
+      "yours_to_move": 0,
+      "waiting_on_the_owner": 0,
+      "finished": 0,
+      "cleared_the_gate": 0
+    },
+    "candidates": []
+  },
+  "owed_by_product": {
+    "known": true,
+    "reason": "Nothing is waiting on the platform for you right now. Every candidate on your list is either yours to move or already through.",
+    "scoped_to_domains": [
+      "internship"
+    ],
+    "stages_counted": [
+      "platform_owed",
+      "screen_built"
+    ],
+    "summary": {
+      "owed": 0,
+      "waiting_for_a_screen_or_a_ruling": 0,
+      "built_and_not_yet_used": 0
+    },
+    "owed": []
   },
   "not_recorded": [
     {
